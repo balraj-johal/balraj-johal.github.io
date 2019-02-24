@@ -20,30 +20,30 @@ Author:	Balraj Johal
                                      Watson shit v confusing.
 
         <H2>24-02-19 - AR block pretty successfully added. </H2>
-         
+         <br><br>
          <p> Design of AR block: <img src="/res/AR_block_pass1.PNG" alt="AR block design, detailed in text below">
-         
+         <br><br>
          So the first pass of the AR block has been mostly successfully implemented. The first bit lets the user choose 
          the GLTF model to display. This works fine, but the process of model choosing/uploading needs to 
          be considered. Currently GLTF models come in like 3 seperate parts and that's not very user-friendly. The other annoying bit
          is the scale. A scale parameter's been added, but this requires a trial and error process. It's worth looking into whether there's
          some sort of auto-scaling API or something, maybe part of the Draco compression library? Speaking of, 
          might be worth having Quando auto-compress models too... Hmm. 
-         
+         <br><br>
          Right, the rest of the block: The only other immediate parameter is the marker choice bit. This is the 
          only non-functioning part rn, as I think the marker generation/uploading/association bit is the next big part to deal with. 
-         
+         <br><br>
          So, the hidden params. Scale is p obvious, with a percentage used instead of a float to make it 
          more user intuitive. The positions' where I've flexed a little bit on. I don't think most users will
          really want/need a high level of control on relative positioning, so I've abstracted it down to two main
          possibilities: Above the marker or On the marker. Think this is about all I've done so far, but Im pretty 
          proud, cause it all looks like it should y'know? Things are starting to come together.
-         
-         TODO: Find out why tf the phone cam aint working
-               marker gen n that
-               sort my goddamn branch out.
+         <br><br>
+         TODO: Find out why tf the phone cam aint working<br>
+               marker gen n that<br>
+               sort my goddamn branch out.<br>
                port all my old adventure game bits.
-               
+               <br><br>
              TODO in general: Think on Puzzle-Specific blocks and how to abstract these as much as possible.
         </p>
 
