@@ -1,12 +1,13 @@
+
 h1 {
   font-weight: 1000;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 body {  
-  background-color: red; /* For browsers that do not support gradients */
-  background: linear-gradient(red, yellow);
-
+  background-image: url("res/sarahdarkslow.gif");
+  background-size:100% 100%;
+  background-color: #cccccc;
 }
 
 #welcome 	{
