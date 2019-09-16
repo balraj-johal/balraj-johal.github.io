@@ -1,13 +1,31 @@
-
-h1 {
-  font-weight: 1000;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+@font-face {
+  font-family: 'ticketing' ;
+  src: url('/Ticketing.ttf') format('truetype');
 }
+body {   
+}
+h1 {
+  font-weight: 1000;  
+  color: #fff;
+}
+h1, h2 {
 
+  font-family: 'VT323', monospace;
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+  font-size: 1.8rem;
+}
 body {  
   background-image: url("res/sarahdarkslow.gif");
   background-size:100% 100%;
   background-color: #cccccc;
+
+  font-family: 'VT323', monospace;
+
+
 }
 
 #welcome 	{
@@ -21,4 +39,15 @@ body {
 #title {
   padding: 40px 0px;
   z-index: 3;
+}
+a, a:hover {
+  color: #000;
+}
+.card {
+  height: 490px;
+  margin-bottom: 40px;
+  border: 0px;
+}
+.card-img-top {
+  height: 150px;
 }
