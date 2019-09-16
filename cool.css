@@ -48,6 +48,7 @@ a, a:hover {
   margin-bottom: 40px;
   border: 0px;
 }
-.card-img-top {
-  height: 150px;
+.card-img-top {height: 13vw;
+  min-height: 150px;
+  width: auto;
 }
