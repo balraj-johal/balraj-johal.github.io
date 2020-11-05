@@ -48,7 +48,59 @@ a, a:hover {
   margin-bottom: 40px;
   border: 0px;
 }
-.card-img-top {height: 13vw;
+/* .card-img-top {
+  height: 13vw;
   min-height: 150px;
   width: auto;
+} */
+
+.card-img-wrap {
+  width: 100%;
+  height: 255px;
+}
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes bounce {
+  25% {transform: translateY(-12.5px);}
+  50% {transform: translateY(-6.25px);}
+  65% {transform: translateY(-11.25px);}
+  /* 75% {transform: translateY(-35px);} */
+  80% {transform: translateY(-10px);}
+  100% {transform: translateY(-10px);}
+}
+
+/* @-o-keyframes bounce {
+  25% {transform: translateY(-50px);}
+  50% {transform: translateY(-25px);}
+  65% {transform: translateY(-45px);}
+  75% {transform: translateY(-35px);}
+  80% {transform: translateY(-40px);}
+}
+
+@-moz-keyframes bounce {
+  25% {transform: translateY(-50px);}
+  50% {transform: translateY(-25px);}
+  65% {transform: translateY(-45px);}
+  75% {transform: translateY(-35px);}
+  80% {transform: translateY(-40px);}
+}
+
+@-webkit-keyframes bounce {
+  25% {transform: translateY(-50px);}
+  50% {transform: translateY(-25px);}
+  65% {transform: translateY(-45px);}
+  75% {transform: translateY(-35px);}
+  80% {transform: translateY(-40px);}
+  100% {transform: translateY(-40px);}
+} */
+
+
+.card:hover {
+  animation: bounce 0.75s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
