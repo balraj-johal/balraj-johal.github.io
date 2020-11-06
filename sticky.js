@@ -13,10 +13,10 @@ window.onload = function() {
     function stick() {
         if (window.pageYOffset >= sticky) {
             navbar.classList.add("sticky")
-            title.classList.add("fill-sticky-gap")
+            // title.classList.add("fill-sticky-gap")
         } else {
             navbar.classList.remove("sticky");
-            title.classList.remove("fill-sticky-gap")
+            // title.classList.remove("fill-sticky-gap")
         }
     } 
 

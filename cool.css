@@ -12,7 +12,7 @@ h1 {
   color: #fff;
 }
 h1, h2 {
-
+  color: #fff;
   font-family: 'VT323', monospace;
 }
 p {
@@ -105,7 +105,7 @@ a, a:hover {
 }
 @keyframes nav-fade-anim {
   from {background-color: transparent}
-  to {background-color: rgba(17, 96, 37, 0.85);}
+  /* to {background-color: rgba(17, 96, 37, 0.85);} */
 }
 
 @keyframes fade-in {
@@ -115,19 +115,6 @@ a, a:hover {
 .fade-in-element {
 animation: fade-in 1.4s;
 }
-/* nav ul {
-  text-align: center;
-  display: block;
-}
-nav ul li {
-  display: inline-block;S
-  float: left;
-  list-style-type: none;
-  width: auto;
-}
-nav ul li a {
-  color: #fff;
-} */
 .nav-wrap {
   margin-bottom: 1.5em;
 }
@@ -141,9 +128,12 @@ nav.navbar {
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
-  position: fixed;
+  /* position: fixed;
   top: 0;
-  width: 100%;
+  width: 100%; */
+  position: sticky;
+	top: 2rem;
+	align-self: start;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
@@ -159,4 +149,18 @@ nav.navbar {
 }
 .fill-sticky-gap {
   margin-bottom: 105px;
+}
+
+.navbar-expand-sm .navbar-nav {
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+h2.col-12 {
+  padding-bottom: 1em;
+}
+section {
+  padding-top: 20px;
+}
+.card-title {
+  color: #000;
 }
