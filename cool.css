@@ -24,8 +24,6 @@ body {
   background-color: #cccccc;
 
   font-family: 'VT323', monospace;
-
-
 }
 
 #welcome 	{
@@ -37,7 +35,7 @@ body {
 }
 
 #title {
-  padding: 40px 0px;
+  padding: 40px 0px 0;
   z-index: 3;
 }
 a, a:hover {
@@ -65,42 +63,94 @@ a, a:hover {
 }
 
 @keyframes bounce {
-  25% {transform: translateY(-12.5px);}
+  25% {transform: translateY(-17.5px);}
   50% {transform: translateY(-6.25px);}
   65% {transform: translateY(-11.25px);}
-  /* 75% {transform: translateY(-35px);} */
   80% {transform: translateY(-10px);}
   100% {transform: translateY(-10px);}
 }
-
-/* @-o-keyframes bounce {
-  25% {transform: translateY(-50px);}
-  50% {transform: translateY(-25px);}
-  65% {transform: translateY(-45px);}
-  75% {transform: translateY(-35px);}
-  80% {transform: translateY(-40px);}
+@-o-keyframes bounce {
+  25% {transform: translateY(-17.5px);}
+  50% {transform: translateY(-6.25px);}
+  65% {transform: translateY(-11.25px);}
+  80% {transform: translateY(-10px);}
+  100% {transform: translateY(-10px);}
 }
-
 @-moz-keyframes bounce {
-  25% {transform: translateY(-50px);}
-  50% {transform: translateY(-25px);}
-  65% {transform: translateY(-45px);}
-  75% {transform: translateY(-35px);}
-  80% {transform: translateY(-40px);}
+  25% {transform: translateY(-17.5px);}
+  50% {transform: translateY(-6.25px);}
+  65% {transform: translateY(-11.25px);}
+  80% {transform: translateY(-10px);}
+  100% {transform: translateY(-10px);}
 }
-
 @-webkit-keyframes bounce {
-  25% {transform: translateY(-50px);}
-  50% {transform: translateY(-25px);}
-  65% {transform: translateY(-45px);}
-  75% {transform: translateY(-35px);}
-  80% {transform: translateY(-40px);}
-  100% {transform: translateY(-40px);}
-} */
-
-
+  25% {transform: translateY(-17.5px);}
+  50% {transform: translateY(-6.25px);}
+  65% {transform: translateY(-11.25px);}
+  80% {transform: translateY(-10px);}
+  100% {transform: translateY(-10px);}
+}
 .card:hover {
   animation: bounce 0.75s ease-in-out;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
+}
+
+.sticky {    
+  animation: nav-fade-anim .5s; 
+  animation-fill-mode: both;
+}
+@keyframes nav-fade-anim {
+  from {background-color: transparent}
+  to {background-color: rgba(17, 96, 37, 0.85);}
+}
+
+@keyframes fade-in {
+  from {opacity: 0; transform: scale(.7,.7)}
+  to {opacity: 1;}
+}
+.fade-in-element {
+animation: fade-in 1.4s;
+}
+/* nav ul {
+  text-align: center;
+  display: block;
+}
+nav ul li {
+  display: inline-block;S
+  float: left;
+  list-style-type: none;
+  width: auto;
+}
+nav ul li a {
+  color: #fff;
+} */
+.nav-wrap {
+  margin-bottom: 1.5em;
+}
+.navbar-nav {
+  font-size: 28px;
+}
+nav.navbar {
+  justify-content: center;
+}
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+#sticky-nav {
+  overflow: hidden;
+  z-index: 10;
+}
+.fill-sticky-gap {
+  margin-bottom: 105px;
 }
