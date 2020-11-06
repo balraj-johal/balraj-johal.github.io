@@ -2,6 +2,9 @@
   font-family: 'ticketing' ;
   src: url('/Ticketing.ttf') format('truetype');
 }
+html {
+	scroll-behavior: smooth;
+}
 body {   
 }
 h1 {
@@ -150,6 +153,9 @@ nav.navbar {
 #sticky-nav {
   overflow: hidden;
   z-index: 10;
+}
+#sticky-nav a {
+  transition: all 100ms ease-in-out;
 }
 .fill-sticky-gap {
   margin-bottom: 105px;
