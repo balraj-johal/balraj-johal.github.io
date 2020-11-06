@@ -164,3 +164,7 @@ section {
 .card-title {
   color: #000;
 }
+p.body-text {
+  color: white;
+  padding: 0 15px;
+}
