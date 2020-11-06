@@ -16,15 +16,15 @@ h1, h2 {
   font-family: 'VT323', monospace;
 }
 p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'PT Sans', sans-serif;
 }
 h2 {
   font-size: 1.8rem;
 }
 body {  
-  background-image: url("res/sarahdarkslow.gif");
-  background-size:100% 100%;
-  background-color: #cccccc;
+  /* background-image: url("res/sarahdarkslow.gif");
+  background-size:100% 100%; */
+  /* background-color: #cccccc; */
 
   font-family: 'VT323', monospace;
 }
@@ -167,4 +167,5 @@ section {
 p.body-text {
   color: white;
   padding: 0 15px;
+  font-size: 1.1rem;
 }

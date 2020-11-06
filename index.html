@@ -10,6 +10,7 @@
 
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="cool.css">
+    <link rel="stylesheet" id="css-that-switches" type="text/css" href="static.css">
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -20,7 +21,15 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff"> 
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- sticky header JS behaviour -->
     <script src="./sticky.js"></script> 
+    <!-- CSS switcher JS behaviour -->
+    <script src="./style-switcher.js"></script> 
+
+    <!-- Google Fonts --> 
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet"> 
 
     <title>Balraj Johal</title>
   </head>
@@ -31,6 +40,10 @@ Author:	Balraj Johal
   <body>
     <h1 id="title"><center>BALRAJ JOHAL<center></h1>
     <div class="nav-wrap">
+      <select name="style" id="style-switcher">
+        <option value="static">static</option>
+        <option value="mono">mono</option>
+      </select>
     </div>
 
     <div class="container">
@@ -122,7 +135,7 @@ Author:	Balraj Johal
               <div class="col-lg-6 col-12">
                 <div class="card">
                   <div class=card-img-wrap>
-                    <img class="card-img-top" src="res/ar.png" alt="Card image cap">
+                    <img class="card-img-top" src="res/liver seg.png" alt="Card image cap">
                   </div>
                   <div class="card-body">
                     <h2 class="card-title">TensorFlow Biomedical Image Segmentation</h2>
@@ -198,9 +211,9 @@ Author:	Balraj Johal
           <section id="about">
             <div class="row">
               <h2 class="col-12">About</h2>
-              <p class="body-text">Hi 😁 I'm primarily a Software Developer, I graduated from
-                The University of Sheffield withh a degree in Artificial Intelligence
-                & Computer Science.
+              <p class="body-text">I'm primarily a Software Developer, with a year
+                of Industry Experience as a Full-Stack Web-Developer and
+                 General Software Developer.
               </p>
             </div>
           </section>
