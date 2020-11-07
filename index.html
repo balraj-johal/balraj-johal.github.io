@@ -41,10 +41,18 @@ Author:	Balraj Johal
   <body>
     <div class="xs-header sticky-header">
       <h1 id="title"><center>BALRAJ JOHAL<center></h1>
-        <select name="style" id="style-switcher">
-          <option value="static" selected>static</option>
-          <option value="mono">mono</option>
-        </select>
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#style-switcher-collapse" aria-controls="style-switcher-collapse" aria-expanded="false" aria-label="Toggle Style Switcher">
+          <span class="">X</span>
+        </button>
+        <div class="collapse" id="style-switcher-collapse">
+          <select name="style" id="style-switcher">
+            <option value="static" selected>static</option>
+            <option value="mono">mono</option>
+          </select>
+        </div>
+
         <div id="navbar-wrapper-xs" class="col-lg-3 col-sm-5">
           <nav id="sticky-nav-xs" class="navbar navbar-expand-sm navbar-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
