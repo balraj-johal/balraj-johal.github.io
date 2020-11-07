@@ -179,9 +179,9 @@ p.body-text {
     height: 100px;
   }
   .xs-header select {
-    position: absolute;
+    /* position: absolute;
     top: 53px;
-    right: 40px;
+    right: 40px; */
   }
   #navbarNav {
     background-color: rgba(0, 0, 0, 0.75);
@@ -203,13 +203,26 @@ p.body-text {
       margin: 0;
     }
     .xs-header select {
-      top: 31px !important;
+      /* top: 31px !important; */
     }
     #navbar-wrapper-xs {
       top: 15px !important;
     }
     .xs-header {
       height: 80px !important;
+    }
+    .style-switcher-btn {
+      /* position: absolute;
+      top: 31px;
+      right: 40px;
+      color: white; */
+    }
+    .style-switcher-wrap {
+      width: 60px;
+      position: absolute;
+      top: 25px;
+      right: 13px;
+      z-index: 15;
     }
 }
 @media (min-width: 576px) {
@@ -221,4 +234,8 @@ p.body-text {
 .navbar-dark .navbar-toggler {
   color: rgba(255,255,255,.5);
   border-color: rgba(255,255,255,0);
+}
+.brush {
+  color: rgba(255,255,255,.5);
+  font-size: 30px;
 }
