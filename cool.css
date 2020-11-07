@@ -162,12 +162,44 @@ p.body-text {
     max-width: 390px;
     margin: auto;
   }
+  h2 {
+    max-width: 390px;
+    margin: auto;
+  }
   .hide-on-xs {
     display: none;
   }
+  #navbar-wrapper-xs {
+    position: absolute;
+    top: 36px;
+  }
+  .xs-header {
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100px;
+  }
+  .xs-header select {
+    position: absolute;
+    top: 53px;
+    right: 40px;
+  }
+  #navbarNav {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: relative;
+    top: 16px;
+    width: 100%;
+    margin-left: -31px;
+    margin-right: 30%;
+    padding-left: 15px;
+    }
 }
 @media (min-width: 576px) {
   .xs-header {
     display: none;
   }
+}
+
+.navbar-dark .navbar-toggler {
+  color: rgba(255,255,255,.5);
+  border-color: rgba(255,255,255,0);
 }
