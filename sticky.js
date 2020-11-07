@@ -6,6 +6,7 @@ window.onload = function() {
     // Get the navbar
     var navbar = document.getElementById("sticky-nav");
     var title = document.getElementById("title");
+    var navbarWrapper = document.getElementById("navbar-wrapper");
     // Get the offset position of the navbar
     var sticky = navbar.offsetTop;
 
@@ -16,6 +17,15 @@ window.onload = function() {
             // title.classList.add("fill-sticky-gap")
         } else {
             navbar.classList.remove("sticky");
+            // title.classList.remove("fill-sticky-gap")
+        }
+
+        
+        if (window.matchMedia('(max-width: 576px)').matches) {
+            navbarWrapper.classList.add("sticky")
+            // title.classList.add("fill-sticky-gap")
+        } else {
+            navbarWrapper.classList.remove("sticky");
             // title.classList.remove("fill-sticky-gap")
         }
     } 

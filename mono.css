@@ -6,3 +6,6 @@ body {
 h1, h2 {
     color: #000;
 }
+p, nav {
+    color: darkgray !important;
+}
