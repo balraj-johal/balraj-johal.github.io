@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    // background-image: url("./res/sarahdarkslow.gif");
+    background-image: url("./res/bgs/1.gif");
+    // background-image: url("./res/bgs/2.gif");
+    // background-image: url("./res/bgs/3.gif");
+    background-size:100% 100%;
+    background-color: #cccccc;
+}
+.app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .main {
+        position: relative;
+        height: 760px;
+        width: 1250px;
+        background-color: rgba(148,148,148, 0.34);
+        color: white;
+        overflow: hidden; /* Try removing this to see how the sheen works! */
+        --sheenX: 0; /* Set these with JavaScript */
+        --sheenY: 0;
+
+        .side-nav {
+            width: 335px;
+            height: 100%;
+            overflow-y: scroll;
+            font-family: "VT323";
+            .list-header {
+                padding-left: 20px;
+                font-size: 30px;
+                font-weight: 500;
+                margin: 22px auto;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                margin-top: -10px;
+                padding: 0;
+                li {
+                    padding: 10px 15px 11px 32px;
+                    font-size: 22px;
+                }
+                .highlight {
+                    background-color: rgba(255, 255, 255, 0.25);
+                }
+            }
+        }
+        .right-bit {
+            position: absolute;
+            top: 0;
+            left: 335px;
+            height: 100%;
+            width: 915px;
+
+            .header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-left: 26px;
+                height: 70px;
+                font-family: "VT323";
+
+                h1 {
+                    font-size: 42px;
+                    font-weight: bold;
+                    width: 100%;
+                    padding-right: 26px;
+                    text-align: right;
+                    animation-fill-mode: forwards;
+                }
+                span {
+                    font-weight: normal;
+                    font-size: 30px;
+                    margin-right: 5px;
+                    position: absolute;
+                    top: 20px;
+                    right: 15px;
+                    animation-fill-mode: forwards;
+                }
+            }
+            .content-item {
+                height: 690px;
+                overflow-y: scroll;
+
+                .image-container {
+                    height: 530px;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .content {
+                    font-family: 'Roboto Mono', monospace;
+                    padding: 2em 2em;
+                }
+            }
+        }
+    }
+}
+
+.main::after {
+    content: "";
+    position: absolute;
+    top: -400px;
+    right: -400px;
+    bottom: -400px;
+    left: -400px;
+    background: linear-gradient(217deg, rgba(255,255,255,0), rgba(255,255,255,0) 35%, rgba(255, 255, 255, 0.034) 45%, rgba(255, 255, 255, 0.089) 50%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+    transform: translateX(var(--sheenX)) translateY(var(--sheenY));
+    pointer-events: none;
+}
+.hideit {
+    display: none;
+}
+
+.moveitleft {
+    animation: moveleft 1.2s ease-in-out;
+}
+.moveitright {
+    animation: moveright 1.2s ease-in-out;
+}
+.movetitleleft {
+    animation: movelefttitle 1.2s ease-in-out;
+}
+.movetitleright {
+    animation: moverighttitle 1.2s ease-in-out;
+}
+@keyframes moveleft {
+    0% {
+        padding-right: 26px;
+    }
+    100% {
+        padding-right: 77%;
+    }
+}
+@keyframes movelefttitle {
+    0% {
+        margin-right: -77%;
+    }
+    100% {
+        padding-right: 5px;
+    }
+}
+@keyframes moveright {
+    0% {
+        padding-right: 77%;
+    }
+    100% {
+        padding-right: 26px;
+    }
+}
+@keyframes moverighttitle {
+    0% {
+        padding-right: 5px;
+    }
+    100% {
+        margin-right: -77%;
+    }
+}
