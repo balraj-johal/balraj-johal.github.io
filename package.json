@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "path": "^0.12.7",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
   },
