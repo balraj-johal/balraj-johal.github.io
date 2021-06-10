@@ -15,6 +15,50 @@
     }
 }
 
+$largest: 1300px;
+@media (min-width: $largest) {
+    .app {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .main {
+            height: 770px !important;
+            width: 1250px !important;
+            
+            .side-nav {
+                width: 335px !important;
+            }
+            .right-bit {
+                position: absolute;
+                top: 0;
+                left: 335px;
+                height: 100%;
+                width: 915px !important;
+
+                .content-item {
+                    height: 690px;
+                    overflow-y: scroll;
+                }
+            }
+        }
+    }
+}
+@media (max-width: $largest) {
+    .app {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .main {
+            height: 760px;
+            width: 1250px;
+
+            .right-bit {
+            }
+        }
+    }
+}
+
+
 .App-header {
     background-color: #282c34;
     min-height: 100vh;
@@ -53,13 +97,11 @@
     background-color: #cccccc;
 }
 .app {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     .main {
+        display: flex;
         position: relative;
-        height: 760px;
-        width: 1250px;
+        height: 100%;
+        width: 100%;
         background-color: rgba(148,148,148, 0.34);
         color: white;
         overflow: hidden; /* Try removing this to see how the sheen works! */
@@ -67,7 +109,7 @@
         --sheenY: 0;
 
         .side-nav {
-            width: 335px;
+            width: 30%;
             height: 100%;
             overflow-y: scroll;
             font-family: "VT323";
@@ -92,11 +134,7 @@
             }
         }
         .right-bit {
-            position: absolute;
-            top: 0;
-            left: 335px;
-            height: 100%;
-            width: 915px;
+            width: 70%;
 
             .header {
                 display: flex;
@@ -125,8 +163,6 @@
                 }
             }
             .content-item {
-                height: 690px;
-                overflow-y: scroll;
 
                 .image-container {
                     height: 530px;
@@ -160,6 +196,23 @@
     display: none;
 }
 
+
+@media (min-width: 992px) and (max-width: $largest) {
+    .header {
+        position: relative;
+        h1 {
+            position: absolute;
+            width: 202px !important;
+        }
+    }
+    .moveitleft {
+        animation: movelefta 1.2s ease-in-out !important;
+    }
+    .moveitright {
+        animation: moverighta 1.2s ease-in-out !important;
+    }
+}
+
 .moveitleft {
     animation: moveleft 1.2s ease-in-out;
 }
@@ -177,15 +230,23 @@
         padding-right: 26px;
     }
     100% {
-        padding-right: 77%;
+        padding-right: 75%;
     }
 }
-@keyframes movelefttitle {
+@keyframes movelefta {
     0% {
-        margin-right: -77%;
+        left: 50vw;
     }
     100% {
-        padding-right: 5px;
+        left: 15px;
+    }
+}
+@keyframes moverighta {
+    0% {
+        left: 15px;
+    }
+    100% {
+        left: 50vw;
     }
 }
 @keyframes moveright {
@@ -196,6 +257,14 @@
         padding-right: 26px;
     }
 }
+@keyframes movelefttitle {
+    0% {
+        margin-right: -77%;
+    }
+    100% {
+        padding-right: 5px;
+    }
+}
 @keyframes moverighttitle {
     0% {
         padding-right: 5px;
@@ -204,3 +273,43 @@
         margin-right: -77%;
     }
 }
+
+// .content-item {
+//     overflow-x: hidden;
+//     perspective: 2px;
+// }
+// // .parra-wrap {
+// //     overflow-x: hidden;
+// //     perspective: 2px;
+// //     height: 250px;
+// // }
+// .section {
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     height: 100%;
+// }
+// .parallax::after {
+//     /* Position the pseudo-element to fill the parent */
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+    
+//     /* Scale the image to full */
+//     background-size: cover;
+    
+//     /* Move the element back then scale the element, it helps to appears more slowly */
+//     transform: translateZ(-1px) scale(1.7);
+    
+//     /* Set the parallax section before the other elements. */
+//     z-index: -1;
+// }
+
+// /* Different background images */
+// .parallax-one::after {
+//     background-image: url(https://source.unsplash.com/vs6a4EHj_Ro/1600x900);
+// }

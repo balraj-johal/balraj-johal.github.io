@@ -16,6 +16,56 @@
   }
 }
 
+@media (min-width: 1300px) {
+  .app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .app .main {
+    height: 770px !important;
+    width: 1250px !important;
+  }
+  .app .main .side-nav {
+    width: 335px !important;
+  }
+  .app .main .right-bit {
+    position: absolute;
+    top: 0;
+    left: 335px;
+    height: 100%;
+    width: 915px !important;
+  }
+  .app .main .right-bit .content-item {
+    height: 690px;
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 1300px) {
+  .app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .app .main {
+    height: 760px;
+    width: 1250px;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -73,22 +123,13 @@
   background-color: #cccccc;
 }
 
-.app {
+.app .main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.app .main {
   position: relative;
-  height: 760px;
-  width: 1250px;
+  height: 100%;
+  width: 100%;
   background-color: rgba(148, 148, 148, 0.34);
   color: white;
   overflow: hidden;
@@ -99,7 +140,7 @@
 }
 
 .app .main .side-nav {
-  width: 335px;
+  width: 30%;
   height: 100%;
   overflow-y: scroll;
   font-family: "VT323";
@@ -129,11 +170,7 @@
 }
 
 .app .main .right-bit {
-  position: absolute;
-  top: 0;
-  left: 335px;
-  height: 100%;
-  width: 915px;
+  width: 70%;
 }
 
 .app .main .right-bit .header {
@@ -172,11 +209,6 @@
           animation-fill-mode: forwards;
 }
 
-.app .main .right-bit .content-item {
-  height: 690px;
-  overflow-y: scroll;
-}
-
 .app .main .right-bit .content-item .image-container {
   height: 530px;
 }
@@ -210,6 +242,24 @@
   display: none;
 }
 
+@media (min-width: 992px) and (max-width: 1300px) {
+  .header {
+    position: relative;
+  }
+  .header h1 {
+    position: absolute;
+    width: 202px !important;
+  }
+  .moveitleft {
+    -webkit-animation: movelefta 1.2s ease-in-out !important;
+            animation: movelefta 1.2s ease-in-out !important;
+  }
+  .moveitright {
+    -webkit-animation: moverighta 1.2s ease-in-out !important;
+            animation: moverighta 1.2s ease-in-out !important;
+  }
+}
+
 .moveitleft {
   -webkit-animation: moveleft 1.2s ease-in-out;
           animation: moveleft 1.2s ease-in-out;
@@ -235,7 +285,7 @@
     padding-right: 26px;
   }
   100% {
-    padding-right: 77%;
+    padding-right: 75%;
   }
 }
 
@@ -244,25 +294,43 @@
     padding-right: 26px;
   }
   100% {
-    padding-right: 77%;
+    padding-right: 75%;
   }
 }
 
-@-webkit-keyframes movelefttitle {
+@-webkit-keyframes movelefta {
   0% {
-    margin-right: -77%;
+    left: 50vw;
   }
   100% {
-    padding-right: 5px;
+    left: 15px;
   }
 }
 
-@keyframes movelefttitle {
+@keyframes movelefta {
   0% {
-    margin-right: -77%;
+    left: 50vw;
   }
   100% {
-    padding-right: 5px;
+    left: 15px;
+  }
+}
+
+@-webkit-keyframes moverighta {
+  0% {
+    left: 15px;
+  }
+  100% {
+    left: 50vw;
+  }
+}
+
+@keyframes moverighta {
+  0% {
+    left: 15px;
+  }
+  100% {
+    left: 50vw;
   }
 }
 
@@ -281,6 +349,24 @@
   }
   100% {
     padding-right: 26px;
+  }
+}
+
+@-webkit-keyframes movelefttitle {
+  0% {
+    margin-right: -77%;
+  }
+  100% {
+    padding-right: 5px;
+  }
+}
+
+@keyframes movelefttitle {
+  0% {
+    margin-right: -77%;
+  }
+  100% {
+    padding-right: 5px;
   }
 }
 

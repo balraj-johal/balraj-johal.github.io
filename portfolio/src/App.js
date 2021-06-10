@@ -15,16 +15,20 @@ function App() {
     document.onmousemove = handleMouseMove;
 
     function handleMouseMove(event) {
+        let target = document.getElementById("moveTarget")
         const height = window.innerHeight;
         const width = window.innerWidth;
-        let target = document.getElementById("moveTarget")
-        let yAxisDegree = event.pageX / width * 40 - 20;
-        let xAxisDegree = event.pageY / height * -1 * 40 + 20;
-        yAxisDegree = yAxisDegree/movementScaler;
-        xAxisDegree = xAxisDegree/movementScaler;
-        target.style.transform = `rotateY(${yAxisDegree}deg) rotateX(${xAxisDegree}deg)`;
-        // Set the sheen position
-        setSheenPosition(event.pageX / width, event.pageY / width);
+        if (width > 1300) {
+            let yAxisDegree = event.pageX / width * 40 - 20;
+            let xAxisDegree = event.pageY / height * -1 * 40 + 20;
+            yAxisDegree = yAxisDegree/movementScaler;
+            xAxisDegree = xAxisDegree/movementScaler;
+            target.style.transform = `rotateY(${yAxisDegree}deg) rotateX(${xAxisDegree}deg)`;
+            // Set the sheen position
+            setSheenPosition(event.pageX / width, event.pageY / width);
+        } else {
+            target.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        }
     }
 
     function setSheenPosition(xRatio, yRatio) {
