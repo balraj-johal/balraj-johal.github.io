@@ -17,6 +17,22 @@
 }
 
 @media (min-width: 1300px) {
+  .moveitleft {
+    -webkit-animation: moveleft 1.2s ease-in-out;
+            animation: moveleft 1.2s ease-in-out;
+  }
+  .moveitright {
+    -webkit-animation: moveright 1.2s ease-in-out;
+            animation: moveright 1.2s ease-in-out;
+  }
+  .movetitleleft {
+    -webkit-animation: movelefttitle 1.2s ease-in-out;
+            animation: movelefttitle 1.2s ease-in-out;
+  }
+  .movetitleright {
+    -webkit-animation: moverighttitle 1.2s ease-in-out;
+            animation: moverighttitle 1.2s ease-in-out;
+  }
   .app {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -41,6 +57,11 @@
     left: 335px;
     height: 100%;
     width: 915px !important;
+  }
+  .app .main .right-bit .header span {
+    position: absolute;
+    top: 20px;
+    right: 15px;
   }
   .app .main .right-bit .content-item {
     height: 690px;
@@ -191,9 +212,6 @@
 .app .main .right-bit .header h1 {
   font-size: 42px;
   font-weight: bold;
-  width: 100%;
-  padding-right: 26px;
-  text-align: right;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -202,11 +220,15 @@
   font-weight: normal;
   font-size: 30px;
   margin-right: 5px;
-  position: absolute;
-  top: 20px;
-  right: 15px;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  color: rgba(255, 255, 255, 0);
+}
+
+.app .main .right-bit .header .nottransparent {
+  color: white;
 }
 
 .app .main .right-bit .content-item .image-container {
@@ -242,59 +264,58 @@
   display: none;
 }
 
-@media (min-width: 992px) and (max-width: 1300px) {
+@media (min-width: 768px) and (max-width: 1300px) {
   .header {
     position: relative;
   }
-  .header h1 {
+  .right-bit .header span {
     position: absolute;
-    width: 202px !important;
-  }
-  .moveitleft {
-    -webkit-animation: movelefta 1.2s ease-in-out !important;
-            animation: movelefta 1.2s ease-in-out !important;
-  }
-  .moveitright {
-    -webkit-animation: moverighta 1.2s ease-in-out !important;
-            animation: moverighta 1.2s ease-in-out !important;
+    left: 20px;
+    font-size: 26px !important;
   }
 }
 
 .moveitleft {
-  -webkit-animation: moveleft 1.2s ease-in-out;
-          animation: moveleft 1.2s ease-in-out;
+  position: absolute;
+  left: 0;
+  text-align: left;
+  width: 25% !important;
 }
 
 .moveitright {
-  -webkit-animation: moveright 1.2s ease-in-out;
-          animation: moveright 1.2s ease-in-out;
-}
-
-.movetitleleft {
-  -webkit-animation: movelefttitle 1.2s ease-in-out;
-          animation: movelefttitle 1.2s ease-in-out;
-}
-
-.movetitleright {
-  -webkit-animation: moverighttitle 1.2s ease-in-out;
-          animation: moverighttitle 1.2s ease-in-out;
+  position: absolute;
+  left: 0;
+  text-align: left;
+  width: 25% !important;
 }
 
 @-webkit-keyframes moveleft {
   0% {
-    padding-right: 26px;
+    right: 0%;
+    left: 75%;
+    color: red;
+    text-align: right;
   }
   100% {
-    padding-right: 75%;
+    right: 100%;
+    left: 0%;
+    color: blue;
+    text-align: left;
   }
 }
 
 @keyframes moveleft {
   0% {
-    padding-right: 26px;
+    right: 0%;
+    left: 75%;
+    color: red;
+    text-align: right;
   }
   100% {
-    padding-right: 75%;
+    right: 100%;
+    left: 0%;
+    color: blue;
+    text-align: left;
   }
 }
 
@@ -335,20 +356,32 @@
 }
 
 @-webkit-keyframes moveright {
-  0% {
-    padding-right: 77%;
-  }
   100% {
-    padding-right: 26px;
+    right: 0%;
+    left: 75%;
+    color: red;
+    text-align: right;
+  }
+  0% {
+    right: 100%;
+    left: 0%;
+    color: blue;
+    text-align: left;
   }
 }
 
 @keyframes moveright {
-  0% {
-    padding-right: 77%;
-  }
   100% {
-    padding-right: 26px;
+    right: 0%;
+    left: 75%;
+    color: red;
+    text-align: right;
+  }
+  0% {
+    right: 100%;
+    left: 0%;
+    color: blue;
+    text-align: left;
   }
 }
 
@@ -386,5 +419,35 @@
   100% {
     margin-right: -77%;
   }
+}
+
+#content-scrollbar-cust::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #f5f5f500;
+}
+
+#content-scrollbar-cust::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f500;
+}
+
+#content-scrollbar-cust::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #adadad;
+}
+
+#sidenav-scrollbar-cust::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #f5f5f500;
+}
+
+#sidenav-scrollbar-cust::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f500;
+}
+
+#sidenav-scrollbar-cust::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #adadad;
 }
 /*# sourceMappingURL=App.css.map */

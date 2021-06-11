@@ -63,7 +63,7 @@ function SideNav(props) {
     }, [props.selectedItem])
 
     return(
-        <div className="side-nav">
+        <div className="side-nav" id="sidenav-scrollbar-cust">
             <h2 className="list-header">Professional Work</h2>
             <ul>
                 {professional.map((item, index) => (
