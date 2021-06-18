@@ -1,6 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
-import { selectItem } from "./actions/actions";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import './App.css';
 

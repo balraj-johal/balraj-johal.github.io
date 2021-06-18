@@ -13,7 +13,7 @@ const items = [
         name: "",
         img_src: "",
         content: `Hi this is my name hello again `,
-        id: "test"
+        id: "HOME"
     },
     {
         name: "Routes",

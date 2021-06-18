@@ -3,8 +3,6 @@ import { connect } from "react-redux";
 import { selectItem } from "../actions/actions";
 
 function SideNav(props) {
-    // let { url } = useRouteMatch();
-    let url = "test";
 
     const professional = [
         {
@@ -57,7 +55,7 @@ function SideNav(props) {
             items[i].classList.remove("highlight")
             
         }
-        if (props.selectedItem.id != "fukc") {
+        if (props.selectedItem.id !== "HOME") {
             document.getElementById("list-item-"+(props.selectedItem.id+1)).classList.add("highlight")
         }
     }, [props.selectedItem])

@@ -1,5 +1,3 @@
-import qs from 'qs';
-
 //import declared action types
 import {
     SELECT_ITEM
