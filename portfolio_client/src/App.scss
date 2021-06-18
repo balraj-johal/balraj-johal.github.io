@@ -1,19 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
-.App {
-    text-align: center;
-}
-
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
 
 $largest: 1300px;
 @media (min-width: $largest) {
@@ -47,7 +33,7 @@ $largest: 1300px;
                 height: 100%;
                 width: 915px !important;
                 .header {
-                    span {
+                    div {
                         position: absolute;
                         top: 20px;
                         right: 15px;
@@ -69,37 +55,10 @@ $largest: 1300px;
         .main {
             height: 760px;
             width: 1250px;
-
-            .right-bit {
-            }
         }
     }
 }
 
-
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
 
 .bg {
     position: absolute;
@@ -122,10 +81,9 @@ $largest: 1300px;
         width: 100%;
         background-color: rgba(148,148,148, 0.34);
         color: white;
-        overflow: hidden; /* Try removing this to see how the sheen works! */
-        --sheenX: 0; /* Set these with JavaScript */
+        overflow: hidden;
+        --sheenX: 0;
         --sheenY: 0;
-
         .side-nav {
             width: 30%;
             height: 100%;
@@ -153,7 +111,6 @@ $largest: 1300px;
         }
         .right-bit {
             width: 70%;
-
             .header {
                 display: flex;
                 align-items: center;
@@ -161,29 +118,21 @@ $largest: 1300px;
                 padding-left: 26px;
                 height: 70px;
                 font-family: "VT323";
-
                 h1 {
                     font-size: 42px;
                     font-weight: bold;
-                    // width: 100%;
-                    // padding-right: 26px;
-                    // text-align: right;
-                    animation-fill-mode: forwards;
+                    animation-fill-mode: forwards !important;
                 }
-                span {
+                div {
                     font-weight: normal;
                     font-size: 30px;
                     margin-right: 5px;
                     animation-fill-mode: forwards;
                     transition: 1s ease;
-                    color: rgba(255, 255, 255, 0);
-                }
-                .nottransparent {
-                    color: white;
                 }
             }
             .content-item {
-
+                overflow-y: scroll; 
                 .image-container {
                     height: 530px;
                     img {
@@ -221,51 +170,83 @@ $largest: 1300px;
     .header {
         position: relative;
         h1 {
-            // position: absolute;
-            // width: 202px !important;
+            font-size: 31px !important;
+            animation-fill-mode: forwards;
+            transition: 1s ease;
+        }
+        div {
+            width: 100%;
+            text-align: right;
         }
     }
     .moveitleft {
-        // animation: movelefta 1.2s ease-in-out !important;
+        animation: moveleft 1.2s ease-in-out !important;
+        padding: 0 0 0 15px;
     }
     .moveitright {
-        // animation: moverighta 1.2s ease-in-out !important;
+        animation: moveright 1.2s ease-in-out !important;
+        padding: 0 15px 0 0;
+    }
+    .movetitleleft {
+        animation: movelefttitle 1.2s ease-in-out;
+    }
+    .movetitleright {
+        animation: moverighttitle 1.2s ease-in-out;
     }
     .right-bit {
         .header {
-            span {
-                position: absolute;
-                left: 20px;
+            div {
+                padding-right: 10px;
+                left: 0;
                 font-size: 26px !important;
             }
         }
     }
 }
 
-.moveitleft {
+.moveitleft, .moveitright {
     position: absolute;
     left: 0;
-    text-align: left;
-    width: 25% !important;
-}
-.moveitright {
-    position: absolute;
-    left: 0;
-    text-align: left;
     width: 25% !important;
 }
 @keyframes moveleft {
     0% {
         right: 0%;
-        left: 75%;
-        color: red;
+        left: 73%;
         text-align: right;
     }
     100% {
         right: 100%;
         left: 0%;
-        color: blue;
         text-align: left;
+    }
+}
+@keyframes moveright {
+    0% {
+        right: 100%;
+        left: 0%;
+        text-align: left;
+    }
+    100% {
+        right: 0%;
+        left: 73%;
+        text-align: right;
+    }
+}
+@keyframes movelefttitle {
+    0% {
+        color: rgba(255,255,255,0);
+    }
+    100% {
+        color: white;
+    }
+}
+@keyframes moverighttitle {
+    100% {
+        color: white;
+    }
+    0% {
+        color: rgba(255,255,255,0);
     }
 }
 @keyframes movelefta {
@@ -284,44 +265,8 @@ $largest: 1300px;
         left: 50vw;
     }
 }
-@keyframes moveright {
-    100% {
-        right: 0%;
-        left: 75%;
-        color: red;
-        text-align: right;
-    }
-    0% {
-        right: 100%;
-        left: 0%;
-        color: blue;
-        text-align: left;
-    }
-    // 0% {
-    //     padding-right: 77%;
-    // }
-    // 100% {
-    //     padding-right: 26px;
-    // }
-}
-@keyframes movelefttitle {
-    0% {
-        margin-right: -77%;
-    }
-    100% {
-        padding-right: 5px;
-    }
-}
-@keyframes moverighttitle {
-    0% {
-        padding-right: 5px;
-    }
-    100% {
-        margin-right: -77%;
-    }
-}
 
-
+//SCROLLBAR
 
 #content-scrollbar-cust::-webkit-scrollbar-track
 {
