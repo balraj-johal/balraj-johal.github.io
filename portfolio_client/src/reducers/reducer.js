@@ -12,8 +12,8 @@ const items = [
     {
         name: "",
         img_src: "",
-        content: `Hi this is my name hello again suck my balls`,
-        id: "fukc"
+        content: `Hi this is my name hello again `,
+        id: "test"
     },
     {
         name: "Routes",
