@@ -2,27 +2,27 @@ import { useEffect } from "react";
 import { connect } from "react-redux";
 import { selectItem } from "../actions/actions";
 
-function SideNav(props) {
+function Nav(props) {
 
-    const professional = [
+    const categories = [
         {
-            name: "Routes",
+            name: "Skills",
             id: 1
         },
         {
-            name: "XR Stories - Treo",
+            name: "About Me",
             id: 2
         },
         {
-            name: "IoC Student Enterprises Website",
+            name: "Profressional Work",
             id: 3
         },
         {
-            name: "Robot Theatre",
+            name: "Other Stuff",
             id: 4
         },
         {
-            name: "AR/AI Visual Programming Toolkit",
+            name: "Socials",
             id: 5
         },
     ]
@@ -61,27 +61,25 @@ function SideNav(props) {
     }, [props.selectedItem])
 
     return(
-        <div className={`${(props.mobile) ? "hideit" : "side-nav"}`} id="sidenav-scrollbar-cust">
-            <h2 className="list-header">Professional Work</h2>
-            <ul>
-                {professional.map((item, index) => (
-                    <li className="list-item" id={"list-item-"+item.id} key={index} onClick={() => {
-                        props.selectItem(item.id);
+        <div className="mobile-nav" id="mobile-nav-elem">
+            <div id="category-list">
+                {categories.map((item, index) => (
+                    <div className="list-item" id={"list-item-"+item.id} key={index} onClick={() => {
+                        // props.selectItem(item.id); //TODO SELECT CATEGORY HERE
                     }} >
-                       {item.name}
-                    </li>
+                       <a>{item.name}</a>
+                    </div>
                 ))}
-            </ul>
+            </div>
             
-            <h2 className="list-header">Other Stuff</h2>
-            <ul>
-                {other.map((item, index) => (
+            <ul id="item-list">
+                {/* {other.map((item, index) => (
                     <li className="list-item" id={"list-item-"+item.id} key={index} onClick={() => {
                         props.selectItem(item.id);
                     }} >
                         {item.name}
                     </li>
-                ))}
+                ))} */}
             </ul>
         </div>
     )
@@ -96,4 +94,4 @@ export default connect(
     {
         selectItem
     }
-)(SideNav);
+)(Nav);

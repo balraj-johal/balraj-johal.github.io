@@ -1,17 +1,42 @@
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
 import './App.css';
 
-import SideNav from "./components/SideNav"
-import ContentItem from "./components/ContentItem"
 import { Provider } from "react-redux";
 import store from "./store";
+import { useEffect, useState } from 'react';
+
+import Nav from "./components/Nav"
+import SideNav from "./components/SideNav"
+import ContentItem from "./components/ContentItem"
 import Header from "./components/Header";
 
 function App() {
     const movementScaler = 10;
     document.onmousemove = handleMouseMove;
 
+    //check if we should render mobile version
+    let [mobile, setMobile] = useState(false);
+    let isMobile = () => {
+        if (window.innerWidth <= 576) {
+            setMobile(true);
+        } else {
+            setMobile(false);
+        }
+        console.log(mobile);
+    }
+    useEffect(() => {
+        window.addEventListener('resize', isMobile);
+        if (window.innerWidth <= 576) {
+            setMobile(true);
+        } else {
+            setMobile(false);
+        }
+        
+        return () => {
+            window.removeEventListener('resize', isMobile);
+        };
+    })
+    
+    //3D window effect
     function handleMouseMove(event) {
         let target = document.getElementById("moveTarget")
         const height = window.innerHeight;
@@ -28,7 +53,6 @@ function App() {
             target.style.transform = `rotateY(0deg) rotateX(0deg)`;
         }
     }
-
     function setSheenPosition(xRatio, yRatio) {
         // This creates a "distance" up to 400px each direction to offset the sheen
         const xOffset = 1 - (xRatio - 0.5) * 800;
@@ -42,9 +66,12 @@ function App() {
         <Provider store={store}>
             <div className="app bg" style={{perspective: "800px"}}>
                 <div className="main" id="moveTarget">
-                    <SideNav></SideNav>
-                    <div className="right-bit">
+                    <SideNav mobile={mobile}></SideNav>
+                    <div className={`${(mobile) ? "" : "right-bit" }`}>
                         <Header></Header>
+                        <div className={`${(mobile) ? "" : "hideit" }`}>
+                            <Nav mobile={true}></Nav>
+                        </div>
                         <ContentItem></ContentItem>
                     </div>
                 </div>

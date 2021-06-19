@@ -18,6 +18,14 @@
   }
 }
 
+@media (min-width: 576px) {
+  .moveitleft, .moveitright {
+    position: absolute;
+    left: 0;
+    width: 25% !important;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1300px) {
   .header {
     margin-top: 2px;
@@ -106,6 +114,9 @@
   }
   .app .main .side-nav .list-header {
     font-size: 30px;
+  }
+  .app .main .side-nav .list-item {
+    font-size: 22px;
   }
   .app .main .right-bit {
     position: absolute;
@@ -256,6 +267,40 @@
   padding: 2em 2em;
 }
 
+.mobile-nav ul {
+  list-style-type: none;
+}
+
+.mobile-nav ul li {
+  float: left;
+  padding: 10px 10px;
+}
+
+.mobile-nav #category-list {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  overflow-x: auto;
+}
+
+.mobile-nav #category-list::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile-nav #category-list .list-item {
+  padding: 10px 20px;
+  width: auto;
+  height: 10px;
+}
+
+.mobile-nav #category-list .list-item a {
+  white-space: nowrap;
+}
+
 .main::after {
   content: "";
   position: absolute;
@@ -271,12 +316,6 @@
 
 .hideit {
   display: none;
-}
-
-.moveitleft, .moveitright {
-  position: absolute;
-  left: 0;
-  width: 25% !important;
 }
 
 @-webkit-keyframes moveleft {
@@ -403,13 +442,18 @@
   }
 }
 
+#content-scrollbar-cust, #sidenav-scrollbar-cust {
+  scrollbar-color: gray rgba(1, 0, 0, 0);
+  scrollbar-width: thin;
+}
+
 #content-scrollbar-cust::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: #f5f5f500;
 }
 
 #content-scrollbar-cust::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
   background-color: #f5f5f500;
 }
 
@@ -424,7 +468,7 @@
 }
 
 #sidenav-scrollbar-cust::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
   background-color: #f5f5f500;
 }
 

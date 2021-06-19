@@ -1,3 +1,5 @@
+// @use "styles/mobile";
+
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 
@@ -22,6 +24,13 @@ $largest: 1300px;
     }
 }
 
+@media (min-width: 576px) {
+    .moveitleft, .moveitright {
+        position: absolute;
+        left: 0;
+        width: 25% !important;
+    }
+}
 @media (min-width: 768px) and (max-width: $largest) {
     .header {
         margin-top: 2px;
@@ -98,6 +107,9 @@ $largest: 1300px;
                 width: 335px !important;
                 .list-header {
                     font-size: 30px;
+                }
+                .list-item {
+                    font-size: 22px;
                 }
             }
             .right-bit {
@@ -215,6 +227,38 @@ $largest: 1300px;
     }
 }
 
+@mixin hideScrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+.mobile-nav {
+    ul {
+        list-style-type: none;
+        li {
+            float: left;
+            padding: 10px 10px;
+        }
+    }
+    #category-list {
+        @include hideScrollbar();
+        display: flex;
+        width: 400px;
+        overflow-x: auto;
+        .list-item {
+            padding: 10px 20px;
+            width: auto;
+            height: 10px;
+            // display: block ruby;
+            a {
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
 .main::after {
     content: "";
     position: absolute;
@@ -232,11 +276,6 @@ $largest: 1300px;
 
 
 
-.moveitleft, .moveitright {
-    position: absolute;
-    left: 0;
-    width: 25% !important;
-}
 @keyframes moveleft {
     0% {
         right: 0%;
@@ -296,6 +335,10 @@ $largest: 1300px;
 
 //SCROLLBAR
 
+#content-scrollbar-cust, #sidenav-scrollbar-cust {
+    scrollbar-color: gray rgba(1,0,0,0);
+    scrollbar-width: thin;
+}
 #content-scrollbar-cust::-webkit-scrollbar-track
 {
 	border-radius: 10px;
@@ -303,7 +346,7 @@ $largest: 1300px;
 }
 #content-scrollbar-cust::-webkit-scrollbar
 {
-	width: 12px;
+	width: 8px;
 	background-color: #f5f5f500;
 }
 #content-scrollbar-cust::-webkit-scrollbar-thumb
@@ -319,7 +362,7 @@ $largest: 1300px;
 }
 #sidenav-scrollbar-cust::-webkit-scrollbar
 {
-	width: 12px;
+	width: 8px;
 	background-color: #f5f5f500;
 }
 #sidenav-scrollbar-cust::-webkit-scrollbar-thumb
