@@ -73,7 +73,7 @@ const items = [
         name: "XR Stories - Treo",
         img_src: "treo.png",
         id: 1,
-        content: `fuck. `
+        content: `fcu. `
     },
     {
         name: "IoC Student Enterprises Website",
@@ -149,7 +149,7 @@ const items = [
         name: "XR Stories - Treo",
         img_src: "treo.png",
         id: 1,
-        content: `fuck. `
+        content: `fcu. `
     },
     {
         name: "IoC Student Enterprises Website",

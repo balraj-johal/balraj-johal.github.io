@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import Nav from "./components/Nav"
 import SideNav from "./components/SideNav"
 import ContentItem from "./components/ContentItem"
+import ContentCarousel from "./components/ContentCarousel"
 import Header from "./components/Header";
 
 function App() {
@@ -65,7 +66,7 @@ function App() {
     return (
         <Provider store={store}>
             <div className="app bg" style={{perspective: "800px"}}>
-                <div className="main" id="moveTarget">
+                {/* <div className="main" id="moveTarget">
                     <SideNav mobile={mobile}></SideNav>
                     <div className={`${(mobile) ? "" : "right-bit" }`}>
                         <Header></Header>
@@ -73,6 +74,15 @@ function App() {
                             <Nav mobile={true}></Nav>
                         </div>
                         <ContentItem></ContentItem>
+                    </div>
+                </div> */}
+                <div className="main" id="moveTarget">
+                    <div className={`${(mobile) ? "" : "right-bit" }`}>
+                        <Header></Header>
+                        <div className={`${(mobile) ? "" : "hideit" }`}>
+                            <Nav mobile={true}></Nav>
+                        </div>
+                        <ContentCarousel></ContentCarousel>
                     </div>
                 </div>
             </div>

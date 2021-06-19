@@ -4,7 +4,7 @@ import { selectItem } from "../actions/actions";
 
 function Nav(props) {
 
-    const categories = [
+    const CATEGORIES = [
         {
             name: "Skills",
             id: 1
@@ -26,28 +26,6 @@ function Nav(props) {
             id: 5
         },
     ]
-    const other = [
-        {
-            name: "Routes",
-            id: 6
-        },
-        {
-            name: "XR Stories - Treo",
-            id: 7
-        },
-        {
-            name: "IoC Student Enterprises Website",
-            id: 8
-        },
-        {
-            name: "Robot Theatre",
-            id: 9
-        },
-        {
-            name: "AR/AI Visual Programming Toolkit",
-            id: 10
-        },
-    ]
 
     useEffect(() => {
         let items = document.getElementsByClassName("list-item")
@@ -63,7 +41,7 @@ function Nav(props) {
     return(
         <div className="mobile-nav" id="mobile-nav-elem">
             <div id="category-list">
-                {categories.map((item, index) => (
+                {CATEGORIES.map((item, index) => (
                     <div className="list-item" id={"list-item-"+item.id} key={index} onClick={() => {
                         // props.selectItem(item.id); //TODO SELECT CATEGORY HERE
                     }} >
