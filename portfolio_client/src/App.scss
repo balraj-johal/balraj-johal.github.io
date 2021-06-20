@@ -33,6 +33,9 @@ $largest: 1300px;
 
 //MOBILE
 @media (max-width: 576px) {
+    .mobile-wrap {
+        width: 100%;
+    }
     .header h1, .mobile-nav {
         font-family: "VT323";
     }
@@ -43,6 +46,7 @@ $largest: 1300px;
         will-change: transform;
         align-content: center;
         overflow-x: auto;
+        overflow-y: hidden;
         scroll-snap-coordinate: 0 0;
         scroll-snap-points-x: repeat(100%);
         scroll-snap-type: x mandatory;
@@ -384,7 +388,7 @@ $largest: 1300px;
 //SCROLLBAR
 
 #content-scrollbar-cust, #sidenav-scrollbar-cust, .cust-scroll {
-    scrollbar-color: gray rgba(1,0,0,0);
+    scrollbar-color: rgba(112, 112, 112, 0.5) rgba(1,0,0,0);
     scrollbar-width: thin;
 }
 #content-scrollbar-cust::-webkit-scrollbar-track, 
@@ -406,5 +410,5 @@ $largest: 1300px;
 .cust-scroll::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
-	background-color: rgb(173, 173, 173);
+	background-color: rgba(173, 173, 173, 0.5);
 }

@@ -77,7 +77,7 @@ function App() {
                     </div>
                 </div> */}
                 <div className="main" id="moveTarget">
-                    <div className={`${(mobile) ? "" : "right-bit" }`}>
+                    <div className={`${(mobile) ? "mobile-wrap" : "right-bit" }`}>
                         <Header></Header>
                         <div className={`${(mobile) ? "" : "hideit" }`}>
                             <Nav mobile={true}></Nav>
