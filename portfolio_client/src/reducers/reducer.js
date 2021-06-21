@@ -8,7 +8,7 @@ const initialState = {
     test: 1
 };
 
-const items = [
+const ENTRIES = [
     {
         name: "",
         img_src: "",
@@ -185,12 +185,12 @@ export default function(state = initialState, action) {
             //return new state
             return {
                 ...state,
-                selectedItem: items[action.payload]
+                selectedItem: ENTRIES[action.payload]
             };
         default:
             return {
                 ...state,
-                selectedItem: items[0]
+                selectedItem: ENTRIES[0]
             };
         // default:
         //     return state;

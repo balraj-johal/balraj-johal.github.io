@@ -1,8 +1,7 @@
 import { connect } from "react-redux";
 
-
 function ContentCarousel(props) {
-    const ITEMS = [
+    const ENTRIES = [
         // {
         //     name: "",
         //     img_src: "",
@@ -173,24 +172,26 @@ function ContentCarousel(props) {
         },
     ]
     
-
     return(
-        <div className="carousel-wrap" style={{gridTemplateColumns: `repeat(${ITEMS.length}, 100%)`}}>
-            {ITEMS.map((item, index) => (
+        <div className="carousel-wrap" 
+            style={{gridTemplateColumns: `repeat(${ENTRIES.length}, 100%)`}}
+        >
+            {ENTRIES.map((item, index) => (
                 <div className="mobile-content-item" 
                     id={"mobile-contentItem-"+item.id} key={index}
                 >
                     <div className={`image-container ${item.img_src ? "" : "hideit"}`}>
                         <img src={`/res/${item.img_src}`} alt={item.img_alt}
                             width="auto" height={200}
-                            draggable="false"></img>
+                            draggable="false">
+                        </img>
                     </div>
                     <div className="content cust-scroll">
                         <h1>{item.name}</h1>
                         {item.content}
                     </div>
                     <div className="swipe-prompt">
-                        SWIPE ------&gt;
+                        SWIPE ------&gt; {/* TODO: REPLACE WITH SVG ARROW */}
                     </div>
                 </div>
             ))}
