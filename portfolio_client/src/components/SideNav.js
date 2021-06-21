@@ -4,7 +4,7 @@ import { selectItem } from "../actions/actions";
 
 function SideNav(props) {
 
-    const professional = [
+    const PROFESSIONAL_ENTRIES = [
         {
             name: "Routes",
             id: 1
@@ -26,7 +26,7 @@ function SideNav(props) {
             id: 5
         },
     ]
-    const other = [
+    const OTHER_ITEMS = [
         {
             name: "Routes",
             id: 6
@@ -61,10 +61,10 @@ function SideNav(props) {
     }, [props.selectedItem])
 
     return(
-        <div className={`${(props.mobile) ? "hideit" : "side-nav"}`} id="sidenav-scrollbar-cust">
+        <div className="side-nav" id="sidenav-scrollbar-cust">
             <h2 className="list-header">Professional Work</h2>
             <ul>
-                {professional.map((item, index) => (
+                {PROFESSIONAL_ENTRIES.map((item, index) => (
                     <li className="list-item" id={"list-item-"+item.id} key={index} onClick={() => {
                         props.selectItem(item.id);
                     }} >
@@ -75,7 +75,7 @@ function SideNav(props) {
             
             <h2 className="list-header">Other Stuff</h2>
             <ul>
-                {other.map((item, index) => (
+                {OTHER_ITEMS.map((item, index) => (
                     <li className="list-item" id={"list-item-"+item.id} key={index} onClick={() => {
                         props.selectItem(item.id);
                     }} >

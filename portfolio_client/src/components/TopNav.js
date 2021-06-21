@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { connect } from "react-redux";
 import { selectItem } from "../actions/actions";
 
-function Nav(props) {
+function TopNav(props) {
 
     const CATEGORIES = [
         {
@@ -72,4 +72,4 @@ export default connect(
     {
         selectItem
     }
-)(Nav);
+)(TopNav);

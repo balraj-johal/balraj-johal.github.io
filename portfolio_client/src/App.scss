@@ -43,6 +43,9 @@ $largest: 1300px;
     .mobile-wrap {
         width: 100%;
     }
+    .header-selected-item {
+        display: none;
+    }
     .header h1, .mobile-nav {
         font-family: "VT323";
     }
@@ -244,6 +247,7 @@ $largest: 1300px;
 //     filter: grayscale(100%);
 // }
 .app {
+    perspective: 800px;
     .main {
         display: flex;
         position: relative;

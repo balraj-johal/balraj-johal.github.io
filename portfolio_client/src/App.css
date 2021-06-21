@@ -31,6 +31,9 @@
   .mobile-wrap {
     width: 100%;
   }
+  .header-selected-item {
+    display: none;
+  }
   .header h1, .mobile-nav {
     font-family: "VT323";
   }
@@ -227,6 +230,11 @@
   background-image: url("./res/bgs/1.gif");
   background-size: 100% 100%;
   background-color: red;
+}
+
+.app {
+  -webkit-perspective: 800px;
+          perspective: 800px;
 }
 
 .app .main {

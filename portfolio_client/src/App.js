@@ -4,15 +4,13 @@ import { Provider } from "react-redux";
 import store from "./store";
 import { useEffect, useState } from 'react';
 
-import Nav from "./components/Nav"
+import TopNav from "./components/TopNav"
 import SideNav from "./components/SideNav"
 import ContentItem from "./components/ContentItem"
 import ContentCarousel from "./components/ContentCarousel"
 import Header from "./components/Header";
 
 function App() {
-    const movementScaler = 10;
-    document.onmousemove = handleMouseMove;
 
     //check if we should render mobile version
     let [mobile, setMobile] = useState(false);
@@ -37,6 +35,8 @@ function App() {
         };
     })
     
+    const MOVEMENT_SCALE = 10;
+    document.onmousemove = handleMouseMove;
     //3D window effect
     function handleMouseMove(event) {
         let target = document.getElementById("moveTarget")
@@ -45,8 +45,8 @@ function App() {
         if (width > 1300) {
             let yAxisDegree = event.pageX / width * 40 - 20;
             let xAxisDegree = event.pageY / height * -1 * 40 + 20;
-            yAxisDegree = yAxisDegree/movementScaler;
-            xAxisDegree = xAxisDegree/movementScaler;
+            yAxisDegree = yAxisDegree/MOVEMENT_SCALE;
+            xAxisDegree = xAxisDegree/MOVEMENT_SCALE;
             target.style.transform = `rotateY(${yAxisDegree}deg) rotateX(${xAxisDegree}deg)`;
             // Set the sheen position
             setSheenPosition(event.pageX / width, event.pageY / width);
@@ -65,14 +65,12 @@ function App() {
 
     return (
         <Provider store={store}>
-            <div className="app bg" style={{perspective: "800px"}}>
+            <div className="app bg">
                 <div className="main" id="moveTarget">
-                    <SideNav mobile={mobile}></SideNav>
+                    {(mobile) ? null : <SideNav mobile={mobile}></SideNav>}
                     <div className={`${(mobile) ? "mobile-wrap" : "right-bit" }`}>
                         <Header></Header>
-                        <div className={`${(mobile) ? "" : "hideit" }`}>
-                            <Nav mobile={true}></Nav>
-                        </div>
+                        {(mobile) ?  <TopNav /> : null}
                         {(mobile) ? <ContentCarousel /> : <ContentItem />}
                     </div>
                 </div>
