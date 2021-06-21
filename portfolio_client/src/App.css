@@ -19,6 +19,9 @@
 }
 
 @media (max-width: 576px) {
+  .app {
+    overflow: hidden;
+  }
   .bg::before {
     -webkit-filter: blur(4px);
             filter: blur(4px);
@@ -145,22 +148,6 @@
 }
 
 @media (min-width: 1300px) {
-  .moveitleft {
-    -webkit-animation: moveleft 1.2s ease-in-out;
-            animation: moveleft 1.2s ease-in-out;
-  }
-  .moveitright {
-    -webkit-animation: moveright 1.2s ease-in-out;
-            animation: moveright 1.2s ease-in-out;
-  }
-  .movetitleleft {
-    -webkit-animation: movelefttitle 1.2s ease-in-out;
-            animation: movelefttitle 1.2s ease-in-out;
-  }
-  .movetitleright {
-    -webkit-animation: moverighttitle 1.2s ease-in-out;
-            animation: moverighttitle 1.2s ease-in-out;
-  }
   .app {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -203,6 +190,22 @@
   .app .main .right-bit .content-item {
     height: 690px;
     overflow-y: scroll;
+  }
+  .moveitleft {
+    -webkit-animation: moveleft 1.2s ease-in-out;
+            animation: moveleft 1.2s ease-in-out;
+  }
+  .moveitright {
+    -webkit-animation: moveright 1.2s ease-in-out;
+            animation: moveright 1.2s ease-in-out;
+  }
+  .movetitleleft {
+    -webkit-animation: movelefttitle 1.2s ease-in-out;
+            animation: movelefttitle 1.2s ease-in-out;
+  }
+  .movetitleright {
+    -webkit-animation: moverighttitle 1.2s ease-in-out;
+            animation: moverighttitle 1.2s ease-in-out;
   }
 }
 
@@ -519,7 +522,7 @@
 }
 
 #content-scrollbar-cust, #sidenav-scrollbar-cust, .cust-scroll {
-  scrollbar-color: rgba(112, 112, 112, 0.5) rgba(1, 0, 0, 0);
+  scrollbar-color: rgba(199, 199, 199, 0.5) rgba(1, 0, 0, 0);
   scrollbar-width: thin;
 }
 

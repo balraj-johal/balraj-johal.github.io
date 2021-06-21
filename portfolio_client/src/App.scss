@@ -33,6 +33,9 @@ $largest: 1300px;
 
 //MOBILE
 @media (max-width: 576px) {
+    .app {
+        overflow: hidden;
+    }
     .bg::before {
         filter: blur(4px);
         transform: scale(1.1);
@@ -146,18 +149,6 @@ $largest: 1300px;
 }
 
 @media (min-width: $largest) {
-    .moveitleft {
-        animation: moveleft 1.2s ease-in-out;
-    }
-    .moveitright {
-        animation: moveright 1.2s ease-in-out;
-    }
-    .movetitleleft {
-        animation: movelefttitle 1.2s ease-in-out;
-    }
-    .movetitleright {
-        animation: moverighttitle 1.2s ease-in-out;
-    }
     .app {
         display: flex;
         align-items: center;
@@ -197,6 +188,19 @@ $largest: 1300px;
                 }
             }
         }
+    }
+    //ASSIGN ANIMATIONS FOR HEADER
+    .moveitleft {
+        animation: moveleft 1.2s ease-in-out;
+    }
+    .moveitright {
+        animation: moveright 1.2s ease-in-out;
+    }
+    .movetitleleft {
+        animation: movelefttitle 1.2s ease-in-out;
+    }
+    .movetitleright {
+        animation: moverighttitle 1.2s ease-in-out;
     }
 }
 
@@ -417,7 +421,7 @@ $largest: 1300px;
 //SCROLLBAR
 
 #content-scrollbar-cust, #sidenav-scrollbar-cust, .cust-scroll {
-    scrollbar-color: rgba(112, 112, 112, 0.5) rgba(1,0,0,0);
+    scrollbar-color: rgba(199, 199, 199, 0.5) rgba(1,0,0,0);
     scrollbar-width: thin;
 }
 #content-scrollbar-cust::-webkit-scrollbar-track, 
