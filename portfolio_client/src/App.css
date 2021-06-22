@@ -5,6 +5,16 @@
   src: url(./res/fonts/FUTUFRG_.TTF);
 }
 
+@font-face {
+  font-family: "Blackjack";
+  src: url(./res/fonts/BLACKJAC.TTF);
+}
+
+@font-face {
+  font-family: "WhiteRabbit";
+  src: url(./res/fonts/WhiteRabbit.ttf);
+}
+
 @media (max-width: 1300px) {
   .app {
     display: -webkit-box;
@@ -40,7 +50,7 @@
     display: none;
   }
   .header h1 {
-    font-family: "FutureFlash";
+    font-family: "Blackjack";
     font-weight: normal;
   }
   .carousel-wrap {
@@ -99,7 +109,7 @@
     padding-left: 15px;
   }
   .mobile-nav {
-    font-family: "VT323";
+    font-family: "Roboto Mono";
   }
   .mobile-nav ul {
     list-style-type: none;

@@ -21,6 +21,14 @@
     font-family: "FutureFlash";
     src: url(./res/fonts/FUTUFRG_.TTF);
 }
+@font-face {
+    font-family: "Blackjack";
+    src: url(./res/fonts/BLACKJAC.TTF);
+}
+@font-face {
+    font-family: "WhiteRabbit";
+    src: url(./res/fonts/WhiteRabbit.ttf);
+}
 
 $largest: 1300px;
 @media (max-width: $largest) {
@@ -50,9 +58,11 @@ $largest: 1300px;
     .header-selected-item {
         display: none;
     }
-    .header h1 {
-        font-family: "FutureFlash";
-        font-weight: normal;
+    .header {
+        h1 {
+            font-family: "Blackjack";
+            font-weight: normal;
+        }
     }
     .carousel-wrap {
         @include hideScrollbar();
@@ -103,7 +113,8 @@ $largest: 1300px;
         }
     }
     .mobile-nav {
-        font-family: "VT323";
+        // font-family: "VT323";
+        font-family: "Roboto Mono";
         ul {
             list-style-type: none;
             li {
