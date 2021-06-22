@@ -4,7 +4,12 @@ import { selectItem } from "../actions/actions";
 function Header(props) {
     return(
         <div className={`header`} onClick={() => {props.selectItem(0)}}>
-            <h1 className={`${props.selectedItem.name ? "moveitleft" : "moveitright"}`}>
+            <h1 className={`${props.selectedItem.name ? "moveitleft" : "moveitright"}`}
+                onClick={() => {
+                    let test = document.getElementById("mobile-contentItem-0");
+                    test.scrollIntoView(false, {behavior: "smooth"});
+                }}
+            >
                 BALRAJ JOHAL
             </h1>
             <div className={`header-selected-item 

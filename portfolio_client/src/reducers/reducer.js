@@ -104,7 +104,7 @@ const ENTRIES = [
     {
         name: "Routes",
         img_src: "routes.png",
-        id: 0,
+        id: 6,
         content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore 
         magna aliqua. Ut enim ad minim veniam, quis nostrud 
@@ -148,13 +148,13 @@ const ENTRIES = [
     {
         name: "XR Stories - Treo",
         img_src: "treo.png",
-        id: 1,
+        id: 7,
         content: `fcu. `
     },
     {
         name: "IoC Student Enterprises Website",
         img_src: "ioc.png",
-        id: 2,
+        id: 8,
         content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor asdincididunt ut labore et dolore 
         magna aliqua. Ut enim ad minim asdas. Excepteur sint occaecat 
@@ -164,7 +164,7 @@ const ENTRIES = [
     {
         name: "Robot Theatre",
         img_src: "robot.jpg",
-        id: 3,
+        id: 9,
         content: `tese sint occaecat 
         cupidatat non proident, sunt in culpa qui officia 
         deserunt mollit anim id est laborum. `
@@ -172,7 +172,7 @@ const ENTRIES = [
     {
         name: "AR/AI Visual Programming Toolkit",
         img_src: "ar.png",
-        id: 4,
+        id: 10,
         content: `a sint occaecat 
         cupidatat non proident, sunt in culpa qui officia 
         deserunt mollit anim id est laborum. `

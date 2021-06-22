@@ -20,7 +20,6 @@ function App() {
         } else {
             setMobile(false);
         }
-        console.log(mobile);
     }
     useEffect(() => {
         window.addEventListener('resize', isMobile);

@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+@font-face {
+  font-family: "FutureFlash";
+  src: url(./res/fonts/FUTUFRG_.TTF);
+}
+
 @media (max-width: 1300px) {
   .app {
     display: -webkit-box;
@@ -34,8 +39,9 @@
   .header-selected-item {
     display: none;
   }
-  .header h1, .mobile-nav {
-    font-family: "VT323";
+  .header h1 {
+    font-family: "FutureFlash";
+    font-weight: normal;
   }
   .carousel-wrap {
     scrollbar-width: none;
@@ -88,6 +94,46 @@
     width: 90vw;
     text-align: right;
     margin: 3vh 5vw;
+  }
+  .mobile-wrap .header h1 {
+    padding-left: 15px;
+  }
+  .mobile-nav {
+    font-family: "VT323";
+  }
+  .mobile-nav ul {
+    list-style-type: none;
+  }
+  .mobile-nav ul li {
+    float: left;
+    padding: 10px 10px;
+  }
+  .mobile-nav #category-list, .mobile-nav #item-list {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 400px;
+    overflow-x: auto;
+  }
+  .mobile-nav #category-list::-webkit-scrollbar, .mobile-nav #item-list::-webkit-scrollbar {
+    display: none;
+  }
+  .mobile-nav #category-list .list-item, .mobile-nav #item-list .list-item {
+    color: #c9c9c9;
+    padding: 10px 20px;
+    width: auto;
+    height: 14px;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  .mobile-nav #category-list .list-item a, .mobile-nav #item-list .list-item a {
+    white-space: nowrap;
+  }
+  .mobile-nav #item-list {
+    margin-bottom: 5px;
   }
 }
 
@@ -350,40 +396,6 @@
   padding: 2em 2em;
 }
 
-.mobile-nav ul {
-  list-style-type: none;
-}
-
-.mobile-nav ul li {
-  float: left;
-  padding: 10px 10px;
-}
-
-.mobile-nav #category-list {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 400px;
-  overflow-x: auto;
-}
-
-.mobile-nav #category-list::-webkit-scrollbar {
-  display: none;
-}
-
-.mobile-nav #category-list .list-item {
-  padding: 10px 20px;
-  width: auto;
-  height: 10px;
-}
-
-.mobile-nav #category-list .list-item a {
-  white-space: nowrap;
-}
-
 .main::after {
   content: "";
   position: absolute;
@@ -549,5 +561,9 @@
 .cust-scroll::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: rgba(173, 173, 173, 0.5);
+}
+
+.highlight {
+  color: white !important;
 }
 /*# sourceMappingURL=App.css.map */

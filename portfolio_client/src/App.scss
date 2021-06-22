@@ -17,6 +17,11 @@
     }
 }
 
+@font-face {
+    font-family: "FutureFlash";
+    src: url(./res/fonts/FUTUFRG_.TTF);
+}
+
 $largest: 1300px;
 @media (max-width: $largest) {
     .app {
@@ -45,8 +50,9 @@ $largest: 1300px;
     .header-selected-item {
         display: none;
     }
-    .header h1, .mobile-nav {
-        font-family: "VT323";
+    .header h1 {
+        font-family: "FutureFlash";
+        font-weight: normal;
     }
     .carousel-wrap {
         @include hideScrollbar();
@@ -91,6 +97,41 @@ $largest: 1300px;
             }
         }
     }
+    .mobile-wrap {
+        .header h1 {
+            padding-left: 15px;
+        }
+    }
+    .mobile-nav {
+        font-family: "VT323";
+        ul {
+            list-style-type: none;
+            li {
+                float: left;
+                padding: 10px 10px;
+            }
+        }
+        #category-list, #item-list {
+            @include hideScrollbar();
+            display: flex;
+            width: 400px;
+            overflow-x: auto;
+            .list-item {
+                color: rgb(201, 201, 201);
+                padding: 10px 20px;
+                width: auto;
+                height: 14px;
+                transition: 0.5s ease;
+                a {
+                    white-space: nowrap;
+                }
+            }
+        }
+        #item-list {
+            margin-bottom: 5px;
+        }
+    }
+    
 }
 @media (min-width: 576px) {
     .moveitleft, .moveitright {
@@ -213,12 +254,6 @@ $largest: 1300px;
     left: 0;
     height: 100vh;
     width: 100vw;
-    // // background-image: url("./res/sarahdarkslow.gif");
-    // background-image: url("./res/bgs/1.gif");
-    // // background-image: url("./res/bgs/2.gif");
-    // // background-image: url("./res/bgs/3.gif");
-    // background-size:100% 100%;
-    // background-color: #cccccc;
 }
 .bg::before {
     content: "";
@@ -234,17 +269,6 @@ $largest: 1300px;
     background-size:100% 100%;
     background-color: rgba(1,0,0,0);
 }
-// .bg::before {
-//     content: "";
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     position: absolute;
-//     background-image: url(https://images.unsplash.com/photo-1494645009625-cc17363a5f20?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=bd502af39c922553e5a13624d4f44f40);
-//     background-size: cover;
-//     filter: grayscale(100%);
-// }
 .app {
     perspective: 800px;
     .main {
@@ -317,31 +341,6 @@ $largest: 1300px;
                     font-family: 'Roboto Mono', monospace;
                     padding: 2em 2em;
                 }
-            }
-        }
-    }
-}
-
-.mobile-nav {
-    ul {
-        list-style-type: none;
-        li {
-            float: left;
-            padding: 10px 10px;
-        }
-    }
-    #category-list {
-        @include hideScrollbar();
-        display: flex;
-        width: 400px;
-        overflow-x: auto;
-        .list-item {
-            padding: 10px 20px;
-            width: auto;
-            height: 10px;
-            // display: block ruby;
-            a {
-                white-space: nowrap;
             }
         }
     }
@@ -447,4 +446,8 @@ $largest: 1300px;
 {
 	border-radius: 10px;
 	background-color: rgba(173, 173, 173, 0.5);
+}
+
+.highlight {
+    color: white !important;
 }
