@@ -171,7 +171,7 @@ function ContentCarousel(props) {
             cupidatat non proident, sunt in culpa qui officia 
             deserunt mollit anim id est laborum. `
         },
-    ]    
+    ]
     
     function isInViewport(element) {
         if (element) {
@@ -184,6 +184,7 @@ function ContentCarousel(props) {
             );
         }
     }
+
     let handleHighlight = () => {
         for (let i = 0; i < ENTRIES.length; i++) {
             let elem = document.getElementById(`mobile-contentItem-${i}`)
@@ -192,12 +193,11 @@ function ContentCarousel(props) {
                 listItem.classList.remove("highlight");
             }
             if (isInViewport(elem)) {
-                alert(`${i} is in view`);
                 listItem.classList.add("highlight");
+                listItem.scrollIntoView(false, {behavior: "smooth", inline: "end"});
             }
         }
     }
-
     let scrolling = false;
     window.scroll = () => {
         scrolling = true;
@@ -228,7 +228,7 @@ function ContentCarousel(props) {
                         {item.content}
                     </div>
                     <div className="swipe-prompt">
-                        SWIPE ------&gt; {/* TODO: REPLACE WITH SVG ARROW */}
+                        <span>SWIPE &gt;</span> {/* TODO: REPLACE WITH SVG ARROW */}
                     </div>
                 </div>
             ))}

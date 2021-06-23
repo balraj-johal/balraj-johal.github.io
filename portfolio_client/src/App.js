@@ -68,8 +68,10 @@ function App() {
                 <div className="main" id="moveTarget">
                     {(mobile) ? null : <SideNav mobile={mobile}></SideNav>}
                     <div className={`${(mobile) ? "mobile-wrap" : "right-bit" }`}>
-                        <Header></Header>
-                        {(mobile) ?  <TopNav /> : null}
+                        <div className="top-wrap">
+                            <Header></Header>
+                            {(mobile) ?  <TopNav /> : null}
+                        </div>
                         {(mobile) ? <ContentCarousel /> : <ContentItem />}
                     </div>
                 </div>
