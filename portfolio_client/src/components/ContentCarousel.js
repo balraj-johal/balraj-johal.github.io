@@ -193,6 +193,7 @@ function ContentCarousel(props) {
                 listItem.classList.remove("highlight");
             }
             if (isInViewport(elem)) {
+                alert(`${i} is in view`);
                 listItem.classList.add("highlight");
             }
         }
