@@ -198,7 +198,7 @@ function ContentCarousel(props) {
             // return false;
             // console.log("checking elem: ", element)
             const rect = element.getBoundingClientRect();
-            alert(rect.width, ' ', rect.height);
+            alert(`rect.width ${rect.width}, ' ', rect.height ${rect.height}`);
             return (
                 rect.top >= 0 &&
                 rect.left >= 0 &&
