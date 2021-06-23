@@ -1,4 +1,23 @@
+import { useState, useEffect } from 'react';
 import { connect } from "react-redux";
+
+const useIntersection = (element, rootMargin) => {
+    const [isVisible, setState] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setState(entry.isIntersecting);
+            }, { rootMargin }
+        );
+
+        element && observer.observe(element);
+
+        return () => observer.unobserve(element);
+    }, []);
+
+    return isVisible;
+};
 
 function ContentCarousel(props) {
     const ENTRIES = [
@@ -175,8 +194,11 @@ function ContentCarousel(props) {
     
     function isInViewport(element) {
         if (element) {
+            // console.log(useIntersection(element, "0px"));
+            // return false;
             // console.log("checking elem: ", element)
             const rect = element.getBoundingClientRect();
+            alert(rect);
             return (
                 rect.top >= 0 &&
                 rect.left >= 0 &&
@@ -187,13 +209,15 @@ function ContentCarousel(props) {
     }
     let handleHighlight = () => {
         for (let i = 0; i < ENTRIES.length; i++) {
-            alert("test")
+            // alert("test")
             let elem = document.getElementById(`mobile-contentItem-${i}`)
             let listItem = document.getElementById(`list-item-${i}`)
             if (listItem) {
                 listItem.classList.remove("highlight");
             }
             if (isInViewport(elem)) {
+            // if (useIntersection(elem, "0px")) {
+                
                 alert(`${i} is in view`);
                 listItem.classList.add("highlight");
             }
