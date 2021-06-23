@@ -187,6 +187,7 @@ function ContentCarousel(props) {
     }
     let handleHighlight = () => {
         for (let i = 0; i < ENTRIES.length; i++) {
+            alert("test")
             let elem = document.getElementById(`mobile-contentItem-${i}`)
             let listItem = document.getElementById(`list-item-${i}`)
             if (listItem) {
