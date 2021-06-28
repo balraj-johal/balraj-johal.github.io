@@ -373,7 +373,6 @@
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-image: url("./res/bgs/1.gif");
   background-size: 100% 100%;
   background-color: rgba(1, 0, 0, 0);
 }
@@ -391,7 +390,7 @@
   height: 100%;
   width: 100%;
   background-color: rgba(148, 148, 148, 0.34);
-  color: white;
+  color: black;
   overflow: hidden;
   --sheenX: 0;
   --sheenY: 0;
@@ -668,6 +667,7 @@
 
 .highlight {
   color: white !important;
-  margin-top: -1.5px;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
 }
 /*# sourceMappingURL=App.css.map */
