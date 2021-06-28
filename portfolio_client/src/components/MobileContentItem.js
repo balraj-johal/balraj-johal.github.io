@@ -10,7 +10,8 @@ function MobileContentItem(props) {
                 <h1>{props.item.name}</h1>
             <div className="content cust-scroll">
                 {/* <h1>{props.item.name}</h1> */}
-                <div dangerouslySetInnerHTML={{ __html: props.item.content }}></div>
+                <div className="content-override" 
+                    dangerouslySetInnerHTML={{ __html: props.item.content }}></div>
             </div>
             <div className="swipe-prompt">
                 <span>SWIPE &gt;</span> {/* TODO: REPLACE WITH SVG ARROW */}

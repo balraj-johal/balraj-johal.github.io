@@ -139,7 +139,7 @@ const ENTRIES = [
     },
     {
         name: "TensorFlow Biomedical Image Segmentation",
-        img_src: "routes.png",
+        img_src: "liver seg.png",
         id: "5",
         category: "other",
         content: `
@@ -150,7 +150,7 @@ const ENTRIES = [
     },
     {
         name: "This website [WIP]",
-        img_src: "treo.png",
+        img_src: "portfolio sc.png",
         id: "6",
         category: "other",
         content: `
@@ -173,7 +173,7 @@ const ENTRIES = [
     },
     {
         name: "Paradoujin.com - Underground Music Blog",
-        img_src: "ioc.png",
+        img_src: "paradoujin screenshot.png",
         id: "7",
         category: "other",
         content: `
@@ -191,7 +191,7 @@ const ENTRIES = [
     },
     {
         name: "Constellations",
-        img_src: "robot.jpg",
+        img_src: "constellations.png",
         id: "8",
         category: "other",
         content: `
@@ -207,7 +207,7 @@ const ENTRIES = [
     },
     {
         name: "I just need some ******* eggs [WIP]",
-        img_src: "ar.png",
+        img_src: "ps1 horror.png",
         id: "9",
         category: "other",
         content: `

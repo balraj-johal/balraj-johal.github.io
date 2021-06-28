@@ -59,6 +59,9 @@
     font-family: "Dubsteptrix";
     font-weight: normal;
   }
+  #mobile-contentItem-about .content div, #mobile-contentItem-SKILLS .content div, #mobile-contentItem-SOCIALS .content div {
+    margin-top: 0 !important;
+  }
   .carousel-wrap {
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -83,7 +86,7 @@
   }
   .carousel-wrap .mobile-content-item {
     position: relative;
-    height: calc(100vh - 147px);
+    height: calc(100vh - 127px);
     scroll-snap-align: start;
     width: 100vw;
     font-family: "Roboto Mono";
@@ -106,11 +109,11 @@
   .carousel-wrap .mobile-content-item .content {
     margin: 0 15px 15px 15px;
     font-size: 13px;
-    height: 45%;
+    height: 42%;
     overflow-y: auto;
   }
-  .carousel-wrap .mobile-content-item .content div {
-    margin-top: -15px;
+  .carousel-wrap .mobile-content-item .content .content-override p:nth-child(1) {
+    margin-top: 0;
   }
   .carousel-wrap .mobile-content-item .content p {
     padding-right: 30px;
@@ -133,7 +136,7 @@
   }
   .mobile-wrap .header h1 {
     padding-left: 15px;
-    margin-bottom: 4px;
+    margin-bottom: 7px;
   }
   .mobile-wrap .mobile-nav {
     font-family: "Roboto Mono";

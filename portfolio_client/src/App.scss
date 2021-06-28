@@ -69,6 +69,14 @@ $largest: 1300px;
             font-weight: normal;
         }
     }
+    #mobile-contentItem-about, #mobile-contentItem-SKILLS, #mobile-contentItem-SOCIALS {
+        .content {
+            div {
+                margin-top: 0 !important;
+            }
+        }
+    }
+
     .carousel-wrap {
         @include hideScrollbar();
         display: grid;
@@ -84,7 +92,7 @@ $largest: 1300px;
         
         .mobile-content-item {
             position: relative;
-            height: calc(100vh - 147px);
+            height: calc(100vh - 127px);
             scroll-snap-align: start;
             width: 100vw;
             font-family: "Roboto Mono";
@@ -105,10 +113,10 @@ $largest: 1300px;
             .content {
                 margin: 0 15px 15px 15px;
                 font-size: 13px;
-                height: 45%;
+                height: 42%;
                 overflow-y: auto;
-                div {
-                    margin-top: -15px;
+                .content-override p:nth-child(1) {
+                    margin-top: 0;
                 }
                 p {
                     padding-right: 30px;
@@ -129,7 +137,7 @@ $largest: 1300px;
     .mobile-wrap {
         .header h1 {
             padding-left: 15px;
-            margin-bottom: 4px;
+            margin-bottom: 7px;
         }
         .mobile-nav {
             font-family: "Roboto Mono";
