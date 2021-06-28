@@ -193,15 +193,6 @@ function ContentCarousel(props) {
         console.log(`handle called ${index} times`)
         for (let i = 0; i < ENTRIES.length; i++) {
             //handle category identification
-            let categoryElem;
-            if (i >= PROFESSIONAL_INDEX && i < OTHER_INDEX) {
-                categoryElem = document.getElementById(`list-category-3`);
-            } else if (i >= OTHER_INDEX) {
-                categoryElem = document.getElementById(`list-category-4`);
-            } else {
-                categoryElem = document.getElementById(`list-category-1`);
-            }
-            // console.log(categoryElem)
         
             let elem = document.getElementById(`mobile-contentItem-${i}`)
             let listItem = document.getElementById(`list-item-${i}`)
@@ -209,10 +200,22 @@ function ContentCarousel(props) {
             if (listItem) {
                 listItem.classList.remove("highlight");
             }
-            if (categoryElem) {
-                categoryElem.classList.remove("highlight");
-            }
             if (isInViewport(elem)) {
+                // clear all category highlights
+                for (let i = 1; i <=4; i++) {
+                    let elem = document.getElementById(`list-category-${i}`);
+                    elem.classList.remove("highlight")
+                }
+                let categoryElem;
+                if (i >= PROFESSIONAL_INDEX && i < OTHER_INDEX) {
+                    categoryElem = document.getElementById(`list-category-3`);
+                } else if (i >= OTHER_INDEX) {
+                    categoryElem = document.getElementById(`list-category-4`);
+                } else {
+                    categoryElem = document.getElementById(`list-category-1`);
+                }
+                console.log(categoryElem)
+
                 listItem.classList.add("highlight");
                 listItem.scrollIntoView(false, {behavior: "smooth", inline: "end"});
                 categoryElem.classList.add("highlight");
