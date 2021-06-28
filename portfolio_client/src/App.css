@@ -115,7 +115,10 @@
   .carousel-wrap .mobile-content-item .content .content-override p:nth-child(1) {
     margin-top: 0;
   }
-  .carousel-wrap .mobile-content-item .content p {
+  .carousel-wrap .mobile-content-item .content .content-override p:last-child {
+    margin-bottom: 0;
+  }
+  .carousel-wrap .mobile-content-item .content .content-override p {
     padding-right: 30px;
   }
   .carousel-wrap .mobile-content-item .swipe-prompt {

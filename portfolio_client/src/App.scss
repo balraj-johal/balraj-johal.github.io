@@ -115,12 +115,17 @@ $largest: 1300px;
                 font-size: 13px;
                 height: 42%;
                 overflow-y: auto;
-                .content-override p:nth-child(1) {
-                    margin-top: 0;
-                }
-                p {
-                    padding-right: 30px;
-                }
+                .content-override {
+                    p:nth-child(1) {
+                        margin-top: 0;
+                    }
+                    p:last-child {
+                        margin-bottom: 0;
+                    }
+                    p {
+                        padding-right: 30px;
+                    }
+                } 
             }
             .swipe-prompt {
                 position: absolute;
