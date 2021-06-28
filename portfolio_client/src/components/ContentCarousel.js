@@ -172,6 +172,8 @@ function ContentCarousel(props) {
             deserunt mollit anim id est laborum. `
         },
     ]
+    const PROFESSIONAL_INDEX = 0;
+    const OTHER_INDEX = 6;
     
     function isInViewport(element) {
         if (element) {
@@ -185,21 +187,41 @@ function ContentCarousel(props) {
         }
     }
 
+    let index = 0;
     let handleHighlight = () => {
+        index++;
+        console.log(`handle called ${index} times`)
         for (let i = 0; i < ENTRIES.length; i++) {
+            //handle category identification
+            let categoryElem;
+            if (i >= PROFESSIONAL_INDEX && i < OTHER_INDEX) {
+                categoryElem = document.getElementById(`list-category-3`);
+            } else if (i >= OTHER_INDEX) {
+                categoryElem = document.getElementById(`list-category-4`);
+            } else {
+                categoryElem = document.getElementById(`list-category-1`);
+            }
+            // console.log(categoryElem)
+        
             let elem = document.getElementById(`mobile-contentItem-${i}`)
             let listItem = document.getElementById(`list-item-${i}`)
+
             if (listItem) {
                 listItem.classList.remove("highlight");
+            }
+            if (categoryElem) {
+                categoryElem.classList.remove("highlight");
             }
             if (isInViewport(elem)) {
                 listItem.classList.add("highlight");
                 listItem.scrollIntoView(false, {behavior: "smooth", inline: "end"});
+                categoryElem.classList.add("highlight");
+                categoryElem.scrollIntoView(false, {behavior: "smooth", inline: "end"});
             }
         }
     }
     let scrolling = false;
-    window.scroll = () => {
+    let setScrolling = () => {
         scrolling = true;
     };
     setInterval(() => {
@@ -210,7 +232,7 @@ function ContentCarousel(props) {
     }, 300);
 
     return(
-        <div className="carousel-wrap" onScroll={handleHighlight}
+        <div className="carousel-wrap" onScroll={setScrolling}
             style={{gridTemplateColumns: `repeat(${ENTRIES.length}, 100%)`}}
         >
             {ENTRIES.map((item, index) => (

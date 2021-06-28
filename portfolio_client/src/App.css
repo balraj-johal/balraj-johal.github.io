@@ -138,7 +138,7 @@
     float: left;
   }
   .mobile-wrap .mobile-nav #item-list {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
   .mobile-wrap .mobile-nav #category-list, .mobile-wrap .mobile-nav #item-list {
     scrollbar-width: none;
