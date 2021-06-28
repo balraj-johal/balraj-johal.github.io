@@ -3,52 +3,7 @@ import { connect } from "react-redux";
 import { selectItem } from "../actions/actions";
 
 function SideNav(props) {
-
-    const PROFESSIONAL_ENTRIES = [
-        {
-            name: "Routes",
-            id: 1
-        },
-        {
-            name: "XR Stories - Treo",
-            id: 2
-        },
-        {
-            name: "IoC Student Enterprises Website",
-            id: 3
-        },
-        {
-            name: "Robot Theatre",
-            id: 4
-        },
-        {
-            name: "AR/AI Visual Programming Toolkit",
-            id: 5
-        },
-    ]
-    const OTHER_ITEMS = [
-        {
-            name: "Routes",
-            id: 6
-        },
-        {
-            name: "XR Stories - Treo",
-            id: 7
-        },
-        {
-            name: "IoC Student Enterprises Website",
-            id: 8
-        },
-        {
-            name: "Robot Theatre",
-            id: 9
-        },
-        {
-            name: "AR/AI Visual Programming Toolkit",
-            id: 10
-        },
-    ]
-
+    //li highlighting
     useEffect(() => {
         let items = document.getElementsByClassName("list-item")
         for (let i = 0; i < items.length; i++) {
@@ -56,7 +11,7 @@ function SideNav(props) {
             
         }
         if (props.selectedItem.id !== "HOME") {
-            document.getElementById("list-item-"+(props.selectedItem.id+1)).classList.add("highlight")
+            document.getElementById("list-item-"+(props.selectedItem.id)).classList.add("highlight")
         }
     }, [props.selectedItem])
 
@@ -64,31 +19,38 @@ function SideNav(props) {
         <div className="side-nav" id="sidenav-scrollbar-cust">
             <h2 className="list-header">Professional Work</h2>
             <ul>
-                {PROFESSIONAL_ENTRIES.map((item, index) => (
-                    <li className="list-item" id={"list-item-"+item.id} key={index} onClick={() => {
-                        props.selectItem(item.id);
-                    }} >
-                       {item.name}
-                    </li>
+                {props.entries.map((item, index) => (
+                    <div key={index} >
+                        {(item.category.includes("professional") ? <ListItem item={item} selectItem={props.selectItem} /> : null)}
+                    </div>
                 ))}
             </ul>
             
             <h2 className="list-header">Other Stuff</h2>
             <ul>
-                {OTHER_ITEMS.map((item, index) => (
-                    <li className="list-item" id={"list-item-"+item.id} key={index} onClick={() => {
-                        props.selectItem(item.id);
-                    }} >
-                        {item.name}
-                    </li>
+                {props.entries.map((item, index) => (
+                    <div key={index} >
+                        {(item.category.includes("other") ? <ListItem item={item} selectItem={props.selectItem} /> : null)}
+                    </div>
                 ))}
             </ul>
         </div>
     )
 }
 
+function ListItem(props) {
+    return(
+        <li className="list-item" id={"list-item-"+props.item.id} onClick={() => {
+            props.selectItem(props.item.id);
+        }} >
+            {props.item.name}
+        </li>
+    )
+}
+
 const mapStateToProps = state => ({
-    selectedItem: state.selectedItem
+    selectedItem: state.selectedItem,
+    entries: state.allEntries
 })
 
 export default connect(

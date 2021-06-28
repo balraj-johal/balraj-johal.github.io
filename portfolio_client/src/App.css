@@ -168,15 +168,68 @@
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 768px) {
+  .moveitleft, .moveitright {
+    position: absolute;
+    left: 0;
+    width: 30% !important;
+  }
+  .header {
+    margin-top: 2px;
+    position: relative;
+    height: 64px;
+  }
+  .header h1 {
+    font-size: 31px !important;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+  }
+  .header div {
+    width: 100%;
+    text-align: right;
+  }
+  .moveitleft {
+    -webkit-animation: moveleft 1.2s ease-in-out !important;
+            animation: moveleft 1.2s ease-in-out !important;
+    padding: 0 0 0 15px;
+  }
+  .moveitright {
+    -webkit-animation: moveright 1.2s ease-in-out !important;
+            animation: moveright 1.2s ease-in-out !important;
+    padding: 0 15px 0 0;
+  }
+  .movetitleleft {
+    -webkit-animation: movelefttitle 1.2s ease-in-out;
+            animation: movelefttitle 1.2s ease-in-out;
+  }
+  .movetitleright {
+    -webkit-animation: moverighttitle 1.2s ease-in-out;
+            animation: moverighttitle 1.2s ease-in-out;
+  }
+  .side-nav .list-header {
+    font-size: 26px;
+  }
+  .side-nav li {
+    font-size: 21px;
+  }
+  .right-bit .header div {
+    padding-right: 10px;
+    left: 0;
+    font-size: 26px !important;
+  }
+  .right-bit .content-item {
+    height: 93vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1300px) {
   .moveitleft, .moveitright {
     position: absolute;
     left: 0;
     width: 25% !important;
   }
-}
-
-@media (min-width: 768px) and (max-width: 1300px) {
   .header {
     margin-top: 2px;
     position: relative;
@@ -228,6 +281,11 @@
 }
 
 @media (min-width: 1300px) {
+  .moveitleft, .moveitright {
+    position: absolute;
+    left: 0;
+    width: 25% !important;
+  }
   .app {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -247,10 +305,10 @@
     width: 335px !important;
   }
   .app .main .side-nav .list-header {
-    font-size: 30px;
+    font-size: 22px;
   }
   .app .main .side-nav .list-item {
-    font-size: 22px;
+    font-size: 16px;
   }
   .app .main .right-bit {
     position: absolute;
@@ -340,12 +398,12 @@
   width: 30%;
   height: 100%;
   overflow-y: scroll;
-  font-family: "VT323";
+  font-family: "Roboto Mono";
 }
 
 .app .main .side-nav .list-header {
   padding-left: 20px;
-  font-weight: 500;
+  font-weight: bold;
   margin: 22px auto;
 }
 
@@ -387,19 +445,22 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-left: 26px;
-  font-family: "VT323";
+  font-family: "Roboto Mono";
 }
 
 .app .main .right-bit .header h1 {
-  font-size: 42px;
+  font-size: 32px;
+  padding-top: 7px;
   font-weight: bold;
   -webkit-animation-fill-mode: forwards !important;
           animation-fill-mode: forwards !important;
+  font-family: "Dubsteptrix";
 }
 
 .app .main .right-bit .header div {
   font-weight: normal;
-  font-size: 30px;
+  padding-top: 3px;
+  font-size: 20px;
   margin-right: 5px;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;

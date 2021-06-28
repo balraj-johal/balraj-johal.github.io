@@ -113,7 +113,6 @@ $largest: 1300px;
                 align-items: center;
                 height: 5%;
                 width: 90vw;
-                // text-align: right;
                 justify-content: right;
                 margin: 3vh 5vw;
             }
@@ -125,7 +124,6 @@ $largest: 1300px;
             margin-bottom: 4px;
         }
         .mobile-nav {
-            // font-family: "WhiteRabbit";
             font-family: "Roboto Mono";
             font-size: 13px;
             ul {
@@ -160,14 +158,68 @@ $largest: 1300px;
     }
     
 }
-@media (min-width: 576px) {
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .moveitleft, .moveitright {
+        position: absolute;
+        left: 0;
+        width: 30% !important;
+    }
+    .header {
+        margin-top: 2px;
+        position: relative;
+        height: 64px;
+        h1 {
+            font-size: 31px !important;
+            animation-fill-mode: forwards;
+            transition: 1s ease;
+        }
+        div {
+            width: 100%;
+            text-align: right;
+        }
+    }
+    .moveitleft {
+        animation: moveleft 1.2s ease-in-out !important;
+        padding: 0 0 0 15px;
+    }
+    .moveitright {
+        animation: moveright 1.2s ease-in-out !important;
+        padding: 0 15px 0 0;
+    }
+    .movetitleleft {
+        animation: movelefttitle 1.2s ease-in-out;
+    }
+    .movetitleright {
+        animation: moverighttitle 1.2s ease-in-out;
+    }
+    .side-nav {
+        .list-header {
+            font-size: 26px;
+        }
+        li {
+            font-size: 21px;
+        }
+    }
+    .right-bit {
+        .header {
+            div {
+                padding-right: 10px;
+                left: 0;
+                font-size: 26px !important;
+            }
+        }
+        .content-item {
+            height: 93vh;
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: $largest) {
     .moveitleft, .moveitright {
         position: absolute;
         left: 0;
         width: 25% !important;
     }
-}
-@media (min-width: 768px) and (max-width: $largest) {
     .header {
         margin-top: 2px;
         position: relative;
@@ -219,6 +271,11 @@ $largest: 1300px;
 }
 
 @media (min-width: $largest) {
+    .moveitleft, .moveitright {
+        position: absolute;
+        left: 0;
+        width: 25% !important;
+    }
     .app {
         display: flex;
         align-items: center;
@@ -230,10 +287,10 @@ $largest: 1300px;
             .side-nav {
                 width: 335px !important;
                 .list-header {
-                    font-size: 30px;
+                    font-size: 22px;
                 }
                 .list-item {
-                    font-size: 22px;
+                    font-size: 16px;
                 }
             }
             .right-bit {
@@ -313,10 +370,10 @@ $largest: 1300px;
             width: 30%;
             height: 100%;
             overflow-y: scroll;
-            font-family: "VT323";
+            font-family: "Roboto Mono";
             .list-header {
                 padding-left: 20px;
-                font-weight: 500;
+                font-weight: bold;
                 margin: 22px auto;
             }
             ul {
@@ -340,15 +397,18 @@ $largest: 1300px;
                 align-items: center;
                 justify-content: space-between;
                 padding-left: 26px;
-                font-family: "VT323";
+                font-family: "Roboto Mono";
                 h1 {
-                    font-size: 42px;
+                    font-size: 32px;
+                    padding-top: 7px;
                     font-weight: bold;
                     animation-fill-mode: forwards !important;
+                    font-family: "Dubsteptrix";
                 }
-                div {
+                div { //entry title
                     font-weight: normal;
-                    font-size: 30px;
+                    padding-top: 3px;
+                    font-size: 20px;
                     margin-right: 5px;
                     animation-fill-mode: forwards;
                     transition: 1s ease;

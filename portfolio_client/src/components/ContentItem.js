@@ -9,9 +9,7 @@ function ContentItem(props) {
                     draggable="false">
                 </img>
             </div>
-            <div className="content">
-                {props.item.content}
-            </div>
+            <div className="content" dangerouslySetInnerHTML={{ __html : props.item.content}}></div>
         </div>
     )
 }

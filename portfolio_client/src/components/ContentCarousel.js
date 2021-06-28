@@ -17,12 +17,14 @@ function ContentCarousel(props) {
             occaecat cupidatat non proident, sunt in culpa qui officia 
             deserunt mollit anim id est laborum.
             `,
-            id: "HOME"
+            id: "HOME",
+            category: "about"
         },
         {
             name: "Routes",
             img_src: "routes.png",
             id: 0,
+            category: "professional",
             content: `
             <p>
             As a freelance Software Developer for Megaverse
@@ -56,6 +58,7 @@ function ContentCarousel(props) {
             name: "XR Stories - Treo",
             img_src: "treo.png",
             id: 1,
+            category: "professional",
             content: `
             <p>
                 As an intern my role was to be the sole developer and 
@@ -79,6 +82,7 @@ function ContentCarousel(props) {
             name: "IoC Student Enterprises Website",
             img_src: "ioc.png",
             id: 2,
+            category: "professional",
             content: `
             <p>
                 I was the sole developer of a website for the Institute 
@@ -108,6 +112,7 @@ function ContentCarousel(props) {
             name: "Robot Theatre",
             img_src: "robot.jpg",
             id: 3,
+            category: "professional",
             content: `
             <p>
                 Collaborated on a project exploring the use of AI and 
@@ -146,6 +151,7 @@ function ContentCarousel(props) {
             name: "AR/AI Visual Programming Toolkit",
             img_src: "ar.png",
             id: 4,
+            category: "professional",
             content: `a sint occaecat 
             cupidatat non proident, sunt in culpa qui officia 
             deserunt mollit anim id est laborum. `
@@ -154,6 +160,7 @@ function ContentCarousel(props) {
             name: "TensorFlow Biomedical Image Segmentation",
             img_src: "routes.png",
             id: 6,
+            category: "other",
             content: `
             To teach myself TensorFlow, 
             I used the U-Net algorithm to create a Image 
@@ -164,6 +171,7 @@ function ContentCarousel(props) {
             name: "This website [WIP]",
             img_src: "treo.png",
             id: 7,
+            category: "other",
             content: `
             <p>
                 As part of my continued practice of the MERN Stack
@@ -186,6 +194,7 @@ function ContentCarousel(props) {
             name: "Paradoujin.com - Underground Music Blog",
             img_src: "ioc.png",
             id: 8,
+            category: "other",
             content: `
             <p>
                 I developed and hosted a custom Wordpress site
@@ -203,6 +212,7 @@ function ContentCarousel(props) {
             name: "Constellations",
             img_src: "robot.jpg",
             id: 9,
+            category: "other",
             content: `
             <p>
                 A game made in Unity for the Paint Jam in about 6 hours,
@@ -218,6 +228,7 @@ function ContentCarousel(props) {
             name: "I just need some ******* eggs [WIP]",
             img_src: "ar.png",
             id: 10,
+            category: "other",
             content: `
             <p>
                 An FPS game I'm currently making about a mutated supermarket.
