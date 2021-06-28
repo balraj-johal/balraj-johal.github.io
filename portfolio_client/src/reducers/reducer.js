@@ -4,7 +4,7 @@ const ENTRIES = [
     {
         name: "Routes",
         img_src: "routes.png",
-        id: 0,
+        id: "0",
         category: "professional",
         content: `
         <p>
@@ -38,7 +38,7 @@ const ENTRIES = [
     {
         name: "XR Stories - Treo",
         img_src: "treo.png",
-        id: 1,
+        id: "1",
         category: "professional",
         content: `
         <p>
@@ -62,7 +62,7 @@ const ENTRIES = [
     {
         name: "IoC Student Enterprises Website",
         img_src: "ioc.png",
-        id: 2,
+        id: "2",
         category: "professional",
         content: `
         <p>
@@ -92,7 +92,7 @@ const ENTRIES = [
     {
         name: "Robot Theatre",
         img_src: "robot.jpg",
-        id: 3,
+        id: "3",
         category: "professional",
         content: `
         <p>
@@ -131,7 +131,7 @@ const ENTRIES = [
     {
         name: "AR/AI Visual Programming Toolkit",
         img_src: "ar.png",
-        id: 4,
+        id: "4",
         category: "professional",
         content: `a sint occaecat 
         cupidatat non proident, sunt in culpa qui officia 
@@ -140,7 +140,7 @@ const ENTRIES = [
     {
         name: "TensorFlow Biomedical Image Segmentation",
         img_src: "routes.png",
-        id: 5,
+        id: "5",
         category: "other",
         content: `
         To teach myself TensorFlow, 
@@ -151,7 +151,7 @@ const ENTRIES = [
     {
         name: "This website [WIP]",
         img_src: "treo.png",
-        id: 6,
+        id: "6",
         category: "other",
         content: `
         <p>
@@ -174,7 +174,7 @@ const ENTRIES = [
     {
         name: "Paradoujin.com - Underground Music Blog",
         img_src: "ioc.png",
-        id: 7,
+        id: "7",
         category: "other",
         content: `
         <p>
@@ -192,7 +192,7 @@ const ENTRIES = [
     {
         name: "Constellations",
         img_src: "robot.jpg",
-        id: 8,
+        id: "8",
         category: "other",
         content: `
         <p>
@@ -208,7 +208,7 @@ const ENTRIES = [
     {
         name: "I just need some ******* eggs [WIP]",
         img_src: "ar.png",
-        id: 9,
+        id: "9",
         category: "other",
         content: `
         <p>
@@ -239,13 +239,37 @@ const ENTRIES = [
         occaecat cupidatat non proident, sunt in culpa qui officia 
         deserunt mollit anim id est laborum.
         `,
-        id: "HOME",
+        id: "about",
         category: "about"
     },
+    {
+        name: "",
+        img_src: "",
+        content: `
+        schkills
+        `,
+        id: "SKILLS",
+        category: "skills"
+    },
+    {
+        name: "",
+        img_src: "",
+        content: `
+        socials
+        `,
+        id: "SOCIALS",
+        category: "socials"
+    },
 ]
+let aboutItem;
+ENTRIES.forEach(elem => {
+    if (elem.category === "about") {
+        aboutItem = elem;
+    }
+})
 
 const initialState = {
-    selectedItem: ENTRIES[0],
+    selectedItem: aboutItem,
     allEntries: ENTRIES,
 };
 
@@ -253,9 +277,15 @@ const initialState = {
 export default function(state = initialState, action) {
     switch (action.type) {
         case SELECT_ITEM:
+            let item;
+            ENTRIES.forEach(elem => {
+                if (elem.id === action.payload) {
+                    item = elem;
+                }
+            });
             return {
                 ...state,
-                selectedItem: ENTRIES[action.payload]
+                selectedItem: item
             };
         default:
             return initialState;

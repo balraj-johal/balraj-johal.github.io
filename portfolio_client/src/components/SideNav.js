@@ -10,7 +10,7 @@ function SideNav(props) {
             items[i].classList.remove("highlight")
             
         }
-        if (props.selectedItem.id !== "HOME") {
+        if (props.selectedItem.id !== "about") {
             document.getElementById("list-item-"+(props.selectedItem.id)).classList.add("highlight")
         }
     }, [props.selectedItem])

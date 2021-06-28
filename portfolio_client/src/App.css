@@ -82,6 +82,7 @@
     display: none;
   }
   .carousel-wrap .mobile-content-item {
+    position: relative;
     height: calc(100vh - 147px);
     scroll-snap-align: start;
     width: 100vw;
@@ -106,6 +107,9 @@
   .carousel-wrap .mobile-content-item .content h1 {
     font-size: 18px;
     margin-top: 0%;
+  }
+  .carousel-wrap .mobile-content-item .content p {
+    padding-right: 30px;
   }
   .carousel-wrap .mobile-content-item .swipe-prompt {
     position: absolute;
@@ -657,5 +661,6 @@
 
 .highlight {
   color: white !important;
+  margin-top: -1.5px;
 }
 /*# sourceMappingURL=App.css.map */

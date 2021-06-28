@@ -83,6 +83,7 @@ $largest: 1300px;
         -webkit-overflow-scrolling: touch;
         
         .mobile-content-item {
+            position: relative;
             height: calc(100vh - 147px);
             scroll-snap-align: start;
             width: 100vw;
@@ -104,6 +105,9 @@ $largest: 1300px;
                 h1 {
                     font-size: 18px;
                     margin-top: 0%;
+                }
+                p {
+                    padding-right: 30px;
                 }
             }
             .swipe-prompt {
@@ -537,4 +541,5 @@ $largest: 1300px;
 
 .highlight {
     color: white !important;
+    margin-top: -1.5px;
 }
