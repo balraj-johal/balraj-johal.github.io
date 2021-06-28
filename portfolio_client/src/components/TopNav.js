@@ -7,23 +7,28 @@ function TopNav(props) {
     const CATEGORIES = [
         {
             name: "Skills",
-            id: 1
+            id: 1,
+            index: 0
         },
         {
             name: "About Me",
-            id: 2
+            id: 2,
+            index: 0
         },
         {
             name: "Profressional Work",
-            id: 3
+            id: 3,
+            index: 0
         },
         {
             name: "Other Stuff",
-            id: 4
+            id: 4,
+            index: 6
         },
         {
             name: "Socials",
-            id: 5
+            id: 5,
+            index: 6
         },
     ]
     const ENTRIES = [
@@ -195,9 +200,7 @@ function TopNav(props) {
             cupidatat non proident, sunt in culpa qui officia 
             deserunt mollit anim id est laborum. `
         },
-    ]    
-
-    let itemList;
+    ]
 
     useEffect(() => {
         let items = document.getElementsByClassName("list-item")
@@ -215,7 +218,8 @@ function TopNav(props) {
                 {CATEGORIES.map((category, index) => (
                     <div className="list-item category" id={"list-category-"+category.id} 
                     key={index} onClick={() => {
-
+                        let elem = document.getElementById(`mobile-contentItem-${category.index}`);
+                        elem.scrollIntoView(false, {behavior: "smooth"});
                     }} >
                        <a>{category.name}</a>
                     </div>

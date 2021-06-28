@@ -187,42 +187,7 @@ function ContentCarousel(props) {
         }
     }
 
-    let index = 0;
-    let handleHighlight = () => {
-        index++;
-        console.log(`handle called ${index} times`)
-        for (let i = 0; i < ENTRIES.length; i++) {
-            //handle category identification
-        
-            let elem = document.getElementById(`mobile-contentItem-${i}`)
-            let listItem = document.getElementById(`list-item-${i}`)
-
-            if (listItem) {
-                listItem.classList.remove("highlight");
-            }
-            if (isInViewport(elem)) {
-                // clear all category highlights
-                for (let i = 1; i <=4; i++) {
-                    let elem = document.getElementById(`list-category-${i}`);
-                    elem.classList.remove("highlight")
-                }
-                let categoryElem;
-                if (i >= PROFESSIONAL_INDEX && i < OTHER_INDEX) {
-                    categoryElem = document.getElementById(`list-category-3`);
-                } else if (i >= OTHER_INDEX) {
-                    categoryElem = document.getElementById(`list-category-4`);
-                } else {
-                    categoryElem = document.getElementById(`list-category-1`);
-                }
-                console.log(categoryElem)
-
-                listItem.classList.add("highlight");
-                listItem.scrollIntoView(false, {behavior: "smooth", inline: "end"});
-                categoryElem.classList.add("highlight");
-                categoryElem.scrollIntoView(false, {behavior: "smooth", inline: "end"});
-            }
-        }
-    }
+    //top nav behaviour
     let scrolling = false;
     let setScrolling = () => {
         scrolling = true;
@@ -233,6 +198,37 @@ function ContentCarousel(props) {
             handleHighlight();
         }
     }, 300);
+    let handleHighlight = () => {
+        for (let i = 0; i < ENTRIES.length; i++) {
+            let elem = document.getElementById(`mobile-contentItem-${i}`)
+            //clear entry highlight
+            let listItem = document.getElementById(`list-item-${i}`)
+            if (listItem) {
+                listItem.classList.remove("highlight");
+            }
+            if (isInViewport(elem)) {
+                // clear all category highlights
+                for (let i = 1; i <=4; i++) {
+                    let elem = document.getElementById(`list-category-${i}`);
+                    elem.classList.remove("highlight")
+                }
+                //get category element
+                let categoryElem;
+                if (i >= PROFESSIONAL_INDEX && i < OTHER_INDEX) {
+                    categoryElem = document.getElementById(`list-category-3`);
+                } else if (i >= OTHER_INDEX) {
+                    categoryElem = document.getElementById(`list-category-4`);
+                } else {
+                    categoryElem = document.getElementById(`list-category-1`);
+                }
+                //scroll to correct entries and add highlights
+                listItem.classList.add("highlight");
+                listItem.scrollIntoView(false, {behavior: "smooth", inline: "end"});
+                categoryElem.classList.add("highlight");
+                categoryElem.scrollIntoView(false, {behavior: "smooth", inline: "end"});
+            }
+        }
+    }
 
     return(
         <div className="carousel-wrap" onScroll={setScrolling}
