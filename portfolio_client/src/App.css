@@ -161,6 +161,7 @@
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
     font-weight: bold;
+    white-space: nowrap;
   }
   .mobile-wrap .mobile-nav #category-list .list-item a, .mobile-wrap .mobile-nav #item-list .list-item a {
     white-space: nowrap;

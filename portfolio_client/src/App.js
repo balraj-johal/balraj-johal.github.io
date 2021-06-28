@@ -32,7 +32,7 @@ function App() {
         return () => {
             window.removeEventListener('resize', isMobile);
         };
-    })
+    }, [])
     
     const MOVEMENT_SCALE = 10;
     document.onmousemove = handleMouseMove;

@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
 import { connect } from "react-redux";
+import MobileContentItem from "./MobileContentItem";
+import Socials from "./Socials";
 
 function ContentCarousel(props) {
     const ENTRIES = [
@@ -192,29 +193,46 @@ function ContentCarousel(props) {
                 Instagram and Twitter page promoting underground UK
                 music. 
             </p><p>
-                I thought that they were doing great work but coul
-            </p><p>
-                Once I have finalised the front end design I intend
-                to write a basic Content Management System such that
-                it is easy for me to add new work and edit site content.
+                I thought that they were doing great work but could
+                have a wider reach with a web presence, and so reached out
+                to them and made their website!
             </p>
             `
         },
         {
-            name: "Robot Theatre",
+            name: "Constellations",
             img_src: "robot.jpg",
             id: 9,
-            content: `tese sint occaecat 
-            cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum. `
+            content: `
+            <p>
+                A game made in Unity for the Paint Jam in about 6 hours,
+                where every asset made in the game must be made in MS Paint
+                and the theme was Starry Night by Van Gogh.
+            </p><p>
+                You must rotate a set of stars in 3D space with the mouse
+                until they align to the displayed constellation.
+            </p>
+            `
         },
         {
-            name: "AR/AI Visual Programming Toolkit",
+            name: "I just need some ******* eggs [WIP]",
             img_src: "ar.png",
             id: 10,
-            content: `a sint occaecat 
-            cupidatat non proident, sunt in culpa qui officia 
-            deserunt mollit anim id est laborum. `
+            content: `
+            <p>
+                An FPS game I'm currently making about a mutated supermarket.
+            </p><p>
+                The concept is that you mush dash close to an enemy
+                avoiding their projectiles until you're in close
+                range to them, at which point you can grab them and use 
+                their attacks against the other enemies until you run
+                out of ammo. This back and forth of dodging projectiles vs
+                firing them is intended to give combat a rhythm similar to
+                DOOM 2016.
+            </p><p>
+                Currently very, very WIP!
+            </p>
+            `
         },
     ]
     const PROFESSIONAL_INDEX = 0;
@@ -226,7 +244,6 @@ function ContentCarousel(props) {
             return (
                 rect.top >= 0 &&
                 rect.left >= 0 &&
-                // rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
                 rect.right <= (window.innerWidth || document.documentElement.clientWidth)
             );
         }
@@ -276,33 +293,12 @@ function ContentCarousel(props) {
     }
 
     return(
-        <div className="carousel-wrap" onScroll={setScrolling}
+        <div className="carousel-wrap" 
+            onScroll={setScrolling}
             style={{gridTemplateColumns: `repeat(${ENTRIES.length}, 100%)`}}
         >
             {ENTRIES.map((item, index) => (
-                <div className="mobile-content-item" 
-                    id={"mobile-contentItem-"+item.id} key={index}
-                >
-                    <div className={`image-container ${item.img_src ? "" : "hideit"}`}>
-                        <img src={`/res/${item.img_src}`} alt={item.img_alt}
-                            width="auto" height={200}
-                            draggable="false">
-                        </img>
-                    </div>
-                    <div className="content cust-scroll">
-                        <h1>{item.name}</h1>
-                        <div dangerouslySetInnerHTML={{ __html: item.content }}>
-                        </div>
-                        {/* {item.content} */}
-                    </div>
-                    {/* <div className="content cust-scroll">
-                        <h1>{item.name}</h1>
-                        {item.content}
-                    </div> */}
-                    <div className="swipe-prompt">
-                        <span>SWIPE &gt;</span> {/* TODO: REPLACE WITH SVG ARROW */}
-                    </div>
-                </div>
+                <MobileContentItem item={item} key={index} />
             ))}
         </div>
     )
