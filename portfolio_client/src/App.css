@@ -98,15 +98,19 @@
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .carousel-wrap .mobile-content-item .content {
+  .carousel-wrap .mobile-content-item h1 {
+    font-size: 18px;
+    margin-top: 0%;
     margin: 15px 15px 15px 15px;
+  }
+  .carousel-wrap .mobile-content-item .content {
+    margin: 0 15px 15px 15px;
     font-size: 13px;
     height: 45%;
     overflow-y: auto;
   }
-  .carousel-wrap .mobile-content-item .content h1 {
-    font-size: 18px;
-    margin-top: 0%;
+  .carousel-wrap .mobile-content-item .content div {
+    margin-top: -15px;
   }
   .carousel-wrap .mobile-content-item .content p {
     padding-right: 30px;

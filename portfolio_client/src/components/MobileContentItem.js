@@ -7,8 +7,9 @@ function MobileContentItem(props) {
                     draggable="false">
                 </img>
             </div>
-            <div className="content cust-scroll">
                 <h1>{props.item.name}</h1>
+            <div className="content cust-scroll">
+                {/* <h1>{props.item.name}</h1> */}
                 <div dangerouslySetInnerHTML={{ __html: props.item.content }}></div>
             </div>
             <div className="swipe-prompt">

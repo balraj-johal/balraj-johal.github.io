@@ -97,14 +97,18 @@ $largest: 1300px;
                     object-fit: cover;
                 }
             }
-            .content {
-                margin: 15px 15px 15px 15px;
-                font-size: 13px;
-                height: 45%;
-                overflow-y: auto;
                 h1 {
                     font-size: 18px;
                     margin-top: 0%;
+                    margin: 15px 15px 15px 15px;
+                }
+            .content {
+                margin: 0 15px 15px 15px;
+                font-size: 13px;
+                height: 45%;
+                overflow-y: auto;
+                div {
+                    margin-top: -15px;
                 }
                 p {
                     padding-right: 30px;
