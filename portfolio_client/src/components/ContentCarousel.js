@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import MobileContentItem from "./MobileContentItem";
 
 function ContentCarousel(props) {
+    
     let aboutItem;
     let skillsItem;
     let socialsItem;
@@ -58,45 +59,45 @@ function ContentCarousel(props) {
             let elem = document.getElementById(`mobile-contentItem-${props.entries[i].id}`)
             //clear entry highlight
             let listItem = document.getElementById(`list-item-${props.entries[i].id}`)
-            // let listItem = document.getElementById(`list-item-${i}`)
             if (listItem) {
                 listItem.classList.remove("highlight");
             }
             if (isInViewport(elem)) {
                 // clear all category highlights
-                for (let i = 1; i <=4; i++) {
-                    let elem = document.getElementById(`list-category-${i}`);
-                    elem.classList.remove("highlight")
-                }
+                let highlightException;
                 //get category element
                 let categoryElem;
                 switch (props.entries[i].category) {
                     case "skills":
                         categoryElem = document.getElementById(`list-category-1`);
+                        highlightException = 1;
                         break;
                     case "about":
                         categoryElem = document.getElementById(`list-category-2`);
+                        highlightException = 2;
                         break;
                     case "professional":
                         categoryElem = document.getElementById(`list-category-3`);
+                        highlightException = 3;
                         break;
                     case "other":
                         categoryElem = document.getElementById(`list-category-4`);
+                        highlightException = 4;
                         break;
                     case "socials":
                         categoryElem = document.getElementById(`list-category-5`);
+                        highlightException = 5;
                         break;
                     default:
                         break;
                 }
+                for (let i = 1; i <=4; i++) {
+                    if (i != highlightException) {
+                        let elem = document.getElementById(`list-category-${i}`);
+                        elem.classList.remove("highlight")
+                    }
+                }
                 console.log(categoryElem)
-                // if (i >= PROFESSIONAL_INDEX && i < OTHER_INDEX) {
-                //     categoryElem = document.getElementById(`list-category-3`);
-                // } else if (i >= OTHER_INDEX) {
-                //     categoryElem = document.getElementById(`list-category-4`);
-                // } else {
-                //     categoryElem = document.getElementById(`list-category-1`);
-                // }
                 //scroll to correct entries and add highlights
                 listItem.classList.add("highlight");
                 listItem.scrollIntoView(false, {behavior: "smooth", inline: "end"});

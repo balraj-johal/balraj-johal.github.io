@@ -109,7 +109,7 @@
   .carousel-wrap .mobile-content-item .content {
     margin: 0 15px 15px 15px;
     font-size: 13px;
-    height: 42%;
+    height: 39%;
     overflow-y: auto;
   }
   .carousel-wrap .mobile-content-item .content .content-override p:nth-child(1) {

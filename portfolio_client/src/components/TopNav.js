@@ -23,12 +23,12 @@ function TopNav(props) {
         {
             name: "Profressional Work",
             id: 3,
-            startItemID: 0
+            startItemID: "0"
         },
         {
             name: "Other Stuff",
             id: 4,
-            startItemID: 5
+            startItemID: "5"
         },
     ]
 
@@ -56,6 +56,7 @@ function TopNav(props) {
                     key={index} onClick={() => {
                         let elem = document.getElementById(`mobile-contentItem-${category.startItemID}`);
                         elem.scrollIntoView(false, {behavior: "smooth"});
+                        props.selectItem(category.startItemID);
                     }} >
                        {category.name}
                     </div>
@@ -68,6 +69,7 @@ function TopNav(props) {
                     key={index} onClick={() => {
                         let elem = document.getElementById(`mobile-contentItem-${item.id}`);
                         elem.scrollIntoView(false, {behavior: "smooth"});
+                        props.selectItem(item.id);
                     }} >
                         {item.name}
                     </div>
