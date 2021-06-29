@@ -121,22 +121,6 @@
   .carousel-wrap .mobile-content-item .content .content-override p {
     padding-right: 30px;
   }
-  .carousel-wrap .mobile-content-item .swipe-prompt {
-    position: absolute;
-    bottom: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 5%;
-    width: 90vw;
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
-    margin: 3vh 5vw;
-  }
   .mobile-wrap .header h1 {
     padding-left: 15px;
     margin-bottom: 7px;
@@ -161,6 +145,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
     width: 100vw;
     overflow-x: scroll;
   }
@@ -179,6 +164,26 @@
   }
   .mobile-wrap .mobile-nav #category-list .list-item a, .mobile-wrap .mobile-nav #item-list .list-item a {
     white-space: nowrap;
+  }
+  .mobile-wrap .mobile-nav #category-list .filler, .mobile-wrap .mobile-nav #item-list .filler {
+    width: 200px;
+  }
+  .mobile-wrap .swipe-prompt {
+    font-family: "Roboto Mono";
+    position: absolute;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 8%;
+    width: 93vw;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin: 0 2.5vw;
   }
 }
 

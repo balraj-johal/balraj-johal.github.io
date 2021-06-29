@@ -127,16 +127,6 @@ $largest: 1300px;
                     }
                 } 
             }
-            .swipe-prompt {
-                position: absolute;
-                bottom: 0;
-                display: flex;
-                align-items: center;
-                height: 5%;
-                width: 90vw;
-                justify-content: right;
-                margin: 3vh 5vw;
-            }
         }
     }
     .mobile-wrap {
@@ -160,6 +150,7 @@ $largest: 1300px;
             #category-list, #item-list {
                 @include hideScrollbar();
                 display: flex;
+                position: relative;
                 width: 100vw;
                 overflow-x: scroll;
                 .list-item {
@@ -174,7 +165,21 @@ $largest: 1300px;
                         white-space: nowrap;
                     }
                 }
+                .filler {
+                    width: 200px;
+                }
             }
+        }
+        .swipe-prompt {
+            font-family: "Roboto Mono";
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            height: 8%;
+            width: 93vw;
+            justify-content: flex-end;
+            margin: 0 2.5vw;
         }
     }
     

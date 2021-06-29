@@ -61,6 +61,7 @@ function TopNav(props) {
                        {category.name}
                     </div>
                 ))}
+                <div className="list-item category filler" id={"list-category-filler"}></div>
             </div>
             
             <div id="item-list">

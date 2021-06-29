@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import MobileContentItem from "./MobileContentItem";
 
 function ContentCarousel(props) {
-    
     let aboutItem;
     let skillsItem;
     let socialsItem;
@@ -22,8 +21,6 @@ function ContentCarousel(props) {
                 break;
         }
     });
-    const PROFESSIONAL_INDEX = 0;
-    const OTHER_INDEX = 6;
     
     function isInViewport(element) {
         if (element) {
@@ -63,10 +60,8 @@ function ContentCarousel(props) {
                 listItem.classList.remove("highlight");
             }
             if (isInViewport(elem)) {
-                // clear all category highlights
-                let highlightException;
-                //get category element
                 let categoryElem;
+                let highlightException;
                 switch (props.entries[i].category) {
                     case "skills":
                         categoryElem = document.getElementById(`list-category-1`);
@@ -91,36 +86,40 @@ function ContentCarousel(props) {
                     default:
                         break;
                 }
+                //remove highlights where appropriate
                 for (let i = 1; i <=4; i++) {
                     if (i != highlightException) {
                         let elem = document.getElementById(`list-category-${i}`);
                         elem.classList.remove("highlight")
                     }
                 }
-                console.log(categoryElem)
                 //scroll to correct entries and add highlights
+                let itemList = document.getElementById("item-list");
+                let catList = document.getElementById("category-list");
                 listItem.classList.add("highlight");
-                listItem.scrollIntoView(false, {behavior: "smooth", inline: "end"});
                 categoryElem.classList.add("highlight");
-                categoryElem.scrollIntoView(false, {behavior: "smooth", inline: "end"});
-            } else {
-                console.log("not in vp")
+                itemList.scrollTo(listItem.offsetLeft, 0, {behavior: "smooth"});
+                catList.scrollTo(categoryElem.offsetLeft, 0, {behavior: "smooth"});
             }
         }
     }
 
     return(
-        <div className="carousel-wrap" 
-            onScroll={setScrolling}
-            style={{gridTemplateColumns: `repeat(${props.entries.length}, 100%)`}}
-        >
-            <MobileContentItem item={socialsItem} />
-            <MobileContentItem item={skillsItem} />
-            <MobileContentItem item={aboutItem} />
-            {props.entries.map((item, index) => (
-                <MobileContentItem item={item} key={index} />
-            ))}
-
+        <div>
+            <div className="carousel-wrap" 
+                onScroll={setScrolling}
+                style={{gridTemplateColumns: `repeat(${props.entries.length}, 100%)`}}
+            >
+                <MobileContentItem item={socialsItem} />
+                <MobileContentItem item={skillsItem} />
+                <MobileContentItem item={aboutItem} />
+                {props.entries.map((item, index) => (
+                    <MobileContentItem item={item} key={index} />
+                ))}
+            </div>
+            <div className="swipe-prompt">
+                <span>SWIPE &gt;</span> 
+            </div>
         </div>
     )
 }
