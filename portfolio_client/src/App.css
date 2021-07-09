@@ -44,6 +44,10 @@
     -webkit-transform: rotateY(0deg) rotateX(0deg);
             transform: rotateY(0deg) rotateX(0deg);
   }
+  .highlight {
+    -webkit-transform: translateY(-1px);
+            transform: translateY(-1px);
+  }
   .app {
     overflow: hidden;
   }
@@ -319,6 +323,50 @@
   }
 }
 
+@-webkit-keyframes moveright768 {
+  0% {
+    right: 100%;
+    left: 0%;
+  }
+  100% {
+    right: 0%;
+    left: calc(100% - 200px);
+  }
+}
+
+@keyframes moveright768 {
+  0% {
+    right: 100%;
+    left: 0%;
+  }
+  100% {
+    right: 0%;
+    left: calc(100% - 200px);
+  }
+}
+
+@-webkit-keyframes moveleft768 {
+  0% {
+    right: 0%;
+    left: calc(100% - 200px);
+  }
+  100% {
+    right: 100%;
+    left: 0%;
+  }
+}
+
+@keyframes moveleft768 {
+  0% {
+    right: 0%;
+    left: calc(100% - 200px);
+  }
+  100% {
+    right: 100%;
+    left: 0%;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1300px) {
   .about-img-wrap {
     width: 60%;
@@ -330,7 +378,7 @@
   .moveitleft, .moveitright {
     position: absolute;
     left: 0;
-    width: 25% !important;
+    width: 184px !important;
   }
   .header {
     margin-top: 2px;
@@ -338,7 +386,8 @@
     height: 64px;
   }
   .header h1 {
-    font-size: 31px !important;
+    font-size: 24px !important;
+    padding-top: 4px !important;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
     -webkit-transition: 1s ease;
@@ -351,11 +400,11 @@
   .moveitleft {
     -webkit-animation: moveleft 1.2s ease-in-out !important;
             animation: moveleft 1.2s ease-in-out !important;
-    padding: 0 0 0 15px;
+    padding: 0 0 0 0;
   }
   .moveitright {
-    -webkit-animation: moveright 1.2s ease-in-out !important;
-            animation: moveright 1.2s ease-in-out !important;
+    -webkit-animation: moveright768 1.2s ease-in-out !important;
+            animation: moveright768 1.2s ease-in-out !important;
     padding: 0 15px 0 0;
   }
   .movetitleleft {
@@ -367,18 +416,35 @@
             animation: moverighttitle 1.2s ease-in-out;
   }
   .side-nav .list-header {
-    font-size: 26px;
+    font-size: 18px;
   }
   .side-nav li {
-    font-size: 21px;
+    font-size: 15px;
   }
   .right-bit .header div {
     padding-right: 10px;
+    padding-top: 0px !important;
     left: 0;
-    font-size: 26px !important;
+    margin-top: -2px !important;
   }
   .right-bit .content-item {
     height: 93vh;
+  }
+  .right-bit .content {
+    font-weight: 300 !important;
+    padding-right: 6em !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .right-bit .header div {
+    font-size: 14px !important;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+  .right-bit .header div {
+    font-size: 19px !important;
   }
 }
 
@@ -414,10 +480,10 @@
     width: 335px !important;
   }
   .app .main .side-nav .list-header {
-    font-size: 22px;
+    font-size: 18px;
   }
   .app .main .side-nav .list-item {
-    font-size: 16px;
+    font-size: 15px;
   }
   .app .main .right-bit {
     position: absolute;
@@ -432,11 +498,16 @@
   .app .main .right-bit .header div {
     position: absolute;
     top: 20px;
-    right: 15px;
+    right: 5px;
   }
   .app .main .right-bit .content-item {
     height: 690px;
     overflow-y: scroll;
+    font-weight: 300;
+    font-size: 16px;
+  }
+  .app .main .right-bit .content {
+    padding-right: 6em !important;
   }
   .moveitleft {
     -webkit-animation: moveleft 1.2s ease-in-out;
@@ -511,7 +582,7 @@
 
 .app .main .side-nav .list-header {
   padding-left: 20px;
-  font-weight: bold;
+  font-weight: 400;
   margin: 22px auto;
 }
 
@@ -524,6 +595,7 @@
 
 .app .main .side-nav ul li {
   padding: 10px 15px 11px 32px;
+  font-weight: 300;
 }
 
 .app .main .side-nav ul .highlight {
@@ -593,7 +665,12 @@
 
 .app .main .right-bit .content-item .content {
   font-family: 'Roboto Mono', monospace;
-  padding: 2em 2em;
+  padding: 1em 2em;
+}
+
+.app .main .right-bit .content-item .content .it-me {
+  font-style: italic;
+  font-size: 14px;
 }
 
 .main::after {
@@ -670,7 +747,7 @@
     color: rgba(255, 255, 255, 0);
   }
   100% {
-    color: white;
+    color: black;
   }
 }
 
@@ -679,13 +756,13 @@
     color: rgba(255, 255, 255, 0);
   }
   100% {
-    color: white;
+    color: black;
   }
 }
 
 @-webkit-keyframes moverighttitle {
   100% {
-    color: white;
+    color: black;
   }
   0% {
     color: rgba(255, 255, 255, 0);
@@ -694,7 +771,7 @@
 
 @keyframes moverighttitle {
   100% {
-    color: white;
+    color: black;
   }
   0% {
     color: rgba(255, 255, 255, 0);
@@ -765,7 +842,7 @@
 
 .highlight {
   color: black !important;
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
+  -webkit-transform: translateY(-3px) translateX(-3px);
+          transform: translateY(-3px) translateX(-3px);
 }
 /*# sourceMappingURL=App.css.map */
