@@ -65,7 +65,7 @@ function App() {
     return (
         <Provider store={store}>
             <div className="app bg">
-                <div className="main" id="moveTarget">
+                <div className={`main ${mobile ? "moveTargetMobileFix" : ""}`} id="moveTarget">
                     {(mobile) ? null : <SideNav mobile={mobile}></SideNav>}
                     <div className={`${(mobile) ? "mobile-wrap" : "right-bit" }`}>
                         <div className="top-wrap">

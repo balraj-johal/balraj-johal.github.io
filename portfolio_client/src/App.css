@@ -40,6 +40,10 @@
 }
 
 @media (max-width: 576px) {
+  .moveTargetMobileFix {
+    -webkit-transform: rotateY(0deg) rotateX(0deg);
+            transform: rotateY(0deg) rotateX(0deg);
+  }
   .app {
     overflow: hidden;
   }

@@ -50,6 +50,9 @@ $largest: 1300px;
 
 //MOBILE
 @media (max-width: 576px) {
+    .moveTargetMobileFix {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
     .app {
         overflow: hidden;
     }
