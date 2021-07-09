@@ -104,7 +104,7 @@
   .carousel-wrap .mobile-content-item h1 {
     font-size: 18px;
     margin-top: 0%;
-    margin: 25px 0 15px;
+    margin: 20px 0 15px;
     width: calc(100vw - 120px);
   }
   .carousel-wrap .mobile-content-item a.content-link {
@@ -181,7 +181,7 @@
     display: none;
   }
   .mobile-wrap .mobile-nav #category-list .list-item, .mobile-wrap .mobile-nav #item-list .list-item {
-    color: #c9c9c9;
+    color: #929292;
     padding: 7px 12.5px;
     width: auto;
     height: 14px;
@@ -702,7 +702,7 @@
 }
 
 .highlight {
-  color: white !important;
+  color: black !important;
   -webkit-transform: translateY(-1px);
           transform: translateY(-1px);
 }
