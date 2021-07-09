@@ -40,6 +40,7 @@ const ENTRIES = [
         name: "XR Stories - Treo",
         img_src: "treo.png",
         id: "1",
+        link: "https://www.youtube.com/watch?v=P1EUnEKnjmE",
         category: "professional",
         content: `
         <p>
@@ -64,6 +65,7 @@ const ENTRIES = [
         name: "IoC Student Enterprises Website",
         img_src: "ioc.png",
         id: "2",
+        link: "https://www.studententerprise.org.uk/",
         category: "professional",
         content: `
         <p>
@@ -94,6 +96,7 @@ const ENTRIES = [
         name: "Robot Theatre",
         img_src: "robot.jpg",
         id: "3",
+        link: "https://festivalofthemind.sheffield.ac.uk/2020/spiegeltent/what-does-it-feel-like-film/",
         category: "professional",
         content: `
         <p>
@@ -176,6 +179,7 @@ const ENTRIES = [
         name: "Paradoujin.com - Underground Music Blog",
         img_src: "paradoujin screenshot.png",
         id: "7",
+        link: "https://paradoujin.com/",
         category: "other",
         content: `
         <p>
@@ -194,6 +198,7 @@ const ENTRIES = [
         name: "Constellations",
         img_src: "constellations.png",
         id: "8",
+        link: "https://balraj-johal.itch.io/constellations",
         category: "other",
         content: `
         <p>
