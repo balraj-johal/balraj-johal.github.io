@@ -113,6 +113,8 @@
   }
   .carousel-wrap .mobile-content-item a.content-link {
     position: absolute;
+    text-decoration: none;
+    color: black;
     top: 36%;
     height: 6%;
     right: 0;
