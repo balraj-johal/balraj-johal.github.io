@@ -44,7 +44,7 @@ const ENTRIES = [
         category: "professional",
         content: `
         <p>
-            As an intern my role was to be the sole developer and 
+            My role was to be the sole developer and 
             liaison between interdisciplinary partners for a VR 
             experience developed in Unreal Engine 4. 
         </p><p>
