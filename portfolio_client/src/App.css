@@ -86,7 +86,7 @@
   }
   .carousel-wrap .mobile-content-item {
     position: relative;
-    height: calc(100vh - 127px);
+    height: calc(100vh - 115px);
     scroll-snap-align: start;
     width: 100vw;
     font-family: "Roboto Mono";
@@ -104,12 +104,40 @@
   .carousel-wrap .mobile-content-item h1 {
     font-size: 18px;
     margin-top: 0%;
-    margin: 15px 15px 15px 15px;
+    margin: 25px 0 15px;
+    width: calc(100vw - 120px);
+  }
+  .carousel-wrap .mobile-content-item a.content-link {
+    position: absolute;
+    top: 36%;
+    height: 6%;
+    right: 0;
+    background-color: silver;
+    font-size: 12px;
+    width: 125px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .carousel-wrap .mobile-content-item .content {
     margin: 0 15px 15px 15px;
     font-size: 13px;
-    height: 39%;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .carousel-wrap .mobile-content-item .content .content-override {
     overflow-y: auto;
   }
   .carousel-wrap .mobile-content-item .content .content-override p:nth-child(1) {
@@ -154,7 +182,7 @@
   }
   .mobile-wrap .mobile-nav #category-list .list-item, .mobile-wrap .mobile-nav #item-list .list-item {
     color: #c9c9c9;
-    padding: 10px 12.5px;
+    padding: 7px 12.5px;
     width: auto;
     height: 14px;
     -webkit-transition: 0.5s ease;

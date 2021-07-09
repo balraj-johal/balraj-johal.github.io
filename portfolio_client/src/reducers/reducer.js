@@ -4,6 +4,7 @@ const ENTRIES = [
     {
         name: "Routes",
         img_src: "routes.png",
+        link: "https://www.theatreroyal.org.uk/event/routes/",
         id: "0",
         category: "professional",
         content: `

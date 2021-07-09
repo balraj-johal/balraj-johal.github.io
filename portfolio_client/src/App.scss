@@ -92,7 +92,7 @@ $largest: 1300px;
         
         .mobile-content-item {
             position: relative;
-            height: calc(100vh - 127px);
+            height: calc(100vh - 115px);
             scroll-snap-align: start;
             width: 100vw;
             font-family: "Roboto Mono";
@@ -105,17 +105,33 @@ $largest: 1300px;
                     object-fit: cover;
                 }
             }
-                h1 {
-                    font-size: 18px;
-                    margin-top: 0%;
-                    margin: 15px 15px 15px 15px;
-                }
+            h1 {
+                font-size: 18px;
+                margin-top: 0%;
+                margin: 25px 0 15px;
+                width: calc(100vw - 120px);
+            }
+            a.content-link {
+                position: absolute;
+                top: 36%;
+                height: 6%;
+                right: 0;
+                background-color: rgb(192, 192, 192);
+                font-size: 12px;
+                width: 125px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
             .content {
                 margin: 0 15px 15px 15px;
                 font-size: 13px;
-                height: 39%;
-                overflow-y: auto;
+                height: 50%;
+                // overflow-y: auto; */
+                display: flex;
+                flex-direction: column;
                 .content-override {
+                    overflow-y: auto;
                     p:nth-child(1) {
                         margin-top: 0;
                     }
@@ -155,7 +171,7 @@ $largest: 1300px;
                 overflow-x: scroll;
                 .list-item {
                     color: rgb(201, 201, 201);
-                    padding: 10px 12.5px;
+                    padding: 7px 12.5px;
                     width: auto;
                     height: 14px;
                     transition: 0.5s ease;

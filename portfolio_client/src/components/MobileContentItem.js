@@ -10,11 +10,20 @@ function MobileContentItem(props) {
                     draggable="false">
                 </img>
             </div>
-            <h1>{props.item.name}</h1>
+            {props.item.link ? <Link link={props.item.link} /> : null}
             <div className="content cust-scroll">
+                <h1>{props.item.name}</h1>
                 <div className="content-override" dangerouslySetInnerHTML={{ __html: props.item.content }}></div>
             </div>
         </div>
+    )
+}
+
+function Link(props) {
+    return(
+        <a className="content-link" href={props.link} target="_blank" >
+            click for more
+        </a>
     )
 }
 
