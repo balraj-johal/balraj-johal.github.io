@@ -12,7 +12,7 @@ function MobileContentItem(props) {
             </div>
             {props.item.link ? <Link link={props.item.link} /> : null}
             <div className="content cust-scroll">
-                <h1>{props.item.name}</h1>
+                {props.item.name ? <h1>{props.item.name}</h1> : null }
                 <div className="content-override" dangerouslySetInnerHTML={{ __html: props.item.content }}></div>
             </div>
         </div>

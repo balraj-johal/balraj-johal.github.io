@@ -236,14 +236,16 @@ const ENTRIES = [
         name: "",
         img_src: "",
         content: `
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmod tempor incididunt ut labore et dolore magna 
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit 
-        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-        occaecat cupidatat non proident, sunt in culpa qui officia 
-        deserunt mollit anim id est laborum.
+        Hey I'm Balraj! I'm primarily a Software Developer,
+        working full-stack with a range of partners across
+        a range of disciplines.
+
+        <div class="about-img-wrap">
+            <img src="/res/me.jpg"
+                draggable="false">
+            </img>
+            <span class="it-me">it me</span>
+        </div>
         `,
         id: "about",
         category: "about"

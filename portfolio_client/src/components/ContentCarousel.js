@@ -21,6 +21,7 @@ function ContentCarousel(props) {
                 break;
         }
     });
+    let contentEntries = props.entries.slice(0, props.entries.length - 3);
     
     function isInViewport(element) {
         if (element) {
@@ -113,7 +114,7 @@ function ContentCarousel(props) {
                 <MobileContentItem item={socialsItem} />
                 <MobileContentItem item={skillsItem} />
                 <MobileContentItem item={aboutItem} />
-                {props.entries.map((item, index) => (
+                {contentEntries.map((item, index) => (
                     <MobileContentItem item={item} key={index} />
                 ))}
             </div>

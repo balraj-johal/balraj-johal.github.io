@@ -48,6 +48,8 @@ $largest: 1300px;
     }
 }
 
+#mobile-contentItem-about {
+}
 //MOBILE
 @media (max-width: 576px) {
     .moveTargetMobileFix {
@@ -74,8 +76,10 @@ $largest: 1300px;
     }
     #mobile-contentItem-about, #mobile-contentItem-SKILLS, #mobile-contentItem-SOCIALS {
         .content {
-            div {
-                margin-top: 0 !important;
+            height: 90%;
+            .content-override {
+                margin-top: 10px !important;
+                height: 100%;
             }
         }
     }
@@ -128,10 +132,19 @@ $largest: 1300px;
                 justify-content: center;
                 align-items: center;
             }
+            #mobile-contentItem-about {
+                font-size: 40px;
+                color: red;
+                background-color: blue;
+                .content {
+                    height: 90% !important;
+                }
+            }
             .content {
                 margin: 0 15px 15px 15px;
                 font-size: 13px;
                 height: 50%;
+                font-weight: 300;
                 // overflow-y: auto; */
                 display: flex;
                 flex-direction: column;
@@ -146,7 +159,22 @@ $largest: 1300px;
                     p {
                         padding-right: 30px;
                     }
-                } 
+                    .about-img-wrap {
+                        width: 100%;
+                        margin: 1em auto;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        img {
+                            width: 100%;
+                        }
+                        span {
+                            font-size: 12px;
+                            margin-top: 5px;
+                            font-style: italic;
+                        }
+                    }
+                }
             }
         }
     }
@@ -180,7 +208,7 @@ $largest: 1300px;
                     width: auto;
                     height: 14px;
                     transition: 0.5s ease;
-                    font-weight: bold;
+                    font-weight: 400;
                     white-space: nowrap;
                     a {
                         white-space: nowrap;
@@ -207,6 +235,13 @@ $largest: 1300px;
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
+    .about-img-wrap {
+        width: 60%;
+        margin: 2em auto;
+        img {
+            width: 100%;
+        }
+    }
     .moveitleft, .moveitright {
         position: absolute;
         left: 0;
@@ -262,6 +297,13 @@ $largest: 1300px;
     }
 }
 @media (min-width: 768px) and (max-width: $largest) {
+    .about-img-wrap {
+        width: 60%;
+        margin: 2em auto;
+        img {
+            width: 100%;
+        }
+    }
     .moveitleft, .moveitright {
         position: absolute;
         left: 0;
@@ -318,6 +360,13 @@ $largest: 1300px;
 }
 
 @media (min-width: $largest) {
+    .about-img-wrap {
+        width: 60%;
+        margin: 2em auto;
+        img {
+            width: 100%;
+        }
+    }
     .moveitleft, .moveitright {
         position: absolute;
         left: 0;
