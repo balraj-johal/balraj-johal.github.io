@@ -236,12 +236,14 @@ const ENTRIES = [
         name: "",
         img_src: "",
         content: `
-        Hey I'm Balraj! I'm a Software Developer with
-        experience working on full-stack projects with a range of 
-        partners across varied disciplines.
-
-        I'm passionate about creative solutions to problems and
-        especially creative applications of digital technology.
+        <p>
+            Hey I'm Balraj! I'm a Software Developer with
+            experience working on full-stack projects with a range of 
+            partners across varied disciplines.
+        </p><p>
+            I'm passionate about creative solutions to problems and
+            especially creative applications of digital technology.
+        </p>
 
         <div class="about-img-wrap">
             <img src="/res/me.jpg"
@@ -254,7 +256,9 @@ const ENTRIES = [
             MY CV
         </div>
 
-        Get in touch with me if you have somthing cool for us to work on!
+        <p>
+            Get in touch with me if you have somthing cool for us to work on!
+        </p>
         `,
         id: "about",
         category: "about"
