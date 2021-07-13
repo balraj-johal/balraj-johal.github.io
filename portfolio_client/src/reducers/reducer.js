@@ -220,7 +220,7 @@ const ENTRIES = [
         <p>
             An FPS game I'm currently making about a mutated supermarket.
         </p><p>
-            The concept is that you mush dash close to an enemy
+            The concept is that you need to dash close to an enemy while
             avoiding their projectiles until you're in close
             range to them, at which point you can grab them and use 
             their attacks against the other enemies until you run
@@ -236,9 +236,12 @@ const ENTRIES = [
         name: "",
         img_src: "",
         content: `
-        Hey I'm Balraj! I'm primarily a Software Developer,
-        working full-stack with a range of partners across
-        a range of disciplines.
+        Hey I'm Balraj! I'm a Software Developer with
+        experience working on full-stack projects with a range of 
+        partners across varied disciplines.
+
+        I'm passionate about creative solutions to problems and
+        especially creative applications of digital technology.
 
         <div class="about-img-wrap">
             <img src="/res/me.jpg"
@@ -246,6 +249,12 @@ const ENTRIES = [
             </img>
             <span class="it-me">it me</span>
         </div>
+
+        <div class="cv-link">
+            MY CV
+        </div>
+
+        Get in touch with me if you have somthing cool for us to work on!
         `,
         id: "about",
         category: "about"
