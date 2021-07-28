@@ -850,4 +850,9 @@
   -webkit-transform: translateY(-3px) translateX(-3px);
           transform: translateY(-3px) translateX(-3px);
 }
+
+.cv-link {
+  padding: 10px 20px;
+  background-color: white;
+}
 /*# sourceMappingURL=App.css.map */
