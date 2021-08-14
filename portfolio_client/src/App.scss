@@ -448,6 +448,9 @@ $largest: 1300px;
                 .content {
                     padding-right: 6em !important;
                 }
+                a.content-link {
+                    top: calc(530px - 25px) !important;
+                }
             }
         }
     }
@@ -705,4 +708,18 @@ $largest: 1300px;
     padding: 10px 20px;
     background-color: white;
     // margin-left: 15px;
+}
+
+a {
+    color: black;
+}
+
+.skill {
+    padding-left: 1em;
+    padding-bottom: 2.5px;
+    transition: 1s;
+    &:hover {
+        // transform: translateX(5px);
+        padding-left: 1.5em;
+    }
 }

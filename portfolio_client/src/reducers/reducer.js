@@ -252,9 +252,11 @@ const ENTRIES = [
             <span class="it-me">it me</span>
         </div>
 
-        <div class="cv-link">
-            MY CV
-        </div>
+        <a href="/res/CV - Balraj Johal.pdf">
+            <div class="cv-link">
+                MY CV
+            </div>
+        </a>
 
         <p>
             Get in touch with me if you have somthing cool for us to work on!
@@ -267,7 +269,20 @@ const ENTRIES = [
         name: "",
         img_src: "",
         content: `
-        schkills
+        <p>
+            I have a strong technical background and have the creative skills to
+            design and present that foundation in the best possible light.
+        </p><p>
+            I have development experience in multiple languages:
+            <div class="skill">JavaScript (primarily Node.js & React)</div>
+            <div class="skill">Java</div>
+            <div class="skill">PHP</div>
+        </p><p>
+            I am also experienced in a variety of different disciplines(?):
+            <div class="skill">Machine Learning & AI</div>
+            <div class="skill">UI/UX Design</div>
+            <div class="skill">Game Development (Unity & Unreal)</div>
+        </p>
         `,
         id: "SKILLS",
         category: "skills"
@@ -276,7 +291,13 @@ const ENTRIES = [
         name: "",
         img_src: "",
         content: `
-        socials
+        <p>
+            The best way to get in touch with me is via email, so hit me at
+            <a href="mailto:balrajsjohal@gmail.com">balrajsjohal@gmail.com</a>!
+        </p>
+        <div class="linkedin-logo">
+            <img class="logo" src="/res/linkedin.png"></img>
+        </div>
         `,
         id: "SOCIALS",
         category: "socials"

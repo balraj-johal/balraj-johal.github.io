@@ -483,6 +483,9 @@
   .app .main .right-bit .content {
     padding-right: 6em !important;
   }
+  .app .main .right-bit a.content-link {
+    top: calc(530px - 25px) !important;
+  }
   .moveitleft {
     -webkit-animation: moveleft 1.2s ease-in-out;
             animation: moveleft 1.2s ease-in-out;
@@ -846,5 +849,20 @@
 .cv-link {
   padding: 10px 20px;
   background-color: white;
+}
+
+a {
+  color: black;
+}
+
+.skill {
+  padding-left: 1em;
+  padding-bottom: 2.5px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.skill:hover {
+  padding-left: 1.5em;
 }
 /*# sourceMappingURL=App.css.map */
