@@ -9,10 +9,20 @@ function ContentItem(props) {
                     draggable="false">
                 </img>
             </div>
+            {props.item.link ? <Link link={props.item.link} /> : null}
             <div className="content" dangerouslySetInnerHTML={{ __html : props.item.content}}></div>
         </div>
     )
 }
+
+function Link(props) {
+    return(
+        <a className="content-link" href={props.link} target="_blank" >
+            click for more
+        </a>
+    )
+}
+
 
 const mapStateToProps = state => ({
     item: state.selectedItem

@@ -15,7 +15,7 @@ function App() {
     //check if we should render mobile version
     let [mobile, setMobile] = useState(false);
     let isMobile = () => {
-        if (window.innerWidth <= 576) {
+        if (window.innerWidth <= 768) {
             setMobile(true);
         } else {
             setMobile(false);
@@ -23,7 +23,7 @@ function App() {
     }
     useEffect(() => {
         window.addEventListener('resize', isMobile);
-        if (window.innerWidth <= 576) {
+        if (window.innerWidth <= 768) {
             setMobile(true);
         } else {
             setMobile(false);
