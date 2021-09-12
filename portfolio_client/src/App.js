@@ -11,7 +11,7 @@ import ContentCarousel from "./components/ContentCarousel"
 import Header from "./components/Header";
 
 function App() {
-    // is app at mobile resolutions?
+    // is app width of mobile dimension?
     let [mobile, setMobile] = useState(false);
 
     //check if we should render mobile version
@@ -71,6 +71,7 @@ function App() {
         target.style.setProperty('--sheenY', `${yOffset}px`)
     }
 
+    // render App with different layout dependant on width
     if (mobile) {
         // render mobile layout
         return (
@@ -94,10 +95,10 @@ function App() {
             <Provider store={store}>
                 <div className="app bg">
                     <div className="main" id="transformTarget">
-                    <SideNav mobile={mobile}></SideNav>
+                        <SideNav />
                         <div className="right-bit">
                             <div className="top-wrap">
-                                <Header></Header>
+                                <Header />
                             </div>
                             <ContentItem />
                         </div>
@@ -106,22 +107,6 @@ function App() {
             </Provider>
         );
     }
-    // return (
-    //     <Provider store={store}>
-    //         <div className="app bg">
-    //             <div className={`main ${mobile ? "transformTargetMobileFix" : ""}`} id="transformTarget">
-    //                 {(mobile) ? null : <SideNav mobile={mobile}></SideNav>}
-    //                 <div className={`${(mobile) ? "mobile-wrap" : "right-bit" }`}>
-    //                     <div className="top-wrap">
-    //                         <Header></Header>
-    //                         {(mobile) ?  <TopNav /> : null}
-    //                     </div>
-    //                     {(mobile) ? <ContentCarousel /> : <ContentItem />}
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     </Provider>
-    // );
 }
 
 export default App;

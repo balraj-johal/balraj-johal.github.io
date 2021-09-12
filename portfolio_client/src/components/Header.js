@@ -19,8 +19,9 @@ function Header(props) {
                 BALRAJ JOHAL
             </h1>
             <div className={`header-selected-item 
-                ${(props.selectedItem.name ? "nottransparent" : "transparent")} 
-                ${props.selectedItem.name ? "movetitleleft" : "movetitleright"}`} 
+                    ${(props.selectedItem.name ? "nottransparent" : "transparent")} 
+                    ${props.selectedItem.name ? "movetitleleft" : "movetitleright"}
+                `} 
             >
                 {(props.selectedItem.name ? props.selectedItem.name : "")}
             </div>

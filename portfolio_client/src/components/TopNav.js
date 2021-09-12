@@ -32,46 +32,51 @@ function TopNav(props) {
         },
     ]
 
-    // //scroll to desired category point on load
-    // useEffect(() => {
-    //     let catList = document.getElementById("category-list");
-    //     catList.scrollTo(40, 0);
-    // }, [])
-
+    // highlight selected item
     useEffect(() => {
         let items = document.getElementsByClassName("list-item")
         for (let i = 0; i < items.length; i++) {
             items[i].classList.remove("highlight")
         }
         if (props.selectedItem.id !== "about") {
-            document.getElementById("list-item-"+(props.selectedItem.id)).classList.add("highlight")
+            let elem = document.getElementById("list-item-"+(props.selectedItem.id))
+            elem.classList.add("highlight")
         }
     }, [props.selectedItem])
+
+    let selectAndScrollToItem = (itemID) => {
+        let elemID = `mobile-contentItem-${itemID}`;
+        let elem = document.getElementById(elemID);
+        elem.scrollIntoView(false, {behavior: "smooth"});
+        props.selectItem(itemID);
+    }
 
     return(
         <div className="mobile-nav" id="mobile-nav-elem">
             <div id="category-list">
                 {CATEGORIES.map((category, index) => (
-                    <div className="list-item category" id={"list-category-"+category.id} 
-                    key={index} onClick={() => {
-                        let elem = document.getElementById(`mobile-contentItem-${category.startItemID}`);
-                        elem.scrollIntoView(false, {behavior: "smooth"});
-                        props.selectItem(category.startItemID);
-                    }} >
+                    <div 
+                        className="list-item category" 
+                        id={"list-category-"+category.id} 
+                        onClick={() => {
+                            selectAndScrollToItem(category.startItemID);
+                        }}
+                        key={index}
+                    >
                        {category.name}
                     </div>
                 ))}
                 <div className="list-item category filler" id={"list-category-filler"}></div>
             </div>
-            
             <div id="item-list">
                 {props.entries.map((item, index) => (
-                    <div className="list-item" id={"list-item-"+item.id} 
-                    key={index} onClick={() => {
-                        let elem = document.getElementById(`mobile-contentItem-${item.id}`);
-                        elem.scrollIntoView(false, {behavior: "smooth"});
-                        props.selectItem(item.id);
-                    }} >
+                    <div 
+                        className="list-item" 
+                        id={"list-item-"+item.id}
+                        onClick={() => {
+                            selectAndScrollToItem(item.id);
+                        }}
+                        key={index}>
                         {item.name}
                     </div>
                 ))}
