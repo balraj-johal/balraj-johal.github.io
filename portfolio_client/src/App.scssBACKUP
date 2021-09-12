@@ -50,7 +50,7 @@ $largest: 1300px;
 
 //MOBILE
 @media (max-width: 576px) {
-    .moveTargetMobileFix {
+    .transformTargetMobileFix {
         transform: rotateY(0deg) rotateX(0deg);
     }
     .highlight {
