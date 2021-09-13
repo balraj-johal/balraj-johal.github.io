@@ -21,7 +21,7 @@ function ContentItem(props) {
 // link to content URL
 function Link(props) {
     return(
-        <a className="content-link" href={props.link} target="_blank" >
+        <a className="content-link" rel="noreferrer" href={props.link} target="_blank" >
             click for more
         </a>
     )

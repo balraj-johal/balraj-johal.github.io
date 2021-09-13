@@ -89,7 +89,7 @@ function ContentCarousel(props) {
                 }
                 //remove highlights where appropriate
                 for (let i = 1; i <=4; i++) {
-                    if (i != highlightException) {
+                    if (i !== highlightException) {
                         let elem = document.getElementById(`list-category-${i}`);
                         elem.classList.remove("highlight")
                     }
