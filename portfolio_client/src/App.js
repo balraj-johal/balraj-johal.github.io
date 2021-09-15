@@ -76,7 +76,7 @@ function App() {
         // render mobile layout
         return (
             <Provider store={store}>
-                <div className="app bg">
+                <div className="app bg" data-testid="app-root">
                     <div className="main transformTargetMobileFix" id="transformTarget">
                         <div className="mobile-wrap">
                             <div className="top-wrap">
@@ -93,7 +93,7 @@ function App() {
         // render fullscreen layout
         return (
             <Provider store={store}>
-                <div className="app bg">
+                <div className="app bg" data-testid="app-root">
                     <div className="main" id="transformTarget">
                         <SideNav />
                         <div className="right-bit">
