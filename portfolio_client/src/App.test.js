@@ -10,3 +10,8 @@ test('renders app root div', () => {
     const appRootElement = screen.getByTestId("app-root");
     expect(appRootElement).toBeInTheDocument();
 });
+
+it('should take a snapshot', () => {
+    const { asFragment } = render(<App />);
+    expect(asFragment(<App />)).toMatchSnapshot();
+})
