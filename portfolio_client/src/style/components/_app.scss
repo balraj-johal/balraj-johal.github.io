@@ -1,0 +1,94 @@
+
+@media (max-width: 768px) {
+    .transformTargetMobileFix {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    .highlight {
+        transform: translateY(-2px) !important;
+    }
+    .app {
+        overflow: hidden;
+    }
+    .bg::before {
+        filter: blur(4px);
+        transform: scale(1.1);
+    }
+    .mobile-wrap {
+        width: 100%;
+    }
+}
+
+@media (max-width: $largest) {
+    .app {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .main {
+            height: 760px;
+            width: 1250px;
+        }
+    }
+}
+@media (min-width: $largest) {
+    .app {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .main {
+            height: 770px !important;
+            width: 1250px !important;
+        }
+    }
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    // background-image: url("./res/sarahdarkslow.gif");
+    // background-image: url("./res/bgs/1.gif");                   THIS 1
+    // background-image: url("./res/bgs/2.gif");
+    // background-image: url("./res/bgs/3.gif");
+    background-size:100% 100%;
+    background-color: rgba(1,0,0,0);
+}
+.app {
+    perspective: 800px;
+    .main {
+        display: flex;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(148,148,148, 0.34);
+        // color: white;                  here
+        color: black;
+        overflow: hidden;
+        --sheenX: 0;
+        --sheenY: 0;
+    }
+}
+
+.main::after {
+    content: "";
+    position: absolute;
+    top: -400px;
+    right: -400px;
+    bottom: -400px;
+    left: -400px;
+    background: linear-gradient(217deg, rgba(255,255,255,0), rgba(255,255,255,0) 35%, rgba(255, 255, 255, 0.034) 45%, rgba(255, 255, 255, 0.089) 50%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+    transform: translateX(var(--sheenX)) translateY(var(--sheenY));
+    pointer-events: none;
+}
+.hideit {
+    display: none;
+}

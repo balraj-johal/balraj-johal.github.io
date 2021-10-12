@@ -1,0 +1,78 @@
+@keyframes moveright768 {
+    0% {
+        right: 100%;
+        left: 0%;
+    }
+    100% {
+        right: 0%;
+        left: calc(100% - 200px);
+    }
+}
+@keyframes moveleft768 {
+    0% {
+        right: 0%;
+        left: calc(100% - 200px);
+    }
+    100% {
+        right: 100%;
+        left: 0%;
+    }
+}
+@keyframes moveleft {
+    0% {
+        right: 0%;
+        left: 73%;
+        text-align: right;
+    }
+    100% {
+        right: 100%;
+        left: 0%;
+        text-align: left;
+    }
+}
+@keyframes moveright {
+    0% {
+        right: 100%;
+        left: 0%;
+        text-align: left;
+    }
+    100% {
+        right: 0%;
+        left: 73%;
+        text-align: right;
+    }
+}
+@keyframes movelefttitle {
+    0% {
+        color: rgba(255,255,255,0);
+    }
+    100% {
+        // color: white;
+        color: black;
+    }
+}
+@keyframes moverighttitle {
+    100% {
+        // color: white;
+        color: black;
+    }
+    0% {
+        color: rgba(255,255,255,0);
+    }
+}
+@keyframes movelefta {
+    0% {
+        left: 50vw;
+    }
+    100% {
+        left: 15px;
+    }
+}
+@keyframes moverighta {
+    0% {
+        left: 15px;
+    }
+    100% {
+        left: 50vw;
+    }
+}
