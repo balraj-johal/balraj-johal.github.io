@@ -249,7 +249,7 @@ const ENTRIES = [
             <img src="/res/me.jpg"
                 draggable="false">
             </img>
-            <span class="it-me">it me</span>
+            <span class="it-me">me hard at work</span>
         </div>
 
         <a href="/res/CV - Balraj Johal.pdf">
