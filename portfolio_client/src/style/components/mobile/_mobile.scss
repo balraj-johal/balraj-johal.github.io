@@ -1,0 +1,32 @@
+@import "mobile-nav";
+@import "mobile-content-item";
+
+
+@media (max-width: 768px) {
+    .carousel-wrap {
+        @include hideScrollbar();
+        display: grid;
+        // grid-template-columns: repeat(4, 100%);
+        will-change: transform;
+        align-content: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-coordinate: 0 0;
+        scroll-snap-points-x: repeat(100%);
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+    .mobile-wrap {
+        .swipe-prompt {
+            font-family: "Roboto Mono";
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            height: 8%;
+            width: 93vw;
+            justify-content: flex-end;
+            margin: 0 2.5vw;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .mobile-wrap .mobile-nav {
+        font-size: 15px !important;
+        #item-list {
+            margin-bottom: 10px !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-wrap {
+        .mobile-nav {
+            font-family: "Roboto Mono";
+            font-size: 13px;
+            ul {
+                list-style-type: none;
+                li {
+                    float: left;
+                    // padding: 10px 5px;
+                }
+            }
+            #item-list {
+                margin-bottom: 5px;
+            }
+            #category-list, #item-list {
+                @include hideScrollbar();
+                display: flex;
+                position: relative;
+                width: 100vw;
+                overflow-x: scroll;
+                .list-item {
+                    color: rgb(146, 146, 146);
+                    padding: 7px 12.5px;
+                    width: auto;
+                    height: 14px;
+                    transition: 0.5s ease;
+                    font-weight: 400;
+                    white-space: nowrap;
+                    a {
+                        white-space: nowrap;
+                    }
+                }
+                .filler {
+                    width: 200px;
+                }
+            }
+        }
+    }
+}

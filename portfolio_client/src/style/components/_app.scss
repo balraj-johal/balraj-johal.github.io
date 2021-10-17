@@ -92,3 +92,12 @@
 .hideit {
     display: none;
 }
+.highlight {
+    // color: white !important;
+    color: black !important;
+    transform: translateY(-3px) translateX(-3px);
+}
+
+a {
+    color: black;
+}

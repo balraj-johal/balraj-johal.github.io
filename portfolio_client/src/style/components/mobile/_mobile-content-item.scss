@@ -1,0 +1,110 @@
+@media (min-width: 576px) and (max-width: 768px) {
+    .carousel-wrap .mobile-content-item {
+        .content {
+            height: 45%;
+            font-size: 15px;
+            font-weight: 300;
+        }
+        .image-container {
+            height: 45%;
+        }
+        a.content-link {
+            top: calc(45% - 25px) !important;
+        }
+    } 
+}
+
+@media (max-width: 768px) {
+    #mobile-contentItem-about, #mobile-contentItem-SKILLS, #mobile-contentItem-SOCIALS {
+        .content {
+            height: 90%;
+            .content-override {
+                margin-top: 10px !important;
+                height: 100%;
+            }
+        }
+    }
+
+    .carousel-wrap {
+        .mobile-content-item {
+            position: relative;
+            height: calc(100vh - 115px);
+            scroll-snap-align: start;
+            width: 100vw;
+            font-family: "Roboto Mono";
+            font-weight: normal;
+            .image-container {
+                height: 40%;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            h1 {
+                font-size: 18px;
+                margin-top: 0%;
+                margin: 20px 0 15px;
+                width: calc(100vw - 120px);
+            }
+            a.content-link {
+                position: absolute;
+                text-decoration: none;
+                color: black;
+                top: 36%;
+                height: 6%;
+                right: 0;
+                background-color: rgb(192, 192, 192);
+                font-size: 12px;
+                width: 125px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #mobile-contentItem-about {
+                font-size: 40px;
+                color: red;
+                background-color: blue;
+                .content {
+                    height: 90% !important;
+                }
+            }
+            .content {
+                margin: 0 15px 15px 15px;
+                font-size: 13px;
+                height: 50%;
+                font-weight: 300;
+                // overflow-y: auto; */
+                display: flex;
+                flex-direction: column;
+                .content-override {
+                    overflow-y: auto;
+                    p:nth-child(1) {
+                        margin-top: 0;
+                    }
+                    p:last-child {
+                        margin-bottom: 0;
+                    }
+                    p {
+                        padding-right: 30px;
+                    }
+                    .about-img-wrap {
+                        width: 100%;
+                        margin: 1em auto;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        img {
+                            width: 100%;
+                        }
+                        span {
+                            font-size: 12px;
+                            margin-top: 5px;
+                            font-style: italic;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

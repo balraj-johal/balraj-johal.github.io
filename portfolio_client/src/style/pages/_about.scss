@@ -1,0 +1,24 @@
+@media (min-width: 768px) and (max-width: $largest) {
+    .about-img-wrap {
+        width: 60%;
+        margin: 2em auto;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: $largest) {
+    .about-img-wrap {
+        width: 60%;
+        margin: 2em auto;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.cv-link {
+    padding: 10px 20px;
+    background-color: white;
+}

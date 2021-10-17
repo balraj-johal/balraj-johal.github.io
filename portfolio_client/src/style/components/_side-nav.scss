@@ -1,0 +1,54 @@
+
+
+@media (min-width: 768px) and (max-width: $largest) {
+    .side-nav {
+        .list-header {
+            font-size: 18px;
+        }
+        li {
+            font-size: 15px;
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+    .side-nav .list-header:first-of-type {
+        margin-top: 65px !important;
+    }
+}
+@media (min-width: $largest) {
+    .app .main .side-nav {
+        width: 335px !important;
+        .list-header {
+            font-size: 18px;
+        }
+        .list-item {
+            font-size: 15px;
+        }
+    }
+}
+
+.app .main .side-nav {
+    @include noDragText();
+    width: 30%;
+    height: 100%;
+    overflow-y: scroll;
+    font-family: "Roboto Mono";
+    .list-header {
+        padding-left: 20px;
+        font-weight: 400;
+        margin: 22px auto;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        margin-top: -10px;
+        padding: 0;
+        li {
+            padding: 10px 15px 11px 32px;
+            font-weight: 300;
+        }
+        .highlight {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+    }
+}

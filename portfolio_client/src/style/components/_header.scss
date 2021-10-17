@@ -1,0 +1,76 @@
+@media (max-width: 768px) {
+    .header-selected-item {
+        display: none;
+    }
+    .header {
+        h1 {
+            font-family: "Dubsteptrix";
+            font-weight: normal;
+        }
+    }
+    .mobile-wrap {
+        .header h1 {
+            padding-left: 15px;
+            margin-bottom: 7px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: $largest) {
+    .moveitleft, .moveitright {
+        position: absolute;
+        left: 0;
+        width: 184px !important;
+    }
+    .header {
+        margin-top: 2px;
+        position: relative;
+        height: 64px;
+        h1 {
+            font-size: 24px !important;
+            // padding-top: 14px !important;
+            padding-top: 4px !important;
+            animation-fill-mode: forwards;
+            transition: 1s ease;
+        }
+        div {
+            width: 100%;
+            text-align: right;
+        }
+    }
+    .moveitleft {
+        animation: moveleft768 1.2s ease-in-out !important;
+        padding: 0 0 0 0;
+    }
+    .moveitright {
+        animation: moveright768 1.2s ease-in-out !important;
+        padding: 0 15px 0 0;
+    }
+    .movetitleleft {
+        animation: movelefttitle 1.2s ease-in-out;
+    }
+    .movetitleright {
+        animation: moverighttitle 1.2s ease-in-out;
+    }
+}
+
+@media (min-width: $largest) {
+    .moveitleft, .moveitright {
+        position: absolute;
+        left: 0;
+        width: 25% !important;
+    }
+    //ASSIGN ANIMATIONS FOR HEADER
+    .moveitleft {
+        animation: moveleft 1.2s ease-in-out;
+    }
+    .moveitright {
+        animation: moveright 1.2s ease-in-out;
+    }
+    .movetitleleft {
+        animation: movelefttitle 1.2s ease-in-out;
+    }
+    .movetitleright {
+        animation: moverighttitle 1.2s ease-in-out;
+    }
+}
