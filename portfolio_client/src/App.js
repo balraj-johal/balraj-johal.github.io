@@ -1,4 +1,4 @@
-import './App.css';
+import './style/Root.css';
 
 import { Provider } from "react-redux";
 import store from "./store";
@@ -9,6 +9,7 @@ import SideNav from "./components/SideNav"
 import ContentItem from "./components/ContentItem"
 import ContentCarousel from "./components/ContentCarousel"
 import Header from "./components/Header";
+import BackgroundCanvas from './components/BackgroundCanvas';
 
 function App() {
     // is app width of mobile dimension?
@@ -76,6 +77,7 @@ function App() {
         // render mobile layout
         return (
             <Provider store={store}>
+                <BackgroundCanvas />
                 <div className="app bg" data-testid="app-root">
                     <div className="main transformTargetMobileFix" id="transformTarget">
                         <div className="mobile-wrap">
@@ -93,6 +95,7 @@ function App() {
         // render fullscreen layout
         return (
             <Provider store={store}>
+                <BackgroundCanvas />
                 <div className="app bg" data-testid="app-root">
                     <div className="main" id="transformTarget">
                         <SideNav />

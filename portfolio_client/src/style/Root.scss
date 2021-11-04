@@ -1,0 +1,23 @@
+@import "abstracts/mixins";
+@import "abstracts/animations";
+@import "abstracts/variables";
+
+@import "base/typography";
+
+@import "components/app";
+@import "components/bgCanvas";
+@import "components/mobile/mobile";
+@import "components/header";
+@import "components/side-nav";
+@import "components/right-bit";
+@import "components/scrollbar";
+
+@import "layout/content";
+@import "layout/navigation";
+
+@import "pages/about";
+@import "pages/skills";
+
+body {
+    overflow: hidden;
+}
