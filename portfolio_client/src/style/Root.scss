@@ -5,6 +5,7 @@
 @import "base/typography";
 
 @import "components/app";
+@import "components/bgCanvas";
 @import "components/mobile/mobile";
 @import "components/header";
 @import "components/side-nav";
@@ -16,3 +17,7 @@
 
 @import "pages/about";
 @import "pages/skills";
+
+body {
+    overflow: hidden;
+}

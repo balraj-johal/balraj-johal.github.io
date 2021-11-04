@@ -312,6 +312,16 @@ a {
   color: black;
 }
 
+#bg-canvas {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 @media (min-width: 576px) and (max-width: 768px) {
   .mobile-wrap .mobile-nav {
     font-size: 15px !important;
@@ -905,5 +915,9 @@ a {
 
 .skill:hover {
   padding-left: 1.5em;
+}
+
+body {
+  overflow: hidden;
 }
 /*# sourceMappingURL=Root.css.map */

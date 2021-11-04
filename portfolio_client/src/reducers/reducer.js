@@ -2,6 +2,44 @@ import { SELECT_ITEM } from "../actions/types";
 
 const ENTRIES = [
     {
+        name: "COP26: Data Visualisation for Coney",
+        img_src: "routes.png",
+        id: "26",
+        category: "professional",
+        content: `
+        <p>
+        I created a visualiser using Node.js, React and Three.js, to 
+        display public responses to live questions 
+        </p><p>
+        
+        </p>
+        `
+    },
+    {
+        name: "Untitled Megaverse Game",
+        img_src: "treo.png",
+        id: "mv2",
+        category: "professional",
+        content: `
+        <p>
+            My role was to be the sole developer and 
+            liaison between interdisciplinary partners for a VR 
+            experience developed in Unreal Engine 4. 
+        </p><p>
+            The project incorporated generative audio/data 
+            sonification elements that were developed in conjunction 
+            with PHD researchers from the University of Sheffield.
+        </p><p>
+            The finished project is an interactive VR experience 
+            in which the user can watch and hear the way that a 
+            group of randomly generated (according to biomechanical 
+            models) trees grow, especially the way that they are 
+            influenced by user determined sunlight and water level 
+            influences.
+        </p>
+        `
+    },
+    {
         name: "Routes",
         img_src: "routes.png",
         link: "https://www.theatreroyal.org.uk/event/routes/",
