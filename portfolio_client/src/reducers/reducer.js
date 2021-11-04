@@ -1,5 +1,7 @@
 import { SELECT_ITEM } from "../actions/types";
 
+const PUBLIC_URL = process.env.PUBLIC_URL;
+
 const ENTRIES = [
     {
         name: "Routes",
@@ -137,9 +139,21 @@ const ENTRIES = [
         img_src: "ar.png",
         id: "4",
         category: "professional",
-        content: `a sint occaecat 
-        cupidatat non proident, sunt in culpa qui officia 
-        deserunt mollit anim id est laborum. `
+        content: `
+        <p>
+            For my dissertation project I extended 
+            <a href="https://github.com/andrewfstratton/quando" target="_blank">
+                Quando</a>, 
+            a block based visual programming toolkit, adding in tools
+            to allow non-coders to have easy access to developing technologies 
+            such as AI (Speech Processing, Chatbots, Computer Vision), and 
+            marker based web Augmented Reality (a-frame and AR.js).
+        </p></p>
+            These tools were showcased through even more tools allowing for 
+            the creation of simple Adventure Game logic. These were used to create
+            an Augmented Reality adventure game using AI tools for puzzle elements.
+        </p>
+        `
     },
     {
         name: "TensorFlow Biomedical Image Segmentation",
@@ -147,9 +161,15 @@ const ENTRIES = [
         id: "5",
         category: "other",
         content: `
-        To teach myself TensorFlow, 
-        I used the U-Net algorithm to create a Image 
-        Segmentation model to segment liver scans.
+        <p>
+            To teach myself TensorFlow, 
+            I used the U-Net algorithm to create a Image 
+            Segmentation model to segment liver scans using
+            openly available datasets.
+
+            This project was a valuable learning experience
+            for developing my machine learning skills.
+        </p>
         `
     },
     {
@@ -252,7 +272,7 @@ const ENTRIES = [
             <span class="it-me">me hard at work</span>
         </div>
 
-        <a href="/res/CV - Balraj Johal.pdf">
+        <a href="${PUBLIC_URL}/res/CV - Balraj Johal.pdf" target="_blank">
             <div class="cv-link">
                 MY CV
             </div>

@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="app bg"
+    data-testid="app-root"
+  >
+    <div
+      class="main"
+      id="transformTarget"
+    >
+      <div
+        class="side-nav"
+        id="sidenav-scrollbar-cust"
+      >
+        <h2
+          class="list-header"
+        >
+          Professional Work
+        </h2>
+        <ul>
+          <div>
+            <li
+              class="list-item"
+              id="list-item-0"
+            >
+              Routes
+            </li>
+          </div>
+          <div>
+            <li
+              class="list-item"
+              id="list-item-1"
+            >
+              XR Stories - Treo
+            </li>
+          </div>
+          <div>
+            <li
+              class="list-item"
+              id="list-item-2"
+            >
+              IoC Student Enterprises Website
+            </li>
+          </div>
+          <div>
+            <li
+              class="list-item"
+              id="list-item-3"
+            >
+              Robot Theatre
+            </li>
+          </div>
+          <div>
+            <li
+              class="list-item"
+              id="list-item-4"
+            >
+              AR/AI Visual Programming Toolkit
+            </li>
+          </div>
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+        </ul>
+        <h2
+          class="list-header"
+        >
+          Other Stuff
+        </h2>
+        <ul>
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div>
+            <li
+              class="list-item"
+              id="list-item-5"
+            >
+              TensorFlow Biomedical Image Segmentation
+            </li>
+          </div>
+          <div>
+            <li
+              class="list-item"
+              id="list-item-6"
+            >
+              This website [WIP]
+            </li>
+          </div>
+          <div>
+            <li
+              class="list-item"
+              id="list-item-7"
+            >
+              Paradoujin.com - Underground Music Blog
+            </li>
+          </div>
+          <div>
+            <li
+              class="list-item"
+              id="list-item-8"
+            >
+              Constellations
+            </li>
+          </div>
+          <div>
+            <li
+              class="list-item"
+              id="list-item-9"
+            >
+              I just need some ******* eggs [WIP]
+            </li>
+          </div>
+          <div />
+          <div />
+          <div />
+        </ul>
+      </div>
+      <div
+        class="right-bit"
+      >
+        <div
+          class="top-wrap"
+        >
+          <div
+            class="header"
+          >
+            <h1
+              class="moveitright"
+            >
+              BALRAJ JOHAL
+            </h1>
+            <div
+              class="header-selected-item 
+                    transparent 
+                    movetitleright
+                "
+            />
+          </div>
+        </div>
+        <div
+          class="content-item"
+          id="content-scrollbar-cust"
+        >
+          <div
+            class="hideit image-container"
+          >
+            <img
+              draggable="false"
+              src="/res/"
+            />
+          </div>
+          <div
+            class="content"
+          >
+            
+        
+            <p>
+              
+            Hey I'm Balraj! I'm a Software Developer with
+            experience working on full-stack projects with a range of 
+            partners across varied disciplines.
+        
+            </p>
+            <p>
+              
+            I'm passionate about creative solutions to problems and
+            especially creative applications of digital technology.
+        
+            </p>
+            
+
+        
+            <div
+              class="about-img-wrap"
+            >
+              
+            
+              <img
+                draggable="false"
+                src="/res/me.jpg"
+              />
+              
+            
+            
+              <span
+                class="it-me"
+              >
+                it me
+              </span>
+              
+        
+            </div>
+            
+
+        
+            <a
+              href="/res/CV - Balraj Johal.pdf"
+            >
+              
+            
+              <div
+                class="cv-link"
+              >
+                
+                MY CV
+            
+              </div>
+              
+        
+            </a>
+            
+
+        
+            <p>
+              
+            Get in touch with me if you have somthing cool for us to work on!
+        
+            </p>
+            
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
