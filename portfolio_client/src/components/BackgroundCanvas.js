@@ -83,12 +83,87 @@ function BackgroundCanvas(props) {
             }
         }
 
+        // c1 and c2 are colors
+        // f is a fraction between 0..1
+        //
+        // returns an interpolated color between 
+        //   c1 (for f=0) and
+        //   c2 (for f=1)
+        //
+        // pass f=0.5 to get the color half-way between c1 and c2
+        let interpolate = (c1, c2, f) => {
+            return {
+                r: Math.floor(c1.r + (c2.r - c1.r) * f),
+                g: Math.floor(c1.g + (c2.g - c1.g) * f),
+                b: Math.floor(c1.b + (c2.b - c1.b) * f)
+            };
+        };
+        const linearGradient = (c1, c2) => {
+            const g = [];
+            // interpolate between the colors in the gradient
+            for (let i = 0; i < 256; i++) {
+                const f = i / 255;
+                g[i] = interpolate(c1, c2, f);
+            }
+            return g;
+        };
+        const fiveColorGradient = (c1, c2, c3, c4, c5) => {
+            const g = [];
+          
+            // for each segment of the heightmap
+            for (let i = 0; i < 64; i++) {
+              const f = i / 64;
+              g[i] = interpolate(c1, c2, f);
+            }
+          
+            for (let i = 64; i < 128; i++) {
+              const f = (i - 64) / 64;
+              g[i] = interpolate(c2, c3, f);
+            }
+          
+            for (let i = 128; i < 192; i++) {
+              const f = (i - 128) / 64;
+              g[i] = interpolate(c3, c4, f);
+            }
+          
+            for (let i = 192; i < 256; i++) {
+              const f = (i - 192) / 64;
+              g[i] = interpolate(c4, c5, f);
+            }
+          
+            return g;
+        };
+        // returns a random color
+        const randomColor = () => {
+            const r = Math.floor(Math.random() * 255);
+            const g = Math.floor(Math.random() * 255);
+            const b = Math.floor(Math.random() * 255);
+            
+            return { r, g, b };
+        };
+        // returns a random 5-color gradient palette
+        const makeRandomPalette = () => {
+            const c1 = randomColor();
+            const c2 = randomColor();
+            const c3 = randomColor();
+            const c4 = randomColor();
+            const c5 = randomColor();
+            
+            return fiveColorGradient(c1, c2, c3, c4, c5);
+        };
+
+        let palette;
+        // // set colour palette to gradient between two colours
+        // palette = linearGradient(
+        //     { r: 255, g: 255, b: 0 },
+        //     { r: 0, g: 54, b: 128 }
+        // );
+        palette = makeRandomPalette();
+
         // offsets for height maps
         // for now, we leave them at upper left corner
-
         let dx1 = 0;
         let dy1 = 0;
-
         let dx2 = 0;
         let dy2 = 0;
 
@@ -108,8 +183,10 @@ function BackgroundCanvas(props) {
                     // height value of 0..255
                     let h = HEIGHT_MAP_1[i] + HEIGHT_MAP_2[k];
 
-                    // greyscale color according to height
-                    let c = { r: h, g: h, b: h };
+                    // // greyscale color according to height
+                    // let c = { r: h, g: h, b: h };
+                    // get color value from current palette
+                    let c = palette[h];
 
                     // set pixel data
                     IMAGE.data[j] = c.r;
@@ -136,7 +213,8 @@ function BackgroundCanvas(props) {
             );
         };
 
-        const tick = time => {
+
+        let tick = time => {
             moveHeightMaps(time);
             updateImageData();
           
