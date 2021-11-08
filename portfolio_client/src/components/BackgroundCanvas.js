@@ -1,7 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 
 function BackgroundCanvas(props) {
+    let [palette, usePalette] = useState(null);
+
+    useEffect(() => {
+
+    }, [palette])
 
     // on mount, configure canavs elements
 
@@ -115,22 +120,18 @@ function BackgroundCanvas(props) {
               const f = i / 64;
               g[i] = interpolate(c1, c2, f);
             }
-          
             for (let i = 64; i < 128; i++) {
               const f = (i - 64) / 64;
               g[i] = interpolate(c2, c3, f);
             }
-          
             for (let i = 128; i < 192; i++) {
               const f = (i - 128) / 64;
               g[i] = interpolate(c3, c4, f);
             }
-          
             for (let i = 192; i < 256; i++) {
               const f = (i - 192) / 64;
               g[i] = interpolate(c4, c5, f);
             }
-          
             return g;
         };
         // returns a random color
@@ -224,7 +225,6 @@ function BackgroundCanvas(props) {
         };
           
         requestAnimationFrame(tick);
-
     }, [])
 
     return(
