@@ -1,15 +1,24 @@
 import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 
+import refreshIcon from "../res/icons/refresh.png";
+
 function BackgroundCanvas(props) {
-    let [palette, usePalette] = useState(null);
+    let [palette, setPalette] = useState(null);
 
     useEffect(() => {
-
-    }, [palette])
+        let defaultPalette = fiveColorGradient(
+            { r: 30, g: 115, b: 200 }, 
+            { r: 43, g: 193, b: 244 }, 
+            { r: 136, g: 205, b: 71 }, 
+            { r: 209, g: 39, b: 8 }, 
+            { r: 165, g: 12, b: 10 }
+        );
+        setPalette(defaultPalette);
+    }, [])
 
     // on mount, configure canavs elements
-
+    //
     // credit to: Slawomir Chodnicki
     // https://towardsdatascience.com/fun-with-html-canvas-lets-make-lava-lamp-plasma-e4b0d89fe778
     useEffect(() => {
@@ -88,78 +97,13 @@ function BackgroundCanvas(props) {
             }
         }
 
-        // c1 and c2 are colors
-        // f is a fraction between 0..1
-        //
-        // returns an interpolated color between 
-        //   c1 (for f=0) and
-        //   c2 (for f=1)
-        //
-        // pass f=0.5 to get the color half-way between c1 and c2
-        let interpolate = (c1, c2, f) => {
-            return {
-                r: Math.floor(c1.r + (c2.r - c1.r) * f),
-                g: Math.floor(c1.g + (c2.g - c1.g) * f),
-                b: Math.floor(c1.b + (c2.b - c1.b) * f)
-            };
-        };
-        const linearGradient = (c1, c2) => {
-            const g = [];
-            // interpolate between the colors in the gradient
-            for (let i = 0; i < 256; i++) {
-                const f = i / 255;
-                g[i] = interpolate(c1, c2, f);
-            }
-            return g;
-        };
-        const fiveColorGradient = (c1, c2, c3, c4, c5) => {
-            const g = [];
-          
-            // for each segment of the heightmap
-            for (let i = 0; i < 64; i++) {
-              const f = i / 64;
-              g[i] = interpolate(c1, c2, f);
-            }
-            for (let i = 64; i < 128; i++) {
-              const f = (i - 64) / 64;
-              g[i] = interpolate(c2, c3, f);
-            }
-            for (let i = 128; i < 192; i++) {
-              const f = (i - 128) / 64;
-              g[i] = interpolate(c3, c4, f);
-            }
-            for (let i = 192; i < 256; i++) {
-              const f = (i - 192) / 64;
-              g[i] = interpolate(c4, c5, f);
-            }
-            return g;
-        };
-        // returns a random color
-        const randomColor = () => {
-            const r = Math.floor(Math.random() * 255);
-            const g = Math.floor(Math.random() * 255);
-            const b = Math.floor(Math.random() * 255);
-            
-            return { r, g, b };
-        };
-        // returns a random 5-color gradient palette
-        const makeRandomPalette = () => {
-            const c1 = randomColor();
-            const c2 = randomColor();
-            const c3 = randomColor();
-            const c4 = randomColor();
-            const c5 = randomColor();
-            
-            return fiveColorGradient(c1, c2, c3, c4, c5);
-        };
-
-        let palette;
+        // let palette;
+        // palette = makeRandomPalette();
         // // set colour palette to gradient between two colours
         // palette = linearGradient(
         //     { r: 255, g: 255, b: 0 },
         //     { r: 0, g: 54, b: 128 }
         // );
-        palette = makeRandomPalette();
 
         // offsets for height maps
         // for now, we leave them at upper left corner
@@ -214,24 +158,98 @@ function BackgroundCanvas(props) {
             );
         };
 
-
         let tick = time => {
             moveHeightMaps(time);
-            updateImageData();
-          
-            c.putImageData(IMAGE, 0, 0);
+
+            if (palette !== null) {
+                updateImageData();
+                c.putImageData(IMAGE, 0, 0);
+            }
           
             requestAnimationFrame(tick);
         };
           
         requestAnimationFrame(tick);
-    }, [])
+    }, [palette])
+
+
+    // c1 and c2 are colors
+    // f is a fraction between 0..1
+    //
+    // returns an interpolated color between 
+    //   c1 (for f=0) and
+    //   c2 (for f=1)
+    //
+    // pass f=0.5 to get the color half-way between c1 and c2
+    let interpolate = (c1, c2, f) => {
+        return {
+            r: Math.floor(c1.r + (c2.r - c1.r) * f),
+            g: Math.floor(c1.g + (c2.g - c1.g) * f),
+            b: Math.floor(c1.b + (c2.b - c1.b) * f)
+        };
+    };
+    const linearGradient = (c1, c2) => {
+        const g = [];
+        // interpolate between the colors in the gradient
+        for (let i = 0; i < 256; i++) {
+            const f = i / 255;
+            g[i] = interpolate(c1, c2, f);
+        }
+        return g;
+    };
+    const fiveColorGradient = (c1, c2, c3, c4, c5) => {
+        const g = [];
+        
+        // for each segment of the heightmap
+        for (let i = 0; i < 64; i++) {
+            const f = i / 64;
+            g[i] = interpolate(c1, c2, f);
+        }
+        for (let i = 64; i < 128; i++) {
+            const f = (i - 64) / 64;
+            g[i] = interpolate(c2, c3, f);
+        }
+        for (let i = 128; i < 192; i++) {
+            const f = (i - 128) / 64;
+            g[i] = interpolate(c3, c4, f);
+        }
+        for (let i = 192; i < 256; i++) {
+            const f = (i - 192) / 64;
+            g[i] = interpolate(c4, c5, f);
+        }
+        return g;
+    };
+    // returns a random color
+    const randomColor = () => {
+        const r = Math.floor(Math.random() * 255);
+        const g = Math.floor(Math.random() * 255);
+        const b = Math.floor(Math.random() * 255);
+        
+        return { r, g, b };
+    };
+    // returns a random 5-color gradient palette
+    const makeRandomPalette = () => {
+        const c1 = randomColor();
+        const c2 = randomColor();
+        const c3 = randomColor();
+        const c4 = randomColor();
+        const c5 = randomColor();
+
+        console.log("making random palette w colours: ", c1, c2, c3, c4, c5);
+        
+        return fiveColorGradient(c1, c2, c3, c4, c5);
+    };
 
     return(
         <div>
             <canvas 
                 id="bg-canvas"
             ></canvas>
+            <div id="randomise-palette-btn" onClick={() => {
+                setPalette(makeRandomPalette());
+            }}>
+                <img src={refreshIcon}></img>
+            </div>
         </div>
     )
 }

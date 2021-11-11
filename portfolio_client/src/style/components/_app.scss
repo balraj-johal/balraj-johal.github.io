@@ -77,6 +77,9 @@
         --sheenY: 0;
     }
 }
+.app.blur {
+    backdrop-filter: blur(20px);
+}
 
 .main::after {
     content: "";
