@@ -4,10 +4,14 @@ function ContentItem(props) {
     return(
         <div className="content-item" id="content-scrollbar-cust">
             <div className={`${props.item.img_src ? "" : "hideit"} image-container`}>
-                <img src={`/res/${props.item.img_src}`} 
+                <img src={"https://balraj-portfolio-bucket.s3.eu-west-2.amazonaws.com/" + props.item.img_src}
                     alt={props.img_alt}
                     draggable="false">
                 </img>
+                {/* <img src={`/res/${props.item.img_src}`} 
+                    alt={props.img_alt}
+                    draggable="false">
+                </img> */}
             </div>
             {props.item.link ? <Link link={props.item.link} /> : null}
             <div
