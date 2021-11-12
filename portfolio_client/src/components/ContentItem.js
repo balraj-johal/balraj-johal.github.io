@@ -4,7 +4,7 @@ function ContentItem(props) {
     return(
         <div className="content-item" id="content-scrollbar-cust">
             <div className={`${props.item.img_src ? "" : "hideit"} image-container`}>
-                <img src={"https://balraj-portfolio-bucket.s3.eu-west-2.amazonaws.com/" + props.item.img_src}
+                <img src={"https://d2hks59q0iv04y.cloudfront.net/" + props.item.img_src}
                     alt={props.img_alt}
                     draggable="false">
                 </img>
