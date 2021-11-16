@@ -1,7 +1,11 @@
 const express = require('express');
 const path = require('path');
 
-const app = express()
+const s3 = require("./routes/api/s3");
+
+const app = express();
+
+app.use("/api/s3", s3);
 
 const PORT = process.env.PORT || 3001;
 
