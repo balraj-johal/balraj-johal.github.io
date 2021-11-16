@@ -168,6 +168,32 @@
   }
 }
 
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
 @font-face {
   font-family: "FutureFlash";
   src: url(../res/fonts/FUTUFRG_.TTF);
@@ -285,6 +311,11 @@
   --sheenY: 0;
 }
 
+.app.blur {
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+
 .main::after {
   content: "";
   position: absolute;
@@ -320,6 +351,22 @@ a {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+#randomise-palette-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+
+#randomise-palette-btn img {
+  height: 100%;
+  width: 100%;
+  -webkit-animation: pulse 1s ease-in-out infinite;
+          animation: pulse 1s ease-in-out infinite;
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
@@ -631,12 +678,6 @@ a {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1000px) {
-  .side-nav .list-header:first-of-type {
-    margin-top: 65px !important;
-  }
-}
-
 @media (min-width: 1300px) {
   .app .main .side-nav {
     width: 335px !important;
@@ -788,7 +829,7 @@ a {
 }
 
 .app .main .right-bit .header h1 {
-  font-size: 32px;
+  font-size: 28px;
   padding-top: 7px;
   font-weight: bold;
   -webkit-animation-fill-mode: forwards !important;
