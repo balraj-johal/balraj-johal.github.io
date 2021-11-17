@@ -21,6 +21,7 @@ function ContentItem(props) {
                                 fill="none" 
                                 stroke="#1f1f1f" 
                                 strokeWidth="2" 
+                                loading="lazy"
                             />
                         </svg>
                     </div>
@@ -29,6 +30,7 @@ function ContentItem(props) {
                     src={"https://d2hks59q0iv04y.cloudfront.net/" + props.item.img_src}
                     style={!imageLoaded ? { visibility: 'hidden' } : {}}
                     onLoad={() => setImageLoaded(true)}
+                    loading="lazy"
                 />
                 {/* <img src={"https://d2hks59q0iv04y.cloudfront.net/" + props.item.img_src}
                     alt={props.img_alt}
