@@ -18,7 +18,16 @@
     }
 }
 
-.cv-link {
-    padding: 10px 20px;
-    background-color: white;
+.cv-link-a {
+    text-decoration: none;
+    .cv-link {
+        padding: 10px 20px;
+        background-color: white;
+        position: relative;
+        text-decoration: none;
+        .arrow {
+            position: absolute;
+            right: 15px;
+        }
+    }
 }

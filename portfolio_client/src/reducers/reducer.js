@@ -310,9 +310,10 @@ const ENTRIES = [
             <span class="it-me">me hard at work</span>
         </div>
 
-        <a href="${PUBLIC_URL}/res/CV - Balraj Johal.pdf" target="_blank">
+        <a href="${PUBLIC_URL}/res/CV - Balraj Johal.pdf" target="_blank" class="cv-link-a" >
             <div class="cv-link">
                 MY CV
+                <span class="arrow">❯</span>
             </div>
         </a>
 

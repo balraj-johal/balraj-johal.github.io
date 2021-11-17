@@ -31,6 +31,7 @@ function App() {
         } else {
             setMobile(false);
         }
+        console.log("mobile state: ", mobile)
         
         return () => {
             window.removeEventListener('resize', updateMobileState);
