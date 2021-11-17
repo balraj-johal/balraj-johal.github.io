@@ -170,11 +170,11 @@
 
 @-webkit-keyframes pulse {
   0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    -webkit-transform: scale(0.65);
+            transform: scale(0.65);
     opacity: 0.5;
   }
-  100% {
+  95% {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
@@ -183,11 +183,11 @@
 
 @keyframes pulse {
   0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    -webkit-transform: scale(0.65);
+            transform: scale(0.65);
     opacity: 0.5;
   }
-  100% {
+  95% {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
