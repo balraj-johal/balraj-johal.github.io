@@ -5,39 +5,54 @@ const PUBLIC_URL = process.env.PUBLIC_URL;
 const ENTRIES = [
     {
         name: "COP26: Data Visualisation for Coney",
-        img_src: "routes.png",
-        id: "26",
+        img_src: "COP26 UKRI.jpg",
+        id: "COP26",
+        link: "https://youtu.be/n3Ac6Ennn5k?t=1341",
         category: "professional",
         content: `
         <p>
-        I created a visualiser using Node.js, React and Three.js, to 
-        display public responses to live questions 
+            For the audience participation segments of a 
+            presentation at the COP 26 Climate Summit,
+            I created a visualiser that took 
+            audience responses and displayed them on an IMAX cinema screen
+            in near real-time, while also using the Web Audio API
+            to create a generative audio soundscape that reflected
+            response content. This allowed the audience to
+            reflect on and see their responses after each question.
         </p><p>
-        
+            The site used Three.js and CSS animations for visual 
+            design, and was built using the MERN stack. 
+        </p><p>
+            This was my first experience building a system for a live "show",
+            as well as my first experience working with Three.js,
+            and it was a challenge working in the zero margin for error.
+            However like always it all came together in the end, and
+            the show went great! 
+        </p><p>
+            The click for more link above will take you to the
+            recorded live-show at the timestamp of our first segment.
         </p>
         `
     },
     {
         name: "Untitled Megaverse Game",
-        img_src: "treo.png",
+        img_src: "crow flies.png",
         id: "mv2",
         category: "professional",
         content: `
         <p>
-            My role was to be the sole developer and 
-            liaison between interdisciplinary partners for a VR 
-            experience developed in Unreal Engine 4. 
+            Building on the work done for our previous game "Routes",
+            a prototype for another Web game emulating a desktop OS
+            was developed. See the "Routes" entry for a more detailed
+            description of the tech used here.
         </p><p>
-            The project incorporated generative audio/data 
-            sonification elements that were developed in conjunction 
-            with PHD researchers from the University of Sheffield.
+            The game has a seamless video choice system, in which 
+            you can make choices that affect the narrative in real time,
+            a la "Black Mirror: Bandersnatch", which was built using
+            React and HTML.
         </p><p>
-            The finished project is an interactive VR experience 
-            in which the user can watch and hear the way that a 
-            group of randomly generated (according to biomechanical 
-            models) trees grow, especially the way that they are 
-            influenced by user determined sunlight and water level 
-            influences.
+            We hope to flesh out our foundation into a full game in the 
+            near future!
         </p>
         `
     },
@@ -49,30 +64,30 @@ const ENTRIES = [
         category: "professional",
         content: `
         <p>
-        As a freelance Software Developer for Megaverse
-        I developed a full-stack (MERN) web application/game, that
-        emulated the look and behvaiour of a late 90's 
-        corporate desktop OS. The game was available as a limited
-        time event. 
+            As a freelance Software Developer for Megaverse
+            I developed a full-stack (MERN) web application/game, that
+            emulated the look and behvaiour of a late 90's 
+            corporate desktop OS. The game was available as a limited
+            time event. 
         </p><p>
-        "Can you find out what happened to your missing friend,
-        and also uncover evidence of illegal deforestation?"
+            "Can you find out what happened to your missing friend,
+            and also uncover evidence of illegal deforestation?"
         </p><p>
-        The application used redux for state management heavily,
-        handling desktop window functionality as well as 
-        handling game logic. bcrypt and JSONWebTokens were used 
-        for user authentication, which was integrated with the
-        Theatre Royal Bath's ticket sales system. RESTful API design
-        was used for server endpoints /WHY?/. SASS CSS-preprocessing
-        was used for front-end styling.
+            The application used redux for state management heavily,
+            handling desktop window functionality as well as 
+            handling game logic. bcrypt and JSONWebTokens were used 
+            for user authentication, which was integrated with the
+            Theatre Royal Bath's ticket sales system. RESTful API design
+            was used for server endpoints and SASS CSS-preprocessing
+            was used for front-end styling.
         </p><p>
-        I'm particularly proud of our satisfying 
-        and accessible UX design, as well as testing my Full-Stack skills
-        further in getting a robust product from conception to release within
-        7 weeks.
+            I'm particularly proud of our satisfying 
+            and accessible UX design, as well as testing my Full-Stack skills
+            further in getting a robust product from conception to release within
+            7 weeks.
         </p><p>
-        The lessons learnt from this project will be built upon in
-        my next freelance project with Megaverse!
+            The lessons learnt from this project will be built upon in
+            my next freelance project with Megaverse!
         </p>
         `
     },
@@ -84,13 +99,9 @@ const ENTRIES = [
         category: "professional",
         content: `
         <p>
-            My role was to be the sole developer and 
+            For this project my role was to be the sole developer and 
             liaison between interdisciplinary partners for a VR 
-            experience developed in Unreal Engine 4. 
-        </p><p>
-            The project incorporated generative audio/data 
-            sonification elements that were developed in conjunction 
-            with PHD researchers from the University of Sheffield.
+            experience developed in Unreal Engine 4.
         </p><p>
             The finished project is an interactive VR experience 
             in which the user can watch and hear the way that a 
@@ -98,6 +109,10 @@ const ENTRIES = [
             models) trees grow, especially the way that they are 
             influenced by user determined sunlight and water level 
             influences.
+        </p><p>
+            The project incorporated generative audio/data 
+            sonification elements that were developed in conjunction 
+            with PHD researchers from the University of Sheffield.
         </p>
         `
     },
@@ -140,7 +155,7 @@ const ENTRIES = [
         category: "professional",
         content: `
         <p>
-            Collaborated on a project exploring the use of AI and 
+            I collaborated on a project exploring the use of AI and 
             robotics in theatre experiences through the continued 
             development of a visual programming toolset (built 
             with JavaScript and Node.js). A particular focus 
@@ -194,6 +209,22 @@ const ENTRIES = [
         `
     },
     {
+        name: "dontlookback. [WIP]",
+        img_src: "dontlookback.png",
+        id: "VR",
+        category: "other",
+        content: `
+        <p>
+            I recently got my hands on an Oculus Quest 2
+            VR headset, and am now working on a short horror
+            game. One of the strengths of VR is the spatial awareness
+            you get when fully immersed, and I want to play off
+            that by impying there is something malicious behind the player,
+            while also ensuring they Dont Look Back.
+        </p>
+        `
+    },
+    {
         name: "TensorFlow Biomedical Image Segmentation",
         img_src: "liver seg.png",
         id: "5",
@@ -204,7 +235,7 @@ const ENTRIES = [
             I used the U-Net algorithm to create a Image 
             Segmentation model to segment liver scans using
             openly available datasets.
-
+        </p><p>
             This project was a valuable learning experience
             for developing my machine learning skills.
         </p>
@@ -219,17 +250,22 @@ const ENTRIES = [
         <p>
             As part of my continued practice of the MERN Stack
             I decided to rewrite my portfolio
-            website to the one you're currently looking at.
+            website to the one you're currently looking at!
         </p><p>
-            The site uses redux for state management and SASS 
+            LATEST UPDATES:
+                - new background styles and switching
+                - image hosting and serving through AWS S3 buckets and Cloudfront
+        </p><p>
+            The site is build with MongoDB, React.js and Node.js,
+             using react-redux for state management and SASS 
             CSS-preprocessing for styling. The website is 
             currently contuinually deployed using Heroku,
-            with the repository being publicly available 
-            on my GitHub.
+            with the repository being publicly visible 
+            on my GitHub account.
         </p><p>
             Once I have finalised the front end design I intend
             to write a basic Content Management System such that
-            it is easy for me to add new work and edit site content.
+            it is easy for me to add new entries and edit site content.
         </p>
         `
     },
@@ -269,27 +305,27 @@ const ENTRIES = [
         </p>
         `
     },
-    {
-        name: "I just need some ******* eggs [WIP]",
-        img_src: "ps1 horror.png",
-        id: "9",
-        category: "other",
-        content: `
-        <p>
-            An FPS game I'm currently making about a mutated supermarket.
-        </p><p>
-            The concept is that you need to dash close to an enemy while
-            avoiding their projectiles until you're in close
-            range to them, at which point you can grab them and use 
-            their attacks against the other enemies until you run
-            out of ammo. This back and forth of dodging projectiles vs
-            firing them is intended to give combat a rhythm similar to
-            DOOM 2016.
-        </p><p>
-            Currently very, very WIP!
-        </p>
-        `
-    },
+    // {
+    //     name: "I just need some ******* eggs [WIP]",
+    //     img_src: "ps1 horror.png",
+    //     id: "9",
+    //     category: "other",
+    //     content: `
+    //     <p>
+    //         An FPS game I'm currently making about a mutated supermarket.
+    //     </p><p>
+    //         The concept is that you need to dash close to an enemy while
+    //         avoiding their projectiles until you're in close
+    //         range to them, at which point you can grab them and use 
+    //         their attacks against the other enemies until you run
+    //         out of ammo. This back and forth of dodging projectiles vs
+    //         firing them is intended to give combat a rhythm similar to
+    //         DOOM 2016.
+    //     </p><p>
+    //         Currently very, very WIP!
+    //     </p>
+    //     `
+    // },
     {
         name: "",
         img_src: "",
@@ -318,7 +354,7 @@ const ENTRIES = [
         </a>
 
         <p>
-            Get in touch with me if you have somthing cool for us to work on!
+            Please get in touch with me if you have somthing cool for us to work on! I can be reached at balrajsjohal@gmail.com!
         </p>
         `,
         id: "about",
