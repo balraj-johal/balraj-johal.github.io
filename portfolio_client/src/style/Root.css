@@ -890,8 +890,9 @@ a {
   color: black;
   top: 36%;
   height: 5%;
+  max-height: 45px;
   right: 0;
-  background-color: silver;
+  background-color: white;
   font-size: 12px;
   width: 125px;
   display: -webkit-box;
