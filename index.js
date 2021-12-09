@@ -9,6 +9,11 @@ app.use("/api/s3", s3);
 
 const PORT = process.env.PORT || 3001;
 
+app.enable('trust proxy')
+app.use((req, res, next) => {
+    req.secure ? next() : res.redirect('https://' + req.headers.host + req.url)
+})
+
 app.use(express.static(path.resolve(__dirname, 'portfolio_client', 'build')));
     
 // Right before your app.listen(), add this:
