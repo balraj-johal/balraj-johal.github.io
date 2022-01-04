@@ -1041,6 +1041,12 @@ a {
   }
 }
 
+#three-scroller-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 @media (min-width: 768px) and (max-width: 1300px) {
   .about-img-wrap {
     width: 60%;
