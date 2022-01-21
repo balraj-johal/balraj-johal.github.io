@@ -209,6 +209,22 @@ const ENTRIES = [
         `
     },
     {
+        name: "Low-Poly 3D Modelling: Sea Shack",
+        img_src: "seashack.png",
+        id: "sea_shack",
+        category: "other",
+        content: `
+        <p>
+            To improve my 3D modelling skills I worked on this low-poly
+            Sea Shack scene following a tutorial by Grant Abbitt. This was my
+            first render in Blender and I learnt a lot about animating and lighting the scene.
+            </p></p>
+            I'm especially proud of that little shark, look at him go...
+
+        </p>
+        `
+    },
+    {
         name: "dontlookback. [WIP]",
         img_src: "dontlookback.png",
         id: "VR",
