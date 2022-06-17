@@ -4,6 +4,23 @@ const PUBLIC_URL = process.env.PUBLIC_URL;
 
 const ENTRIES = [
     {
+        name: "Festival of the Mind: Rendering MRI Scans",
+        img_src: "brain.gid",
+        id: "MRI",
+        category: "professional",
+        content: `
+        <p>
+            I was asked by friends at the University of Sheffield to take real world
+            MRI scans and build a rendering system to show this data
+            as a 3D object using three.js.
+        </p><p>
+            The visualisation will then be part of a physical installation
+            which will be used to educate the public on preventative dementia
+            behaviour.
+        </p>
+        `
+    },
+    {
         name: "COP26: Data Visualisation for Coney",
         img_src: "COP26 UKRI.jpg",
         id: "COP26",
@@ -36,7 +53,7 @@ const ENTRIES = [
     },
     {
         name: "Untitled Megaverse Game",
-        img_src: "crow flies.png",
+        // img_src: "crow flies.png",
         id: "mv2",
         category: "professional",
         content: `
@@ -201,10 +218,24 @@ const ENTRIES = [
             to allow non-coders to have easy access to developing technologies 
             such as AI (Speech Processing, Chatbots, Computer Vision), and 
             marker based web Augmented Reality (a-frame and AR.js).
-        </p></p>
+        </p><p>
             These tools were showcased through even more tools allowing for 
             the creation of simple Adventure Game logic. These were used to create
             an Augmented Reality adventure game using AI tools for puzzle elements.
+        </p>
+        `
+    },
+    {
+        name: "LearnPunjabi [WIP]",
+        img_src: "dontlookback.png",
+        id: "VR",
+        category: "other",
+        content: `
+        <p>
+            I am building a full stack application to teach people Punjabi,
+            a language that is the 10th most spoken in the world but is
+            underserved in pop culture, and is not taught on alternatives
+            such as Duolingo.
         </p>
         `
     },
@@ -219,14 +250,11 @@ const ENTRIES = [
             Sea Shack scene following a tutorial by Grant Abbitt. This was my
             first render in Blender and I learnt a lot about animating and lighting the scene.
             </p></p>
-            I'm especially proud of that little shark, look at him go...
-
-        </p>
-        `
-    },
+            I'm especially proud of that little shark, look at him go...`
+    }, 
     {
         name: "dontlookback. [WIP]",
-        img_src: "dontlookback.png",
+        // img_src: "dontlookback.png",
         id: "VR",
         category: "other",
         content: `

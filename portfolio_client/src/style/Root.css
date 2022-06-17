@@ -716,7 +716,7 @@ a {
 
 .app .main .side-nav .list-header {
   padding-left: 20px;
-  font-weight: 400;
+  font-weight: 500;
   margin: 22px auto;
 }
 
@@ -729,7 +729,7 @@ a {
 
 .app .main .side-nav ul li {
   padding: 10px 15px 11px 32px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .app .main .side-nav ul .highlight {
@@ -1090,5 +1090,9 @@ a {
 
 body {
   overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 /*# sourceMappingURL=Root.css.map */
