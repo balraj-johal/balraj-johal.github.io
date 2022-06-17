@@ -5,7 +5,7 @@ const PUBLIC_URL = process.env.PUBLIC_URL;
 const ENTRIES = [
     {
         name: "Festival of the Mind: Rendering MRI Scans",
-        img_src: "brain.gid",
+        img_src: "brain.gif",
         id: "MRI",
         category: "professional",
         content: `
