@@ -7,13 +7,20 @@ function BackgroundCanvas(props) {
     let [palette, setPalette] = useState(null);
 
     useEffect(() => {
+        // let defaultPalette = fiveColorGradient(
+        //     { r: 30, g: 115, b: 200 }, 
+        //     { r: 43, g: 193, b: 244 }, 
+        //     { r: 136, g: 205, b: 71 }, 
+        //     { r: 209, g: 39, b: 8 }, 
+        //     { r: 165, g: 12, b: 10 }
+        // );
         let defaultPalette = fiveColorGradient(
-            { r: 30, g: 115, b: 200 }, 
-            { r: 43, g: 193, b: 244 }, 
-            { r: 136, g: 205, b: 71 }, 
-            { r: 209, g: 39, b: 8 }, 
-            { r: 165, g: 12, b: 10 }
-        );
+                { r: 255, g: 255, b: 255 }, 
+                { r: 255, g: 255, b: 255 }, 
+                { r: 255, g: 255, b: 255 }, 
+                { r: 255, g: 255, b: 255 }, 
+                { r: 255, g: 255, b: 255 }, 
+            );
         setPalette(defaultPalette);
     }, [])
 
