@@ -226,15 +226,16 @@ const ENTRIES = [
         `
     },
     {
-        name: "LearnPunjabi [WIP]",
-        img_src: "dontlookback.png",
-        id: "VR",
+        name: "LearnPunjabi",
+        // img_src: "dontlookback.png",
+        link: "learnpunjabi.academy",
+        id: "LearnPunjabi",
         category: "other",
         content: `
         <p>
             I am building a full stack application to teach people Punjabi,
             a language that is the 10th most spoken in the world but is
-            underserved in pop culture, and is not taught on alternatives
+            underserved in pop culture, and is not taught on popular alternatives
             such as Duolingo.
         </p>
         `
@@ -390,7 +391,7 @@ const ENTRIES = [
             <span class="it-me">me hard at work</span>
         </div>
 
-        <a href="${PUBLIC_URL}/res/CV - Balraj Johal.pdf" target="_blank" class="cv-link-a" >
+        <a href="${PUBLIC_URL}/res/CV - Balraj Johal - May '22.pdf" target="_blank" class="cv-link-a" >
             <div class="cv-link">
                 MY CV
                 <span class="arrow">❯</span>
