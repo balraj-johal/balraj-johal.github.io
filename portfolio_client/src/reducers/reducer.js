@@ -4,24 +4,71 @@ const PUBLIC_URL = process.env.PUBLIC_URL;
 
 const ENTRIES = [
     {
-        name: "Festival of the Mind: Rendering MRI Scans",
-        img_src: "brain.gif",
-        id: "MRI",
-        category: "professional",
+        name: "Learn Punjabi",
+        // img_src: "dontlookback.png",
+        link: "https://www.learnpunjabi.academy",
+        id: "LearnPunjabi",
+        category: "other",
         content: `
         <p>
-            I was asked by friends at the University of Sheffield to take real world
-            MRI scans and build a rendering system to show this data
-            as a 3D object using three.js.
-        </p><p>
-            The visualisation will then be part of a physical installation
-            which will be used to educate the public on preventative dementia
-            behaviour.
+            For my biggest project yet, I am building a full stack application to teach people Punjabi,
+            a language that is the 10th most spoken in the world but is
+            underserved in pop culture, and is not taught on popular alternatives
+            such as Duolingo. The site is live at
+            <a href="https://www.learnpunjabi.academy>https://www.learnpunjabi.academy</a> but is
+            currently in beta testing.
+        </p>
+        <p>
+            I'm using MongoDB, Node.js and Express for the back-end, and React and redux for the front-end.
+            Media is uploaded to and stored in an Amazon S3 bucket, and then served to end users with
+            runtime signed URL's. Authentication is currently handled using JSONWebTokens, but I plan 
+            on expanding this with OAuth 2.0 support. I use TailwindCSS for inline styling, 
+            but began the project using SASS pre-processing.
+        </p>
+        <p>
+            The site is Unit/Integration tested using React Testing Library and Jest. I also 
+            use Cypress for end-to-end testing.
+        </p>
+        <p>
+            On the landing page I use React Three Fiber to render a
+            scroll animated interaction showing the user the history
+            of Punjab in a visually engaging way.
+        </p>
+        <p>
+            The project is currently targeting a production-ready release with a small set of initial lessons.
+            <br/>
+            Once the first release milestone is hit, the platform will be expanded with more 
+            content and lesson task types, including a planned AI character recognition task 
+            type to allow users to better learn character forms.
         </p>
         `
     },
     {
-        name: "COP26: Data Visualisation for Coney",
+        name: "Rendering MRI Scans in 3D",
+        img_src: "brain.gif",
+        id: "MRI",
+        link: "https://www.youtube.com/watch?v=WRY_lzsbLio",
+        category: "professional",
+        content: `
+        <p>
+            I was hired by the University of Sheffield to take real world
+            MRI scans and build a rendering system to show this data
+            as a 3D object using three.js.
+        </p>
+        <p>
+            I adapted a GLSL Volume Shader to work with a domain-specific
+            datatype, and then rendered the data in such a way that is both
+            medically accurate, immediately readable and visually interesting.
+        </p>
+        <p>
+            The visualisation will be part of a physical installation built by 
+            artist Ruby Fox, which will be used to educate the public on preventative dementia
+            measures.
+        </p>
+        `
+    },
+    {
+        name: "COP26 Climate Summit: Data Visualisation",
         img_src: "COP26 UKRI.jpg",
         id: "COP26",
         link: "https://youtu.be/n3Ac6Ennn5k?t=1341",
@@ -30,9 +77,10 @@ const ENTRIES = [
         <p>
             For the audience participation segments of a 
             presentation at the COP 26 Climate Summit,
-            I created a visualiser that took 
-            audience responses and displayed them on an IMAX cinema screen
-            in near real-time, while also using the Web Audio API
+            I was hired by award winning creative agency Coney to create a visualiser 
+            displaying audience responses on an IMAX cinema screen
+            in near real-time. We  wanted to create an immersive and meditative
+            experience, so I used the Web Audio API
             to create a generative audio soundscape that reflected
             response content. This allowed the audience to
             reflect on and see their responses after each question.
@@ -52,40 +100,20 @@ const ENTRIES = [
         `
     },
     {
-        name: "Untitled Megaverse Game",
-        // img_src: "crow flies.png",
-        id: "mv2",
-        category: "professional",
-        content: `
-        <p>
-            Building on the work done for our previous game "Routes",
-            a prototype for another Web game emulating a desktop OS
-            was developed. See the "Routes" entry for a more detailed
-            description of the tech used here.
-        </p><p>
-            The game has a seamless video choice system, in which 
-            you can make choices that affect the narrative in real time,
-            a la "Black Mirror: Bandersnatch", which was built using
-            React and HTML.
-        </p><p>
-            We hope to flesh out our foundation into a full game in the 
-            near future!
-        </p>
-        `
-    },
-    {
-        name: "Routes",
+        name: "React Web Theatrical Experience",
         img_src: "routes.png",
         link: "https://www.theatreroyal.org.uk/event/routes/",
         id: "0",
         category: "professional",
         content: `
         <p>
-            As a freelance Software Developer for Megaverse
-            I developed a full-stack (MERN) web application/game, that
+            I was hired by Megaverse (a Sheffield based digital creative
+            agency) to develop a web application/game, that
             emulated the look and behvaiour of a late 90's 
-            corporate desktop OS. The game was available as a limited
-            time event. 
+            corporate desktop OS. Throughout the experience the user 
+            would navigate through a fully functional desktop,
+            checking documents and using "applications", all within 
+            the browser window.
         </p><p>
             "Can you find out what happened to your missing friend,
             and also uncover evidence of illegal deforestation?"
@@ -103,13 +131,41 @@ const ENTRIES = [
             further in getting a robust product from conception to release within
             7 weeks.
         </p><p>
-            The lessons learnt from this project will be built upon in
-            my next freelance project with Megaverse!
+            Further links: <br/>
+            <a href="https://www.thestage.co.uk/reviews/routes-egg-assembly-theatre-royal-bath-online-2021" target="_blank">Review</a>
+            <a href="https://thebathandwiltshireparent.co.uk/2021/04/the-egg-assembly-launches-routes-a-cutting-edge-interactive-digital-crime-thriller-for-ages-14/" target="_blank">Press Release</a>
         </p>
         `
     },
     {
-        name: "XR Stories - Treo",
+        name: "Untitled Megaverse Game",
+        // img_src: "crow flies.png",
+        id: "mv2",
+        category: "professional",
+        content: `
+        <p>
+            Building on the work done for our previous game "Routes",
+            a prototype for another Web game emulating a desktop OS
+            was developed. See the "Routes" entry for a more detailed
+            description of the tech used here.
+        </p><p>
+            The biggest technical challenge on this project was 
+            developing a video streaming interface that allowed for
+            seamless "choose your own adventure" style choices, affecting
+            the flow of the experience (for an example, see Black Mirror: Bandersnatch).
+        </p><p>
+            Ensuring that user choice was handled and the next video
+            was played seamlessly with zero buffering/stuttering was difficult,
+            but was crucial to keeping the illusion that events were really
+            playing out.
+        </p><p>
+            We hope to flesh out our foundation into a full game in the 
+            near future!
+        </p>
+        `
+    },
+    {
+        name: "Educational VR Experience - Treo",
         img_src: "treo.png",
         id: "1",
         link: "https://www.youtube.com/watch?v=P1EUnEKnjmE",
@@ -165,7 +221,7 @@ const ENTRIES = [
         `
     },
     {
-        name: "Robot Theatre",
+        name: "Exploration of AI and Robotics in Theatre",
         img_src: "robot.jpg",
         id: "3",
         link: "https://festivalofthemind.sheffield.ac.uk/2020/spiegeltent/what-does-it-feel-like-film/",
@@ -226,23 +282,9 @@ const ENTRIES = [
         `
     },
     {
-        name: "LearnPunjabi",
-        // img_src: "dontlookback.png",
-        link: "learnpunjabi.academy",
-        id: "LearnPunjabi",
-        category: "other",
-        content: `
-        <p>
-            I am building a full stack application to teach people Punjabi,
-            a language that is the 10th most spoken in the world but is
-            underserved in pop culture, and is not taught on popular alternatives
-            such as Duolingo.
-        </p>
-        `
-    },
-    {
         name: "Low-Poly 3D Modelling: Sea Shack",
         img_src: "seashack.png",
+        link: "https://www.youtube.com/watch?v=BB05bpPVAXk",
         id: "sea_shack",
         category: "other",
         content: `
@@ -250,8 +292,9 @@ const ENTRIES = [
             To improve my 3D modelling skills I worked on this low-poly
             Sea Shack scene following a tutorial by Grant Abbitt. This was my
             first render in Blender and I learnt a lot about animating and lighting the scene.
-            </p></p>
-            I'm especially proud of that little shark, look at him go...`
+        </p><p>
+            I'm especially proud of that little shark, look at him go...
+        </p>`
     }, 
     {
         name: "dontlookback. [WIP]",
@@ -288,7 +331,7 @@ const ENTRIES = [
     },
     {
         name: "This website [WIP]",
-        img_src: "portfolio sc.png",
+        // img_src: "portfolio sc.png",
         id: "6",
         category: "other",
         content: `
@@ -382,6 +425,13 @@ const ENTRIES = [
         </p><p>
             I'm passionate about creative solutions to problems and
             especially creative applications of digital technology.
+        </p><p>
+            My skills lie primarily in JavaScript web development, 
+            particularly in a full stack capacity using Node.js and React.
+        </p><p>
+            I am constantly striving to improve my skillset in every discipline,
+            whether that be in Visual Design or User Experience, or in 3D work
+            such as modelling in Blender or Shader Design and WebGL/Three.js libraries.
         </p>
 
         <div class="about-img-wrap">
@@ -399,7 +449,7 @@ const ENTRIES = [
         </a>
 
         <p>
-            Please get in touch with me if you have somthing cool for us to work on! I can be reached at balrajsjohal@gmail.com!
+            Please get in touch with me if you have somthing cool for us to work on! Contact me at balrajsjohal@gmail.com!
         </p>
         `,
         id: "about",
