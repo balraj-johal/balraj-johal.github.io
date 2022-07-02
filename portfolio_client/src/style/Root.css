@@ -354,19 +354,21 @@ a {
 }
 
 #randomise-palette-btn {
+  -webkit-animation: pulse 1s ease-in-out infinite;
+          animation: pulse 1s ease-in-out infinite;
+  background-color: white;
+  border-radius: 50%;
   width: 15px;
   height: 15px;
   position: fixed;
   left: 25px;
-  bottom: 38px;
+  bottom: 25px;
   z-index: 1;
 }
 
 #randomise-palette-btn img {
   height: 100%;
   width: 100%;
-  -webkit-animation: pulse 1s ease-in-out infinite;
-          animation: pulse 1s ease-in-out infinite;
 }
 
 @media (min-width: 768px) {
