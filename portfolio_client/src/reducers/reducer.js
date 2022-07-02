@@ -8,14 +8,14 @@ const ENTRIES = [
         // img_src: "dontlookback.png",
         link: "https://www.learnpunjabi.academy",
         id: "LearnPunjabi",
-        category: "other",
+        category: "professional",
         content: `
         <p>
             For my biggest project yet, I am building a full stack application to teach people Punjabi,
             a language that is the 10th most spoken in the world but is
             underserved in pop culture, and is not taught on popular alternatives
             such as Duolingo. The site is live at
-            <a href="https://www.learnpunjabi.academy>https://www.learnpunjabi.academy</a> but is
+            <a href="https://www.learnpunjabi.academy">https://www.learnpunjabi.academy</a> but is
             currently in beta testing.
         </p>
         <p>
@@ -443,7 +443,7 @@ const ENTRIES = [
             <span class="it-me">me hard at work</span>
         </div>
 
-        <a href="${PUBLIC_URL}/res/CV - Balraj Johal - May '22.pdf" target="_blank" class="cv-link-a" >
+        <a href="${PUBLIC_URL}/res/CV - Balraj Johal - June '22.pdf" target="_blank" class="cv-link-a" >
             <div class="cv-link">
                 MY CV
                 <span class="arrow">❯</span>
