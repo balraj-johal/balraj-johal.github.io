@@ -770,7 +770,7 @@ a {
     top: calc(50vh - 25px) !important;
   }
   .right-bit .content {
-    font-weight: 300 !important;
+    font-weight: 400 !important;
     padding-right: 6em !important;
   }
 }
@@ -800,7 +800,7 @@ a {
   .app .right-bit .content-item {
     height: 690px;
     overflow-y: scroll;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
   }
   .app .right-bit .content {
