@@ -69,7 +69,8 @@ const ENTRIES = [
     },
     {
         name: "COP26 Climate Summit: Data Visualisation",
-        img_src: "COP26 UKRI.jpg",
+        // img_src: "COP26 UKRI.jpg",
+        img_src: "COP26.gif",
         id: "COP26",
         link: "https://youtu.be/n3Ac6Ennn5k?t=1341",
         category: "professional",
@@ -166,7 +167,8 @@ const ENTRIES = [
     },
     {
         name: "Educational VR Experience - Treo",
-        img_src: "treo.png",
+        img_src: "TREOgif.gif",
+        // img_src: "treo.png",
         id: "1",
         link: "https://www.youtube.com/watch?v=P1EUnEKnjmE",
         category: "professional",
