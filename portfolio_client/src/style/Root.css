@@ -1079,6 +1079,16 @@ a {
   right: 15px;
 }
 
+.linkedin-logo {
+  height: 50px;
+  width: 50px;
+}
+
+.linkedin-logo img {
+  height: 100%;
+  width: 100%;
+}
+
 .skill {
   padding-left: 1em;
   padding-bottom: 2.5px;
