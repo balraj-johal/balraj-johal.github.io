@@ -343,6 +343,10 @@ a {
   color: black;
 }
 
+.full-height {
+  height: 100%;
+}
+
 #bg-canvas {
   width: 100vw;
   height: 100vh;
@@ -583,13 +587,13 @@ a {
   .mobile-wrap .swipe-prompt {
     font-family: "Roboto Mono";
     position: absolute;
-    bottom: 0;
+    bottom: 8px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
     height: 8%;
     width: 93vw;
     -webkit-box-pack: end;
