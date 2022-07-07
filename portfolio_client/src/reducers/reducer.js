@@ -470,7 +470,7 @@ const ENTRIES = [
             <div class="skill">Java</div>
             <div class="skill">PHP</div>
         </p><p>
-            I am also experienced in a variety of different disciplines(?):
+            I am also experienced in a variety of different disciplines:
             <div class="skill">Machine Learning & AI</div>
             <div class="skill">UI/UX Design</div>
             <div class="skill">Game Development (Unity & Unreal)</div>
@@ -487,9 +487,9 @@ const ENTRIES = [
             The best way to get in touch with me is via email, so hit me at
             <a href="mailto:balrajsjohal@gmail.com">balrajsjohal@gmail.com</a>!
         </p>
-        <div class="linkedin-logo">
+        <a class="linkedin-logo" href="https://www.linkedin.com/in/balraj-johal/">
             <img class="logo" src="/res/linkedin.png"></img>
-        </div>
+        </a>
         `,
         id: "SOCIALS",
         category: "socials"
