@@ -360,7 +360,6 @@ a {
 #randomise-palette-btn {
   -webkit-animation: pulse 1s ease-in-out infinite;
           animation: pulse 1s ease-in-out infinite;
-  background-color: white;
   border-radius: 50%;
   width: 15px;
   height: 15px;
@@ -491,7 +490,7 @@ a {
     top: 36%;
     height: 6%;
     right: 0;
-    background-color: silver;
+    background-color: white;
     font-size: 12px;
     width: 125px;
     display: -webkit-box;
