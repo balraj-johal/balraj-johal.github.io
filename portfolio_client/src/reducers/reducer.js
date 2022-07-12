@@ -13,7 +13,7 @@ const ENTRIES = [
         <p>
             For my biggest project yet, I am building a full stack application to teach people Punjabi,
             a language that is the 10th most spoken in the world but is
-            underserved in pop culture, and is not taught on popular alternatives
+            underserved in popular culture, and is not taught on popular alternatives
             such as Duolingo. The site is live at
             <a href="https://www.learnpunjabi.academy">https://www.learnpunjabi.academy</a> but is
             currently in beta testing.
@@ -36,7 +36,8 @@ const ENTRIES = [
         </p>
         <p>
             The project is currently targeting a production-ready release with a small set of initial lessons.
-            <br/>
+        </p>
+        <p>
             Once the first release milestone is hit, the platform will be expanded with more 
             content and lesson task types, including a planned AI character recognition task 
             type to allow users to better learn character forms.
@@ -427,7 +428,17 @@ const ENTRIES = [
         </p><p>
             I'm passionate about creative solutions to problems and
             especially creative applications of digital technology.
-        </p><p>
+        </p>
+        
+
+        <a href="${PUBLIC_URL}/res/CV - Balraj Johal - June '22.pdf" target="_blank" class="cv-link-a" >
+            <div class="cv-link">
+                MY CV
+                <span class="arrow">❯</span>
+            </div>
+        </a>
+
+        <p>
             My skills lie primarily in JavaScript web development, 
             particularly in a full stack capacity using Node.js and React.
         </p><p>
@@ -442,13 +453,6 @@ const ENTRIES = [
             </img>
             <span class="it-me">me hard at work</span>
         </div>
-
-        <a href="${PUBLIC_URL}/res/CV - Balraj Johal - June '22.pdf" target="_blank" class="cv-link-a" >
-            <div class="cv-link">
-                MY CV
-                <span class="arrow">❯</span>
-            </div>
-        </a>
 
         <p>
             Please get in touch with me if you have somthing cool for us to work on! Contact me at balrajsjohal@gmail.com!
