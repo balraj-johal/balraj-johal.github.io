@@ -285,6 +285,29 @@ const ENTRIES = [
         `
     },
     {
+        name: "3D Animated Landing Page",
+        img_src: "stars.gif",
+        link: "https://react-three-fiber-landing-page.vercel.app/",
+        id: "stars",
+        category: "other",
+        content: `
+        <p>
+            NOTE: Currently only tested on Chrome...
+        </p><p>
+            Using Three.js, React Three Fiber and Framer Motion
+            I made a responsive landing page for my web design practice.
+            I used Blender to create an optimised star-shaped balloon
+            mesh, then animated instances of the star as if they were floating.
+        </p><p>
+            Framer Motion was used to animate UI elements. This was my
+            first exposure to the library, and it won't be my last as I am
+            very happy with the flexibility and ease of use of the animation library.
+        </p><p>
+            Typography and spacing are where I need to refine my skills the most 
+            currently, and I am very happy with the final look of the site.
+        </p>`
+    }, 
+    {
         name: "Low-Poly 3D Modelling: Sea Shack",
         img_src: "seashack.png",
         link: "https://www.youtube.com/watch?v=BB05bpPVAXk",
