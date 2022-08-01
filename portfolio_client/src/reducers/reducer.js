@@ -5,7 +5,7 @@ const PUBLIC_URL = process.env.PUBLIC_URL;
 const ENTRIES = [
     {
         name: "Learn Punjabi",
-        // img_src: "dontlookback.png",
+        img_src: "lplanding.png",
         link: "https://www.learnpunjabi.academy",
         id: "LearnPunjabi",
         category: "professional",
@@ -286,7 +286,7 @@ const ENTRIES = [
     },
     {
         name: "3D Animated Landing Page",
-        img_src: "stars.gif",
+        img_src: "r3flanding.gif",
         link: "https://react-three-fiber-landing-page.vercel.app/",
         id: "stars",
         category: "other",
