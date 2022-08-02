@@ -4,6 +4,30 @@ const PUBLIC_URL = process.env.PUBLIC_URL;
 
 const ENTRIES = [
     {
+        name: "Rendering MRI Scans in 3D",
+        img_src: "brain.gif",
+        id: "MRI",
+        link: "https://www.youtube.com/watch?v=WRY_lzsbLio",
+        category: "professional",
+        content: `
+        <p>
+            I was hired by the University of Sheffield to take real world
+            MRI scans and build a rendering system to show this data
+            as a 3D object using three.js.
+        </p>
+        <p>
+            I adapted a GLSL Volume Shader to work with a domain-specific
+            datatype, and then rendered the data in such a way that is both
+            medically accurate, immediately readable and visually interesting.
+        </p>
+        <p>
+            The visualisation will be part of a physical installation built by 
+            artist Ruby Fox, which will be used to educate the public on preventative dementia
+            measures.
+        </p>
+        `
+    },
+    {
         name: "Learn Punjabi",
         img_src: "lplanding.png",
         link: "https://www.learnpunjabi.academy",
@@ -41,30 +65,6 @@ const ENTRIES = [
             Once the first release milestone is hit, the platform will be expanded with more 
             content and lesson task types, including a planned AI character recognition task 
             type to allow users to better learn character forms.
-        </p>
-        `
-    },
-    {
-        name: "Rendering MRI Scans in 3D",
-        img_src: "brain.gif",
-        id: "MRI",
-        link: "https://www.youtube.com/watch?v=WRY_lzsbLio",
-        category: "professional",
-        content: `
-        <p>
-            I was hired by the University of Sheffield to take real world
-            MRI scans and build a rendering system to show this data
-            as a 3D object using three.js.
-        </p>
-        <p>
-            I adapted a GLSL Volume Shader to work with a domain-specific
-            datatype, and then rendered the data in such a way that is both
-            medically accurate, immediately readable and visually interesting.
-        </p>
-        <p>
-            The visualisation will be part of a physical installation built by 
-            artist Ruby Fox, which will be used to educate the public on preventative dementia
-            measures.
         </p>
         `
     },
