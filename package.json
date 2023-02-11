@@ -14,7 +14,7 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.20"
   },
   "scripts": {
     "start": "node index.js",
